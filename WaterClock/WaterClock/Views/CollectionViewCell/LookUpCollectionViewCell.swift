@@ -11,4 +11,6 @@ class LookUpCollectionViewCell: UICollectionViewCell {
     let identifier = "LookUpCollectionViewCell"
     
     
+    
+    
 }
