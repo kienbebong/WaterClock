@@ -23,7 +23,7 @@ class HeaderSettingView: UIView {
     private let settingLabel: UILabel = {
         let label = UILabel()
         label.text = "CÀI ĐẶT"
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .boldSystemFont(ofSize: 18)
         label.textColor = .white
         return label
     }()
@@ -32,7 +32,7 @@ class HeaderSettingView: UIView {
         let label = UILabel()
         label.text = "ĐĂNG NHẬP NGAY"
         label.textColor = .blue
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
     

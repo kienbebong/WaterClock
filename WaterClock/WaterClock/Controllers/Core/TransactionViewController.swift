@@ -28,6 +28,7 @@ class TransactionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         
         setUpLayout()
             
