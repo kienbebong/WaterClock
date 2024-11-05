@@ -9,6 +9,7 @@ import UIKit
 
 class LookUpViewController: UIViewController {
     var headerView: HeaderLookUpView?
+    var collectionView: CollectionLookUpView?
     
     private lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
@@ -34,6 +35,7 @@ class LookUpViewController: UIViewController {
         setUpScrollView()
         setUpContentView()
         setUpChart()
+        setUpCollection()
     }
     
     func setUpHeaderView() {
@@ -81,7 +83,18 @@ class LookUpViewController: UIViewController {
         imageChart.snp.makeConstraints { make in
             make.top.equalTo(contentView).offset(10)
             make.centerX.equalTo(contentView)
-            make.width.height.equalTo(300)
+            make.width.height.equalTo(250)
+        }
+    }
+    
+    func setUpCollection() {
+        collectionView = CollectionLookUpView(frame: .zero)
+        contentView.addSubview(collectionView!)
+        collectionView?.snp.makeConstraints { make in
+            make.top.equalTo(imageChart.snp.bottom).offset(10)
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().offset(-10)
+            make.bottom.equalTo(contentView.snp.bottom)
         }
     }
 }

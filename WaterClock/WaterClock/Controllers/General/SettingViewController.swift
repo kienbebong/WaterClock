@@ -48,7 +48,11 @@ class SettingViewController: UIViewController {
             let destinationVC = SignInViewController()
             destinationVC.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(destinationVC, animated: true)
-            }
+        }
+        
+        headerView?.back = { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
         
         headerView?.snp.makeConstraints { make in
             make.top.equalToSuperview()
