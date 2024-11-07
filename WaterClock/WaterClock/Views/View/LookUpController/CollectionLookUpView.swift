@@ -7,10 +7,14 @@
 
 import UIKit
 
+protocol CollectionLookUpViewDelegate: AnyObject {
+    func collectionViewDidTapped(_ cell: CollectionLookUpView, item: Int)
+}
+
 class CollectionLookUpView: UIView {
+    var delegate: CollectionLookUpViewDelegate?
 
     private let collectionView: UICollectionView = {
-        
         let layout = UICollectionViewFlowLayout()
                 
         let itemsPerRow: CGFloat = 4
@@ -92,5 +96,9 @@ extension CollectionLookUpView: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let item = indexPath.item
+        self.delegate?.collectionViewDidTapped(self, item: item)
+    }
 }

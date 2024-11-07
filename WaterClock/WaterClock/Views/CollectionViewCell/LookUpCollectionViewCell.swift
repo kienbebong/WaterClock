@@ -14,7 +14,7 @@ class LookUpCollectionViewCell: UICollectionViewCell {
        let view = UIView()
         view.layer.cornerRadius = 30
         view.clipsToBounds = true
-        view.backgroundColor = .blue.withAlphaComponent(0.1)
+        view.backgroundColor = .blue.withAlphaComponent(0.05)
         return view
     }()
     

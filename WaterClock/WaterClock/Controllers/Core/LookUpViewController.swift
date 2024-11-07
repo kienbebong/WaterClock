@@ -96,5 +96,15 @@ class LookUpViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-10)
             make.bottom.equalTo(contentView.snp.bottom)
         }
+        collectionView?.delegate = self
+    }
+}
+extension LookUpViewController: CollectionLookUpViewDelegate {
+    func collectionViewDidTapped(_ cell: CollectionLookUpView, item: Int) {
+        DispatchQueue.main.async { [weak self] in
+            let vc = ServicesViewController()
+            vc.item = item
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
