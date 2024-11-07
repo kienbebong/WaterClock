@@ -104,7 +104,9 @@ extension LookUpViewController: CollectionLookUpViewDelegate {
         DispatchQueue.main.async { [weak self] in
             let vc = ServicesViewController()
             vc.item = item
+            vc.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(vc, animated: true)
+            vc.switchController(for: item)
         }
     }
 }

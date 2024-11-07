@@ -262,6 +262,33 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.item == 0 {
+            DispatchQueue.main.async {
+                let vc = ServicesViewController()
+                vc.item = 0
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+                vc.switchController(for: vc.item)
+            }
+        } else if indexPath.item == 1 {
+            DispatchQueue.main.async {
+                let vc = ServicesViewController()
+                vc.item = 4
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+                vc.switchController(for: vc.item)
+            }
+        } else if indexPath.item == 2 {
+            DispatchQueue.main.async {
+                let vc = ServicesViewController()
+                vc.item = 7
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+                vc.switchController(for: vc.item)
+            }
+        } 
+    }
     
 }
 

@@ -100,5 +100,6 @@ extension CollectionLookUpView: UICollectionViewDelegate, UICollectionViewDataSo
         collectionView.deselectItem(at: indexPath, animated: true)
         let item = indexPath.item
         self.delegate?.collectionViewDidTapped(self, item: item)
+        
     }
 }

@@ -14,11 +14,23 @@ protocol HeaderServicesViewDelegate: AnyObject {
 class HeaderServicesView: UIView {
     
     weak var delegate: HeaderServicesViewDelegate?
+    var back: (() -> Void)?
+
+    
+    private let backLogoImage: UIImageView = {
+        let img = UIImageView()
+        img.image = UIImage(systemName: "arrow.backward")
+        img.tintColor = .gray
+        img.isUserInteractionEnabled = true
+        return img
+    }()
+    
+    
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 30, height: 30)
+        layout.itemSize = CGSize(width: 40, height: 40)
         layout.minimumLineSpacing = 35
         
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -40,6 +52,20 @@ class HeaderServicesView: UIView {
     func setUp() {
 
         setUpCollectionView()
+        setUpBackLogo()
+        
+    }
+    
+    func setUpBackLogo() {
+        self.addSubview(backLogoImage)
+        backLogoImage.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(90)
+            make.leading.equalToSuperview().offset(10)
+            make.width.height.equalTo(28)
+        }
+        
+        let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(backHome))
+        backLogoImage.addGestureRecognizer(tapGesture1)
     }
     
     
@@ -47,6 +73,7 @@ class HeaderServicesView: UIView {
         self.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(80)
+            make.leading.equalToSuperview().offset(70)
             make.width.equalToSuperview()
             make.height.equalTo(50)
         }
@@ -100,11 +127,11 @@ extension HeaderServicesView: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        if let cell = collectionView.cellForItem(at: indexPath) as? ServicesCollectionViewCell {
-            cell.viewImage.backgroundColor = .blue.withAlphaComponent(0.05)
-            }
-        
         let item = indexPath.item
         self.delegate?.collectionViewDidTappedHeader(self, item: item)
+    }
+    
+    @objc private func backHome() {
+        back?()
     }
 }

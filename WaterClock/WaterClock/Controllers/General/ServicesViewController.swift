@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ServicesViewController: UIViewController {
     
@@ -18,11 +19,17 @@ class ServicesViewController: UIViewController {
         view.clipsToBounds = true
         return view
     }()
+    
+    private let stackView: UIStackView = {
+        let view = UIStackView()
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpRedView()
         setUpHeaderView()
+        setUpView()
     }
     
     func setUpRedView() {
@@ -42,8 +49,88 @@ class ServicesViewController: UIViewController {
             make.height.equalTo(140)
         }
         
+        headerView?.back = { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        
         headerView?.delegate = self
         
+    }
+    
+    func setUpView() {
+        view.addSubview(stackView)
+        stackView.snp.makeConstraints { make in
+            make.top.equalTo(headerView!.snp.bottom).offset(10)
+            make.leading.width.bottom.equalToSuperview()
+        }
+    }
+    
+    func switchController(for item: Int) {
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        switch item {
+        case 0:
+            let vc = PaymentViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 1:
+            let vc = WaterConsumeViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 2:
+            let vc = WaterUpViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 3:
+            let vc = ParameterViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 4:
+            let vc = CutCalenderViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 5:
+            let vc = RecordCalenderViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 6:
+            let vc = PayHistoryViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 7:
+            let vc = ServiceProgressViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 8:
+            let vc = CollectionLocationViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 9:
+            let vc = ContractWaterConsumeViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 10:
+            let vc = PriceViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        case 11:
+            let vc = ContactLocationViewController()
+            addChild(vc)
+            stackView.addArrangedSubview(vc.view)
+            vc.didMove(toParent: self)
+        default:
+            break
+        }
     }
     
     
@@ -56,5 +143,8 @@ class ServicesViewController: UIViewController {
 extension ServicesViewController: HeaderServicesViewDelegate {
     func collectionViewDidTappedHeader(_ cell: HeaderServicesView, item: Int) {
         self.item = item
+        
+        switchController(for: item)
+        
     }
 }

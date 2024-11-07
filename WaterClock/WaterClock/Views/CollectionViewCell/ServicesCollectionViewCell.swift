@@ -12,7 +12,7 @@ class ServicesCollectionViewCell: UICollectionViewCell {
     
     public let viewImage: UIView = {
        let view = UIView()
-        view.layer.cornerRadius = 15
+        view.layer.cornerRadius = 20
         view.clipsToBounds = true
         view.backgroundColor = .white
         return view
@@ -37,7 +37,7 @@ class ServicesCollectionViewCell: UICollectionViewCell {
         viewImage.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.centerX.equalToSuperview()
-            make.width.height.equalTo(30)
+            make.width.height.equalTo(40)
         }
     }
     
@@ -45,7 +45,7 @@ class ServicesCollectionViewCell: UICollectionViewCell {
         viewImage.addSubview(image)
         image.snp.makeConstraints { make in
             make.centerX.centerY.equalTo(viewImage)
-            make.width.height.equalTo(20)
+            make.width.height.equalTo(30)
         }
     }
     
