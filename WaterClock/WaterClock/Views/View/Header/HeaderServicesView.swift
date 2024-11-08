@@ -74,7 +74,7 @@ class HeaderServicesView: UIView {
         collectionView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(80)
             make.leading.equalToSuperview().offset(70)
-            make.width.equalToSuperview()
+            make.trailing.equalToSuperview().offset(-10)
             make.height.equalTo(50)
         }
         
