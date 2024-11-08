@@ -8,6 +8,7 @@
 import UIKit
 
 class FeatureTransactionView: UIView {
+    var tappedPayment: (() -> Void)?
 
     private let onlinePayButton: UIButton = {
         let button = UIButton()
@@ -21,6 +22,7 @@ class FeatureTransactionView: UIView {
         button.configuration?.imagePadding = 10
         button.layer.cornerRadius = 20
         button.clipsToBounds = true
+        button.addTarget(self, action: #selector(checkPayment), for: .touchUpInside)
         return button
     }()
     
@@ -96,6 +98,11 @@ class FeatureTransactionView: UIView {
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
+    @objc func checkPayment() {
+        tappedPayment?()
+    }
+    
     
 
 }

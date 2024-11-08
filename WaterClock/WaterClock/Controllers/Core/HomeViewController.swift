@@ -287,7 +287,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 self.navigationController?.pushViewController(vc, animated: true)
                 vc.switchController(for: vc.item)
             }
-        } 
+        } else {
+            DispatchQueue.main.async {
+                let vc = OnlineChargeViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
     
 }

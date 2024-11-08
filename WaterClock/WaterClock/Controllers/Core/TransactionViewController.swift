@@ -87,6 +87,12 @@ class TransactionViewController: UIViewController {
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(200)
         }
+        
+        featureView?.tappedPayment = { [weak self] in
+            let vc = OnlineChargeViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func setUpRequestView() {
