@@ -207,6 +207,17 @@ class HomeViewController: UIViewController {
             make.leading.equalTo(contentView).offset(20)
             make.height.equalTo(100)
         }
+        
+        handbookView?.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backHome))
+        handbookView!.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func backHome() {
+        let vc = BookViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func setUpNewsLabel() {
