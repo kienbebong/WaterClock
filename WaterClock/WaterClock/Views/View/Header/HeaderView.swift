@@ -39,7 +39,7 @@ class HeaderView: UIView {
         return image
     }()
 
-    private let signInView: UIView = {
+    public let signInView: UIView = {
         let view = UIView()
         view.backgroundColor = .red
         view.layer.cornerRadius = 15
@@ -64,8 +64,7 @@ class HeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-         
+    
         self.layer.cornerRadius = 30
         self.clipsToBounds = true
         
@@ -84,49 +83,51 @@ class HeaderView: UIView {
         let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(openSettingConTroller))
         signInImage.addGestureRecognizer(tapGesture1)
         
-        addSubview(signInView)
-        signInView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(90)
-            make.leading.equalTo(signInImage.snp.trailing).offset(15)
-            make.height.equalTo(60)
-            make.width.equalTo(200)
-        }
-        
-        signInView.addSubview(logoImage)
-        logoImage.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(10)
-            make.width.height.equalTo(30)
-        }
-        
-        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(handleSignInViewTap))
-        signInView.addGestureRecognizer(tapGesture2)
-        
-        signInView.addSubview(logInLabel)
-        logInLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalTo(logoImage).offset(38)
-            make.height.equalTo(logoImage)
-            make.width.equalTo(200)
-        }
+            addSubview(signInView)
+            signInView.snp.makeConstraints { make in
+                make.top.equalToSuperview().offset(90)
+                make.leading.equalTo(signInImage.snp.trailing).offset(15)
+                make.height.equalTo(60)
+                make.width.equalTo(200)
+            }
+            signInView.addSubview(logoImage)
+            logoImage.snp.makeConstraints { make in
+                make.centerY.equalToSuperview()
+                make.leading.equalToSuperview().offset(10)
+                make.width.height.equalTo(30)
+            }
+            
+            let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(handleSignInViewTap))
+            signInView.addGestureRecognizer(tapGesture2)
+            
+            signInView.addSubview(logInLabel)
+            logInLabel.snp.makeConstraints { make in
+                make.centerY.equalToSuperview()
+                make.leading.equalTo(logoImage).offset(38)
+                make.height.equalTo(logoImage)
+                make.width.equalTo(200)
+            }
+
         
         addSubview(logoImage2)
         logoImage2.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(100)
-            make.leading.equalTo(signInView).offset(220)
+            make.trailing.equalToSuperview().offset(-80)
             make.width.height.equalTo(30)
         }
         
         addSubview(logoImage3)
         logoImage3.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(100)
-            make.leading.equalTo(logoImage2).offset(70)
+            make.trailing.equalToSuperview().offset(-30)
             make.width.height.equalTo(30)
         }
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(OpenTabContact))
         logoImage3.addGestureRecognizer(tapGesture)
     }
+    
+    
     
     @objc private func handleSignInViewTap() {
         onSignInTapped?()
@@ -144,3 +145,5 @@ class HeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+

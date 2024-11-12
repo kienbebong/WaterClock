@@ -8,7 +8,10 @@
 import UIKit
 import SnapKit
 
+
 class HomeViewController: UIViewController {
+    var check = false
+
     private lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
         return view
@@ -81,7 +84,17 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleSignInNotification(_:)), name: Notification.Name("UserDidSignIn"), object: nil)
         setUpLayOut()
+    }
+    
+    @objc func handleSignInNotification(_ notification: Notification) {
+        if let check = notification.object as? Bool, check == true {
+            self.check = true
+            headerView?.isHidden = true
+            view.setNeedsLayout()
+        }
     }
     
     func setUpLayOut() {

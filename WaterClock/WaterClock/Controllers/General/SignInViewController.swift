@@ -7,8 +7,16 @@
 
 import UIKit
 import SnapKit
+import FirebaseAuth
+
+
 
 class SignInViewController: UIViewController {
+    
+    func signInSuccessful() {
+        let check = true
+        NotificationCenter.default.post(name: Notification.Name("UserDidSignIn"), object: check)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,9 +61,17 @@ class SignInViewController: UIViewController {
             make.width.equalToSuperview().offset(-45)
         }
         
-        view.addSubview(phoneNumberTextField)
-        phoneNumberTextField.snp.makeConstraints { make in
+        view.addSubview(logEmailTextField)
+        logEmailTextField.snp.makeConstraints { make in
             make.top.equalTo(signDetailLabel).offset(60)
+            make.width.equalToSuperview().offset(-45)
+            make.height.equalTo(50)
+            make.leading.equalTo(signLabel)
+        }
+        
+        view.addSubview(logPaswordTextField)
+        logPaswordTextField.snp.makeConstraints { make in
+            make.top.equalTo(logEmailTextField.snp.bottom).offset(10)
             make.width.equalToSuperview().offset(-45)
             make.height.equalTo(50)
             make.leading.equalTo(signLabel)
@@ -63,15 +79,15 @@ class SignInViewController: UIViewController {
         
         view.addSubview(continueButton)
         continueButton.snp.makeConstraints { make in
-            make.top.equalTo(phoneNumberTextField).offset(80)
-            make.width.height.equalTo(phoneNumberTextField)
-            make.leading.equalTo(phoneNumberTextField)
+            make.top.equalTo(logPaswordTextField).offset(80)
+            make.width.height.equalTo(logPaswordTextField)
+            make.leading.equalTo(logPaswordTextField)
         }
         
         view.addSubview(clauseLabel)
         clauseLabel.snp.makeConstraints { make in
             make.top.equalTo(continueButton).offset(60)
-            make.leading.equalTo(phoneNumberTextField)
+            make.leading.equalTo(logPaswordTextField)
             make.width.equalTo(signDetailLabel)
         }
         
@@ -141,7 +157,7 @@ class SignInViewController: UIViewController {
         let label = UILabel()
         
         let text1 = "Vui lòng nhập "
-        let text2 = "số điện thoại "
+        let text2 = "tài khoản và mật khẩu "
         let text3 = "để đăng kí hoặc đăng nhập vào ứng dụng."
         let fullText = text1 + text2 + text3
         
@@ -162,9 +178,9 @@ class SignInViewController: UIViewController {
         return label
     }()
     
-    private let phoneNumberTextField: UITextField = {
+    private let logEmailTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Số điện thoại"
+        textField.placeholder = "Email"
         textField.textColor = .black
         textField.backgroundColor = .white
         textField.font = .systemFont(ofSize: 15)
@@ -172,7 +188,22 @@ class SignInViewController: UIViewController {
         textField.layer.borderColor = UIColor.gray.cgColor
         textField.layer.cornerRadius = 10
         textField.keyboardType = .phonePad
-        textField.attributedPlaceholder = NSAttributedString(string: "Số điện thoại", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        textField.attributedPlaceholder = NSAttributedString(string: "UserName", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        textField.leftViewMode = .always
+        return textField
+    }()
+    
+    private let logPaswordTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Password"
+        textField.textColor = .black
+        textField.backgroundColor = .white
+        textField.font = .systemFont(ofSize: 15)
+        textField.layer.borderWidth = 2
+        textField.layer.borderColor = UIColor.gray.cgColor
+        textField.layer.cornerRadius = 10
+        textField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         textField.leftViewMode = .always
         return textField
@@ -186,6 +217,7 @@ class SignInViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemRed
         button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(didTappedContinueButton), for: .touchUpInside)
         return button
     }()
     
@@ -220,4 +252,60 @@ class SignInViewController: UIViewController {
         image.image = UIImage(named: "congdvc")
         return image
     }()
+    
+    func showAlert(missingField: String) {
+        var alertTitle = ""
+        var alertMessage = ""
+        
+        if missingField == "email" {
+            alertTitle = "Please Enter Username"
+            alertMessage = "We need your username to continue."
+        } else if missingField == "password" {
+            alertTitle = "Please Enter Password"
+            alertMessage = "We need your password to continue."
+        }
+        
+        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            print("\(missingField.capitalized) is required")
+        }
+        
+        alertController.addAction(okAction)
+        
+        if let windowScene = view.window?.windowScene {
+            if let rootViewController = windowScene.windows.first(where: { $0.isKeyWindow })?.rootViewController {
+                rootViewController.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+
+    @objc func didTappedContinueButton() {
+        guard let userName = logEmailTextField.text, !userName.isEmpty else {
+            showAlert(missingField: "email")
+            return
+        }
+        
+        guard let password = logPaswordTextField.text, !password.isEmpty else {
+            showAlert(missingField: "password")
+            return
+        }
+        
+        API.shared.checkLogin(userName: userName, password: password) { result in
+            switch result {
+            case .success(let account):
+                DispatchQueue.main.async {
+                    self.handleLoginSuccess()
+                    self.navigationController?.popViewController(animated: true)
+                }
+                print("success")
+            case .failure(let error):
+                print("failure")
+            }
+        }
+    }
+    
+    func handleLoginSuccess() {
+        NotificationCenter.default.post(name: Notification.Name("UserDidSignIn"), object: true)
+    }
 }
