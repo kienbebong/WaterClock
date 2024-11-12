@@ -295,12 +295,12 @@ class SignInViewController: UIViewController {
             switch result {
             case .success(let account):
                 DispatchQueue.main.async {
+                    self.saveCoreData(account: account)
                     self.handleLoginSuccess()
                     self.navigationController?.popViewController(animated: true)
                 }
-                print("success")
             case .failure(let error):
-                print("failure")
+                print(error.localizedDescription)
             }
         }
     }
@@ -308,4 +308,21 @@ class SignInViewController: UIViewController {
     func handleLoginSuccess() {
         NotificationCenter.default.post(name: Notification.Name("UserDidSignIn"), object: true)
     }
+    
+    func saveCoreData(account: Account) {
+        DataPersistenceManager.shared.downloadAccount(accountLogin: account) { result in
+            switch result {
+            case .success():
+                NotificationCenter.default.post(name: NSNotification.Name("Log ing success"), object: nil)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        
+        
+        
+    }
 }
+
+

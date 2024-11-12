@@ -27,6 +27,10 @@ class API {
                 return
             }
             
+//            if let dataString = String(data: data, encoding: .utf8) {
+//                        print("Response data: \(dataString)")
+//                    }
+            
             do {
                 let account = try JSONDecoder().decode(Account.self, from: data)
                 completion(.success(account))

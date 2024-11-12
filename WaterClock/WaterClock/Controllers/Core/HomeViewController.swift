@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
     }()
     
     private var handbookView: HandbookHomeView?
+    private var headerAfter: HeaderAfterLoginView?
     private var signInView: SignInHomeView?
     private var headerView: HeaderView?
     private var newsView: NewsView?
@@ -93,6 +94,7 @@ class HomeViewController: UIViewController {
         if let check = notification.object as? Bool, check == true {
             self.check = true
             headerView?.isHidden = true
+            setUpHeaderAfterLogin()
             view.setNeedsLayout()
         }
     }
@@ -260,6 +262,18 @@ class HomeViewController: UIViewController {
             make.centerX.equalTo(contentView)
             make.bottom.equalTo(contentView.snp.bottom)
             make.width.equalTo(300)
+        }
+    }
+    
+    func setUpHeaderAfterLogin() {
+        headerAfter = HeaderAfterLoginView(frame: .zero)
+        
+        self.view.addSubview(headerAfter!)
+        headerAfter?.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.height.equalTo(180)
         }
     }
 }

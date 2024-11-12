@@ -70,15 +70,15 @@ extension CollectionLookUpView: UICollectionViewDelegate, UICollectionViewDataSo
         if indexPath.item == 0 {
             cell.configure(with: UIImage(systemName: "list.bullet.clipboard") ?? UIImage(), title: "Hoá đơn điện tử")
         } else if indexPath.item == 1 {
-            cell.configure(with: UIImage(systemName: "gauge.low") ?? UIImage(), title: "Điện năng sử dụng")
+            cell.configure(with: UIImage(systemName: "gauge.low") ?? UIImage(), title: "Số nước sử dụng")
         } else if indexPath.item == 2 {
-            cell.configure(with: UIImage(systemName: "humidity") ?? UIImage(), title: "Điện năng phát lên")
+            cell.configure(with: UIImage(systemName: "humidity") ?? UIImage(), title: "Số nước phát lên")
         } else if indexPath.item == 3 {
             cell.configure(with: UIImage(systemName: "chart.line.uptrend.xyaxis") ?? UIImage(), title: "Thông số vận hành")
         } else if indexPath.item == 4 {
-            cell.configure(with: UIImage(systemName: "calendar.badge.clock") ?? UIImage(), title: "Lịch cắt điện")
+            cell.configure(with: UIImage(systemName: "calendar.badge.clock") ?? UIImage(), title: "Lịch cắt nước")
         } else if indexPath.item == 5 {
-            cell.configure(with: UIImage(systemName: "calendar.badge.checkmark") ?? UIImage(), title: "Lịch ghi điện")
+            cell.configure(with: UIImage(systemName: "calendar.badge.checkmark") ?? UIImage(), title: "Lịch ghi nước")
         } else if indexPath.item == 6 {
             cell.configure(with: UIImage(systemName: "memories") ?? UIImage(), title: "Lịch sử thanh toán")
         } else if indexPath.item == 7 {
@@ -86,9 +86,9 @@ extension CollectionLookUpView: UICollectionViewDelegate, UICollectionViewDataSo
         } else if indexPath.item == 8 {
             cell.configure(with: UIImage(systemName: "house") ?? UIImage(), title: "Điểm thu hộ")
         } else if indexPath.item == 9 {
-            cell.configure(with: UIImage(systemName: "book") ?? UIImage(), title: "Hợp đồng sử dụng điện")
+            cell.configure(with: UIImage(systemName: "book") ?? UIImage(), title: "Hợp đồng sử dụng nước")
         } else if indexPath.item == 10 {
-            cell.configure(with: UIImage(systemName: "bitcoinsign") ?? UIImage(), title: "Giá bán điện")
+            cell.configure(with: UIImage(systemName: "bitcoinsign") ?? UIImage(), title: "Giá bán nước")
         } else {
             cell.configure(with: UIImage(systemName: "house.lodge") ?? UIImage(), title: "Địa chỉ ")
         }
