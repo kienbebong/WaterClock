@@ -9,6 +9,7 @@ import SnapKit
 import UIKit
 
 class HeaderAfterLoginView: UIView {
+    var onSettingInTapped: (() -> Void)?
     
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
@@ -93,6 +94,9 @@ class HeaderAfterLoginView: UIView {
         setUpSignInImage()
         setUpAccountView()
         setUpFixButton()
+        
+        let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(openSettingConTroller))
+        signInImage.addGestureRecognizer(tapGesture1)
     }
     
     required init?(coder: NSCoder) {
@@ -155,6 +159,10 @@ class HeaderAfterLoginView: UIView {
             make.trailing.equalTo(phoneLogo).offset(10)
             make.height.equalTo(50)
         }
+    }
+    
+    @objc private func openSettingConTroller() {
+        onSettingInTapped?()
     }
 
 }

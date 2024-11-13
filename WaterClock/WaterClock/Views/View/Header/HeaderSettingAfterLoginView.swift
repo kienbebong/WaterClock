@@ -1,14 +1,14 @@
 //
-//  HeaderSettingView.swift
+//  HeaderSettingAfterLoginView.swift
 //  WaterClock
 //
-//  Created by Dinh Chi Kien on 1/11/24.
+//  Created by Dinh Chi Kien on 12/11/24.
 //
 
 import UIKit
-import SnapKit
 
-class HeaderSettingView: UIView {
+class HeaderSettingAfterLoginView: UIView {
+
     var onSignInTapped: (() -> Void)?
     var back: (() -> Void)?
     
@@ -39,7 +39,7 @@ class HeaderSettingView: UIView {
     
     private let logInLabel: UILabel = {
         let label = UILabel()
-        label.text = "ĐĂNG NHẬP NGAY"
+        label.text = "ĐĂNG XUẤT"
         label.textColor = .blue
         label.font = UIFont.boldSystemFont(ofSize: 15)
         return label
@@ -60,12 +60,29 @@ class HeaderSettingView: UIView {
         return view
     }()
     
+    private let userNameLabel: UILabel = {
+        let label = UILabel()
+        DataPersistenceManager.shared.fetchAccount { result in
+            switch result {
+            case .success(let account):
+                label.text = account.userName
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 16)
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.setUpBackLogo()
         self.setUpSettingImage()
         self.setUpSettingLabel()
+        self.setUpUserName()
+
         self.setUpSignInView()
     }
     
@@ -88,18 +105,26 @@ class HeaderSettingView: UIView {
     func setUpSettingImage() {
         addSubview(settingImage)
         settingImage.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(90)
+            make.top.equalToSuperview().offset(80)
             make.leading.equalTo(backLogoImage.snp.trailing).offset(20)
-            make.size.equalTo(CGSize(width: 30, height: 30))
+            make.size.equalTo(CGSize(width: 45, height: 45))
         }
     }
     
     func setUpSettingLabel() {
         addSubview(settingLabel)
         settingLabel.snp.makeConstraints { make in
-            make.top.equalTo(settingImage)
-            make.leading.equalTo(settingImage).offset(40)
+            make.top.equalTo(settingImage).offset(5)
+            make.leading.equalTo(settingImage).offset(50)
             make.width.equalTo(100)
+        }
+    }
+    
+    func setUpUserName() {
+        addSubview(userNameLabel)
+        userNameLabel.snp.makeConstraints { make in
+            make.top.equalTo(settingLabel.snp.bottom).offset(5)
+            make.leading.equalTo(settingLabel)
         }
     }
     
@@ -108,7 +133,7 @@ class HeaderSettingView: UIView {
         signInView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(80)
             make.trailing.equalToSuperview().offset(-20)
-            make.width.equalTo(180)
+            make.width.equalTo(140)
             make.height.equalTo(50)
         }
         
@@ -138,5 +163,6 @@ class HeaderSettingView: UIView {
     @objc private func handleSignInViewTap() {
         onSignInTapped?()
     }
+
 
 }

@@ -10,7 +10,6 @@ import SnapKit
 
 
 class HomeViewController: UIViewController {
-    var check = false
 
     private lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
@@ -92,7 +91,6 @@ class HomeViewController: UIViewController {
     
     @objc func handleSignInNotification(_ notification: Notification) {
         if let check = notification.object as? Bool, check == true {
-            self.check = true
             headerView?.isHidden = true
             setUpHeaderAfterLogin()
             view.setNeedsLayout()
@@ -267,6 +265,12 @@ class HomeViewController: UIViewController {
     
     func setUpHeaderAfterLogin() {
         headerAfter = HeaderAfterLoginView(frame: .zero)
+        
+        headerAfter?.onSettingInTapped = { [weak self] in
+            let destinationVC = SettingViewController()
+            destinationVC.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(destinationVC, animated: true)
+        }
         
         self.view.addSubview(headerAfter!)
         headerAfter?.snp.makeConstraints { make in

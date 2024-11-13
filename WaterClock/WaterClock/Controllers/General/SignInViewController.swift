@@ -307,20 +307,18 @@ class SignInViewController: UIViewController {
     
     func handleLoginSuccess() {
         NotificationCenter.default.post(name: Notification.Name("UserDidSignIn"), object: true)
+        UserDefaults.standard.set(true, forKey: "isUserSignedIn")
     }
     
     func saveCoreData(account: Account) {
         DataPersistenceManager.shared.downloadAccount(accountLogin: account) { result in
             switch result {
             case .success():
-                NotificationCenter.default.post(name: NSNotification.Name("Log ing success"), object: nil)
+                print("Log in success")
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-        
-        
-        
         
     }
 }

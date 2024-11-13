@@ -13,6 +13,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        _ = SessionManager.shared
+        UserDefaults.standard.set(false, forKey: "isUserSignedIn")
+    
         guard let windowsence = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowsence)
         

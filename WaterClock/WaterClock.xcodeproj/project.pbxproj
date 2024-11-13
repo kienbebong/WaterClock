@@ -14,6 +14,8 @@
 		756BBDAF2CE2F737003B4021 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDAE2CE2F737003B4021 /* Account.swift */; };
 		756BBDB22CE329A1003B4021 /* AccountModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDB02CE329A1003B4021 /* AccountModel.xcdatamodeld */; };
 		756BBDB82CE32F35003B4021 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDB72CE32F35003B4021 /* DataPersistenceManager.swift */; };
+		756BBDBA2CE348AB003B4021 /* HeaderSettingAfterLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDB92CE348AB003B4021 /* HeaderSettingAfterLoginView.swift */; };
+		756BBDBC2CE438CE003B4021 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDBB2CE438CE003B4021 /* SessionManager.swift */; };
 		75819F4C2CE1B0730018B986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75819F452CE1B0730018B986 /* Assets.xcassets */; };
 		75819F4E2CE1B0730018B986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75819F482CE1B0730018B986 /* LaunchScreen.storyboard */; };
 		75819F4F2CE1B0730018B986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75819F4A2CE1B0730018B986 /* Main.storyboard */; };
@@ -81,6 +83,8 @@
 		756BBDAE2CE2F737003B4021 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		756BBDB12CE329A1003B4021 /* AccountModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccountModel.xcdatamodel; sourceTree = "<group>"; };
 		756BBDB72CE32F35003B4021 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
+		756BBDB92CE348AB003B4021 /* HeaderSettingAfterLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSettingAfterLoginView.swift; sourceTree = "<group>"; };
+		756BBDBB2CE438CE003B4021 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		75819F022CE1B0730018B986 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		75819F032CE1B0730018B986 /* LookUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookUpViewController.swift; sourceTree = "<group>"; };
 		75819F042CE1B0730018B986 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			children = (
 				756BBDA92CE2F301003B4021 /* API.swift */,
 				756BBDB72CE32F35003B4021 /* DataPersistenceManager.swift */,
+				756BBDBB2CE438CE003B4021 /* SessionManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				75819F322CE1B0730018B986 /* HeaderView.swift */,
 				75819F332CE1B0730018B986 /* TransactionHeaderView.swift */,
 				756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */,
+				756BBDB92CE348AB003B4021 /* HeaderSettingAfterLoginView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 				75819F6B2CE1B0730018B986 /* HomeCollectionViewCell.swift in Sources */,
 				75819F6C2CE1B0730018B986 /* LookUpCollectionViewCell.swift in Sources */,
 				75819F6D2CE1B0730018B986 /* NewsCollectionViewCell.swift in Sources */,
+				756BBDBC2CE438CE003B4021 /* SessionManager.swift in Sources */,
 				75819F6E2CE1B0730018B986 /* NotificationCollectionViewCell.swift in Sources */,
 				75819F6F2CE1B0730018B986 /* ServicesCollectionViewCell.swift in Sources */,
 				75819F702CE1B0730018B986 /* BookTableViewCell.swift in Sources */,
@@ -562,6 +569,7 @@
 				75819F7F2CE1B0730018B986 /* CollectionLookUpView.swift in Sources */,
 				75819F802CE1B0730018B986 /* ChangeInfoTransactionView.swift in Sources */,
 				75819F812CE1B0730018B986 /* ContractTransactionView.swift in Sources */,
+				756BBDBA2CE348AB003B4021 /* HeaderSettingAfterLoginView.swift in Sources */,
 				75819F822CE1B0730018B986 /* DeviceTransactionView.swift in Sources */,
 				75819F832CE1B0730018B986 /* FeatureTransactionView.swift in Sources */,
 				75819F842CE1B0730018B986 /* MoreChangeTransactionView.swift in Sources */,

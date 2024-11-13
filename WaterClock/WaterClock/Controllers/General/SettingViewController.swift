@@ -11,6 +11,7 @@ import SnapKit
 class SettingViewController: UIViewController {
     
     var headerView: HeaderSettingView?
+    var headerAfter: HeaderSettingAfterLoginView?
     
     private lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
@@ -30,7 +31,22 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(handleSignInNotification(_:)), name: Notification.Name("UserDidSignIn"), object: nil)
+        
         setUpLayout()
+        
+        if SessionManager.shared.isUserSignedIn() {
+            headerView?.isHidden = true
+            setUpHeaderAfter()
+        }
+    }
+    
+    @objc func handleSignInNotification(_ notification: Notification) {
+        if let check = notification.object as? Bool, check == true {
+            headerView?.isHidden = true
+            setUpHeaderAfter()
+            view.setNeedsLayout()
+        }
     }
     
     func setUpLayout() {
@@ -45,9 +61,9 @@ class SettingViewController: UIViewController {
         view.addSubview(headerView!)
         
         headerView?.onSignInTapped = { [weak self] in
-            let destinationVC = SignInViewController()
-            destinationVC.hidesBottomBarWhenPushed = true
-            self?.navigationController?.pushViewController(destinationVC, animated: true)
+            let vc = SignInViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(vc, animated: true)
         }
         
         headerView?.back = { [weak self] in
@@ -101,6 +117,24 @@ class SettingViewController: UIViewController {
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
 
+    }
+    
+    func setUpHeaderAfter() {
+        headerAfter = HeaderSettingAfterLoginView(frame: .zero)
+        view.addSubview(headerAfter!)
+        
+        headerAfter?.back = { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        
+        headerAfter?.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.equalTo(150)
+        }
+    
+        headerAfter?.backgroundColor = .blue
     }
 }
 

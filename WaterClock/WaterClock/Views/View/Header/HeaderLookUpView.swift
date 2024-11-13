@@ -113,6 +113,19 @@ class HeaderLookUpView: UIView {
         }
     }
     
+    func handleAfterSignIn() {
+        signInView.isHidden = true
+        DataPersistenceManager.shared.fetchAccount { result in
+            switch result {
+            case .success(let account):
+                self.detailLabel.text = "Tra cứu tất cả thông tin của khách hàng: \(account.userName ?? "")"
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .blue
@@ -123,6 +136,7 @@ class HeaderLookUpView: UIView {
         setUpLookupImage()
         setUpLookupLabel()
         setUpDetailLabel()
+        
     }
     
     required init?(coder: NSCoder) {

@@ -36,6 +36,10 @@ class LookUpViewController: UIViewController {
         setUpContentView()
         setUpChart()
         setUpCollection()
+        
+        if SessionManager.shared.isUserSignedIn() {
+            headerView?.handleAfterSignIn()
+        }
     }
     
     func setUpHeaderView() {
