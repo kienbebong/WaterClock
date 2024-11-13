@@ -93,6 +93,19 @@ class HomeViewController: UIViewController {
         if let check = notification.object as? Bool, check == true {
             headerView?.isHidden = true
             setUpHeaderAfterLogin()
+            signInView?.isHidden = true
+            handbookView?.snp.makeConstraints { make in
+                make.top.equalTo(homeCollectionView.snp.bottom).offset(10)
+            }
+            
+            callButton.snp.removeConstraints()
+            callButton.snp.makeConstraints { make in
+                make.top.equalTo(newsView!.snp.bottom).offset(20)
+                make.centerX.equalTo(contentView)
+                make.width.equalTo(300)
+                make.height.equalTo(50)
+            }
+            
             view.setNeedsLayout()
         }
     }
