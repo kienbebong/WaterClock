@@ -69,7 +69,7 @@ class ServicesViewController: UIViewController {
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         switch item {
         case 0:
-            let vc = PaymentViewController()
+            let vc = MeterDataInDayViewController()
             addChild(vc)
             stackView.addArrangedSubview(vc.view)
             vc.didMove(toParent: self)

@@ -304,9 +304,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
         
         if indexPath.row == 0 {
-            cell.configure(with: UIImage(systemName: "list.bullet.clipboard") ?? UIImage(), text: "Hoá đơn điện tử")
+            cell.configure(with: UIImage(systemName: "list.bullet.clipboard") ?? UIImage(), text: "Dữ liệu nước theo ngày")
         } else if indexPath.row == 1 {
-            cell.configure(with: UIImage(systemName: "calendar.badge.clock") ?? UIImage(), text: "Xem lịch cắt điện")
+            cell.configure(with: UIImage(systemName: "calendar.badge.clock") ?? UIImage(), text: "Xem lịch cắt nước")
         } else if indexPath.row == 2 {
             cell.configure(with: UIImage(systemName: "checklist") ?? UIImage(), text: "Tiến độ dịch vụ")
         } else {

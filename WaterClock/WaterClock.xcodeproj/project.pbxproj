@@ -16,6 +16,8 @@
 		756BBDB82CE32F35003B4021 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDB72CE32F35003B4021 /* DataPersistenceManager.swift */; };
 		756BBDBA2CE348AB003B4021 /* HeaderSettingAfterLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDB92CE348AB003B4021 /* HeaderSettingAfterLoginView.swift */; };
 		756BBDBC2CE438CE003B4021 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDBB2CE438CE003B4021 /* SessionManager.swift */; };
+		756BBDBE2CE45DED003B4021 /* MeterDataInDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDBD2CE45DED003B4021 /* MeterDataInDay.swift */; };
+		756BBDC12CE48619003B4021 /* ChooseDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDC02CE48619003B4021 /* ChooseDateView.swift */; };
 		75819F4C2CE1B0730018B986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75819F452CE1B0730018B986 /* Assets.xcassets */; };
 		75819F4E2CE1B0730018B986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75819F482CE1B0730018B986 /* LaunchScreen.storyboard */; };
 		75819F4F2CE1B0730018B986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75819F4A2CE1B0730018B986 /* Main.storyboard */; };
@@ -37,7 +39,7 @@
 		75819F5F2CE1B0730018B986 /* CutCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F132CE1B0730018B986 /* CutCalenderViewController.swift */; };
 		75819F602CE1B0730018B986 /* ParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F142CE1B0730018B986 /* ParameterViewController.swift */; };
 		75819F612CE1B0730018B986 /* PayHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F152CE1B0730018B986 /* PayHistoryViewController.swift */; };
-		75819F622CE1B0730018B986 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F162CE1B0730018B986 /* PaymentViewController.swift */; };
+		75819F622CE1B0730018B986 /* MeterDataInDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F162CE1B0730018B986 /* MeterDataInDayViewController.swift */; };
 		75819F632CE1B0730018B986 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F172CE1B0730018B986 /* PriceViewController.swift */; };
 		75819F642CE1B0730018B986 /* RecordCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F182CE1B0730018B986 /* RecordCalenderViewController.swift */; };
 		75819F652CE1B0730018B986 /* ServiceProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F192CE1B0730018B986 /* ServiceProgressViewController.swift */; };
@@ -85,6 +87,8 @@
 		756BBDB72CE32F35003B4021 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 		756BBDB92CE348AB003B4021 /* HeaderSettingAfterLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSettingAfterLoginView.swift; sourceTree = "<group>"; };
 		756BBDBB2CE438CE003B4021 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		756BBDBD2CE45DED003B4021 /* MeterDataInDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterDataInDay.swift; sourceTree = "<group>"; };
+		756BBDC02CE48619003B4021 /* ChooseDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDateView.swift; sourceTree = "<group>"; };
 		75819F022CE1B0730018B986 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		75819F032CE1B0730018B986 /* LookUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookUpViewController.swift; sourceTree = "<group>"; };
 		75819F042CE1B0730018B986 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +107,7 @@
 		75819F132CE1B0730018B986 /* CutCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutCalenderViewController.swift; sourceTree = "<group>"; };
 		75819F142CE1B0730018B986 /* ParameterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterViewController.swift; sourceTree = "<group>"; };
 		75819F152CE1B0730018B986 /* PayHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHistoryViewController.swift; sourceTree = "<group>"; };
-		75819F162CE1B0730018B986 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		75819F162CE1B0730018B986 /* MeterDataInDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterDataInDayViewController.swift; sourceTree = "<group>"; };
 		75819F172CE1B0730018B986 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
 		75819F182CE1B0730018B986 /* RecordCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCalenderViewController.swift; sourceTree = "<group>"; };
 		75819F192CE1B0730018B986 /* ServiceProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProgressViewController.swift; sourceTree = "<group>"; };
@@ -176,8 +180,17 @@
 			isa = PBXGroup;
 			children = (
 				756BBDAE2CE2F737003B4021 /* Account.swift */,
+				756BBDBD2CE45DED003B4021 /* MeterDataInDay.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		756BBDBF2CE485FD003B4021 /* DataInDay */ = {
+			isa = PBXGroup;
+			children = (
+				756BBDC02CE48619003B4021 /* ChooseDateView.swift */,
+			);
+			path = DataInDay;
 			sourceTree = "<group>";
 		};
 		75819F072CE1B0730018B986 /* Core */ = {
@@ -215,7 +228,7 @@
 				75819F132CE1B0730018B986 /* CutCalenderViewController.swift */,
 				75819F142CE1B0730018B986 /* ParameterViewController.swift */,
 				75819F152CE1B0730018B986 /* PayHistoryViewController.swift */,
-				75819F162CE1B0730018B986 /* PaymentViewController.swift */,
+				75819F162CE1B0730018B986 /* MeterDataInDayViewController.swift */,
 				75819F172CE1B0730018B986 /* PriceViewController.swift */,
 				75819F182CE1B0730018B986 /* RecordCalenderViewController.swift */,
 				75819F192CE1B0730018B986 /* ServiceProgressViewController.swift */,
@@ -319,6 +332,7 @@
 		75819F432CE1B0730018B986 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				756BBDBF2CE485FD003B4021 /* DataInDay */,
 				75819F342CE1B0730018B986 /* Header */,
 				75819F392CE1B0730018B986 /* HomeController */,
 				75819F3B2CE1B0730018B986 /* LookUpController */,
@@ -523,6 +537,7 @@
 				75819F562CE1B0730018B986 /* ContactViewController.swift in Sources */,
 				75819F572CE1B0730018B986 /* OnlineChargeViewController.swift in Sources */,
 				75819F582CE1B0730018B986 /* ServicesViewController.swift in Sources */,
+				756BBDC12CE48619003B4021 /* ChooseDateView.swift in Sources */,
 				756BBDB82CE32F35003B4021 /* DataPersistenceManager.swift in Sources */,
 				75819F592CE1B0730018B986 /* SettingViewController.swift in Sources */,
 				75819F5A2CE1B0730018B986 /* SignInViewController.swift in Sources */,
@@ -534,10 +549,11 @@
 				756BBDAF2CE2F737003B4021 /* Account.swift in Sources */,
 				75819F602CE1B0730018B986 /* ParameterViewController.swift in Sources */,
 				75819F612CE1B0730018B986 /* PayHistoryViewController.swift in Sources */,
-				75819F622CE1B0730018B986 /* PaymentViewController.swift in Sources */,
+				75819F622CE1B0730018B986 /* MeterDataInDayViewController.swift in Sources */,
 				75819F632CE1B0730018B986 /* PriceViewController.swift in Sources */,
 				75819F642CE1B0730018B986 /* RecordCalenderViewController.swift in Sources */,
 				75819F652CE1B0730018B986 /* ServiceProgressViewController.swift in Sources */,
+				756BBDBE2CE45DED003B4021 /* MeterDataInDay.swift in Sources */,
 				756BBDA72CE2EB7A003B4021 /* HeaderAfterLoginView.swift in Sources */,
 				75819F662CE1B0730018B986 /* WaterConsumeViewController.swift in Sources */,
 				75819F672CE1B0730018B986 /* WaterUpViewController.swift in Sources */,
