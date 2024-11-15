@@ -18,6 +18,7 @@
 		756BBDBC2CE438CE003B4021 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDBB2CE438CE003B4021 /* SessionManager.swift */; };
 		756BBDBE2CE45DED003B4021 /* MeterDataInDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDBD2CE45DED003B4021 /* MeterDataInDay.swift */; };
 		756BBDC12CE48619003B4021 /* ChooseDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDC02CE48619003B4021 /* ChooseDateView.swift */; };
+		756BBDC92CE6ECA5003B4021 /* DataSpreadSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDC82CE6ECA5003B4021 /* DataSpreadSheetView.swift */; };
 		75819F4C2CE1B0730018B986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75819F452CE1B0730018B986 /* Assets.xcassets */; };
 		75819F4E2CE1B0730018B986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75819F482CE1B0730018B986 /* LaunchScreen.storyboard */; };
 		75819F4F2CE1B0730018B986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75819F4A2CE1B0730018B986 /* Main.storyboard */; };
@@ -89,6 +90,7 @@
 		756BBDBB2CE438CE003B4021 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		756BBDBD2CE45DED003B4021 /* MeterDataInDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterDataInDay.swift; sourceTree = "<group>"; };
 		756BBDC02CE48619003B4021 /* ChooseDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDateView.swift; sourceTree = "<group>"; };
+		756BBDC82CE6ECA5003B4021 /* DataSpreadSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSpreadSheetView.swift; sourceTree = "<group>"; };
 		75819F022CE1B0730018B986 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		75819F032CE1B0730018B986 /* LookUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookUpViewController.swift; sourceTree = "<group>"; };
 		75819F042CE1B0730018B986 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				756BBDC02CE48619003B4021 /* ChooseDateView.swift */,
+				756BBDC82CE6ECA5003B4021 /* DataSpreadSheetView.swift */,
 			);
 			path = DataInDay;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				75819F682CE1B0730018B986 /* AppDelegate.swift in Sources */,
 				75819F692CE1B0730018B986 /* SceneDelegate.swift in Sources */,
 				75819F6A2CE1B0730018B986 /* BookCollectionViewCell.swift in Sources */,
+				756BBDC92CE6ECA5003B4021 /* DataSpreadSheetView.swift in Sources */,
 				75819F6B2CE1B0730018B986 /* HomeCollectionViewCell.swift in Sources */,
 				75819F6C2CE1B0730018B986 /* LookUpCollectionViewCell.swift in Sources */,
 				75819F6D2CE1B0730018B986 /* NewsCollectionViewCell.swift in Sources */,

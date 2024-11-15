@@ -88,4 +88,25 @@ class DataPersistenceManager {
             completion(.failure(error))
         }
     }
+    
+    func deleteAllAccounts(completion: (Result<Void, Error>) -> Void) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<AccountEntity> = AccountEntity.fetchRequest()
+        
+        do {
+            let accounts = try context.fetch(fetchRequest)
+            
+            for account in accounts {
+                context.delete(account)
+            }
+            
+            try context.save()
+            
+            completion(.success(()))
+        } catch {
+            completion(.failure(error))
+        }
+    }
 }

@@ -6,9 +6,6 @@
 //
 
 import Foundation
-struct DataInDayResponse: Decodable {
-    let results: [MeterDataInDay]
-}
 
 struct MeterDataInDay: Codable {
     let METER_NO: String

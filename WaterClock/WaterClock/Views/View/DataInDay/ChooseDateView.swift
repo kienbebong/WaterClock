@@ -7,8 +7,15 @@
 
 import UIKit
 
+protocol ChooseDateViewDelegate: AnyObject {
+    func didTappedSearch(with data: [MeterDataInDay])
+}
+
 class ChooseDateView: UIView {
     
+    var dataInDay: [MeterDataInDay]?
+    var delegate : ChooseDateViewDelegate?
+
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Chỉ số đồng hồ nước theo ngày"
@@ -19,15 +26,16 @@ class ChooseDateView: UIView {
     
     private let chooseLabel: UILabel = {
         let label = UILabel()
-        label.text = "Ngày: "
-        label.font = .systemFont(ofSize: 16)
+        label.text = "Ngày"
+        label.font = .systemFont(ofSize: 15)
         label.textColor = .black
         return label
     }()
-
+    
     public var dateTF: UITextField = {
         let text = UITextField()
         text.placeholder = "Chọn ngày"
+        text.font = .systemFont(ofSize: 15)
         text.textColor = .black
         text.backgroundColor = .white
         text.layer.borderWidth = 1.5
@@ -53,7 +61,7 @@ class ChooseDateView: UIView {
     
     func formatDate(date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM dd yyyy"
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: date)
     }
     
@@ -73,18 +81,72 @@ class ChooseDateView: UIView {
         dateTF.resignFirstResponder()
     }
     
+    private let noLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Meter No"
+        label.font = .systemFont(ofSize: 15)
+        label.textColor = .black
+        return label
+    }()
+    
+    private let meterTextFiled: UITextField = {
+        let text = UITextField()
+        text.placeholder = "No"
+        text.font = .systemFont(ofSize: 15)
+        text.textColor = .black
+        text.backgroundColor = .white
+        text.layer.borderWidth = 1.5
+        text.layer.borderColor = UIColor.black.cgColor
+        text.layer.cornerRadius = 10
+        text.clipsToBounds = true
+        text.textAlignment = .center
+        text.keyboardType = .numberPad
+        return text
+    }()
+    
     private let searchButton: UIButton = {
         let button = UIButton()
         button.setTitle("Tìm kiếm", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 15)
+        button.titleLabel?.font = .systemFont(ofSize: 18)
         button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
         button.tintColor = .white
         button.backgroundColor = .red
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
+        button.addTarget(self, action: #selector(handleDataInDay), for: .touchUpInside)
         return button
     }()
+    
+    @objc func handleDataInDay() {
+        var date = "\(dateTF.text ?? "")0000"
+        date = date.replacingOccurrences(of: "-", with: "")
+        let meterNo = meterTextFiled.text
+        var token: String?
+        
+        DataPersistenceManager.shared.fetchAccount { result in
+            switch result {
+            case .success(let account):
+                token = account.token
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        if token != nil {
+            
+            API.shared.getDataInDay(date: date, meterNo: meterNo!, token: token!) { result in
+                switch result {
+                case .success(let data):
+                    self.dataInDay = data
+                    self.delegate?.didTappedSearch(with: data)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    
+                }
+            }
+        } 
+    }
+    
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -97,6 +159,8 @@ class ChooseDateView: UIView {
         setUpTitleLabel()
         setUpChooseLabel()
         setUpTextFiled()
+        setUpMeterLabel()
+        setUpMeterTextField()
         setUpSearchButton()
     }
     
@@ -127,18 +191,39 @@ class ChooseDateView: UIView {
             make.top.equalToSuperview().offset(40)
             make.leading.equalTo(chooseLabel.snp.trailing).offset(10)
             make.height.equalTo(50)
-            make.width.equalTo(170)
+            make.width.equalTo(150)
+        }
+    }
+    
+    func setUpMeterLabel() {
+        addSubview(noLabel)
+        
+        noLabel.snp.makeConstraints { make in
+            make.top.equalTo(chooseLabel)
+            make.leading.equalTo(dateTF.snp.trailing).offset(10)
+        }
+    }
+    
+    func setUpMeterTextField() {
+        addSubview(meterTextFiled)
+        
+        meterTextFiled.snp.makeConstraints { make in
+            make.top.equalTo(dateTF)
+            make.leading.equalTo(noLabel.snp.trailing).offset(10)
+            make.height.equalTo(50)
+            make.width.equalTo(140)
         }
     }
     
     func setUpSearchButton() {
         addSubview(searchButton)
         searchButton.snp.makeConstraints { make in
-            make.top.equalTo(dateTF)
-            make.leading.equalTo(dateTF.snp.trailing).offset(30)
+            make.top.equalTo(dateTF.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
             make.height.equalTo(50)
-            make.width.equalTo(110)
+            make.width.equalTo(150)
         }
     }
+    
 
 }

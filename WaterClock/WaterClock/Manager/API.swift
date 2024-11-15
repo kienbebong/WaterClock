@@ -30,7 +30,7 @@ class API {
 //            if let dataString = String(data: data, encoding: .utf8) {
 //                        print("Response data: \(dataString)")
 //                    }
-            
+//            
             do {
                 let account = try JSONDecoder().decode(Account.self, from: data)
                 completion(.success(account))
@@ -40,5 +40,34 @@ class API {
         }
             
             task.resume()
+    }
+    
+    func getDataInDay(date: String, meterNo: String, token: String, completion: @escaping (Result<[MeterDataInDay], Error>) -> Void){
+        
+        guard let url = URL(string: "\(Constants.API_KEY)/GetMeterDataInDay?MeterNo=\(meterNo)&Date=\(date)&Token=\(token)") else {
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+//            if let dataString = String(data: data, encoding: .utf8) {
+//                print("Response data: \(dataString)")
+//            }
+
+                do {
+                    let result = try JSONDecoder().decode([MeterDataInDay].self, from: data)
+                    completion(.success(result))
+                } catch {
+                    completion(.failure(error))
+                }
+        }
+        
+        task.resume()
     }
 }
