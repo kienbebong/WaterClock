@@ -162,6 +162,77 @@ class HomeViewController: UIViewController {
             
             view.setNeedsLayout()
             view.layoutIfNeeded()
+        } else {
+            headerAfter?.isHidden = true
+            setUpHeaderView()
+            
+            signInView?.isHidden = false
+            
+            scrollView.snp.removeConstraints()
+            scrollView.snp.makeConstraints { make in
+                make.width.leading.trailing.equalToSuperview()
+                make.top.equalTo(headerView?.snp.bottom ?? view)
+                make.bottom.equalTo(view.safeAreaInsets).offset(-25)
+            }
+            
+            contentView.snp.removeConstraints()
+            contentView.snp.makeConstraints { make in
+                make.top.equalTo(scrollView)
+                make.leading.equalTo(scrollView.snp.leading)
+                make.bottom.equalTo(scrollView.snp.bottom)
+                make.width.equalTo(scrollView.snp.width)
+                make.height.greaterThanOrEqualTo(scrollView.snp.height)
+            }
+            
+            logoVTB.snp.removeConstraints()
+            logoVTB.snp.makeConstraints { make in
+                make.top.equalTo(contentView).offset(20)
+                make.leading.equalTo(contentView)
+                make.width.equalTo(150)
+                make.height.equalTo(70)
+            }
+            
+            homeCollectionView.snp.removeConstraints()
+            homeCollectionView.snp.makeConstraints { make in
+                make.top.equalTo(logoVTB.snp.bottom)
+                make.leading.trailing.equalTo(contentView)
+                make.width.equalTo(contentView)
+                make.height.equalTo(160)
+            }
+            
+            handbookView?.snp.removeConstraints()
+            handbookView?.snp.makeConstraints { make in
+                make.top.equalTo(homeCollectionView.snp.bottom).offset(540)
+                make.trailing.equalTo(contentView).offset(-20)
+                make.leading.equalTo(contentView).offset(20)
+                make.height.equalTo(100)
+            }
+            
+            newsLabel.snp.removeConstraints()
+            newsLabel.snp.makeConstraints { make in
+                make.top.equalTo(handbookView?.snp.bottom ?? view).offset(30)
+                make.height.equalTo(20)
+                make.leading.equalTo(contentView).offset(35)
+            }
+            
+            newsView?.snp.removeConstraints()
+            newsView?.snp.makeConstraints { make in
+                make.top.equalTo(handbookView?.snp.bottom ?? view).offset(55)
+                make.trailing.equalTo(contentView).offset(-35)
+                make.leading.equalTo(contentView).offset(35)
+                make.height.equalTo(210)
+            }
+            
+            callButton.snp.removeConstraints()
+            callButton.snp.makeConstraints { make in
+                make.top.equalTo(newsView!.snp.bottom).offset(20)
+                make.centerX.equalTo(contentView)
+                make.width.equalTo(300)
+                make.bottom.equalTo(contentView.snp.bottom)
+            }
+            
+            view.setNeedsLayout()
+            view.layoutIfNeeded()
         }
         
         if scrollView != nil {

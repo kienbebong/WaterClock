@@ -136,6 +136,9 @@ class SettingViewController: UIViewController {
                     print(error.localizedDescription)
                 }
             }
+            UserDefaults.standard.set(false, forKey: "isUserSignedIn")
+            self?.handleSignOut()
+            self?.navigationController?.popViewController(animated: true)
         }
         
         headerAfter?.snp.makeConstraints { make in
@@ -146,6 +149,11 @@ class SettingViewController: UIViewController {
         }
     
         headerAfter?.backgroundColor = .blue
+    }
+    
+    func handleSignOut() {
+        NotificationCenter.default.post(name: Notification.Name("UserDidSignIn"), object: false)
+        UserDefaults.standard.set(false, forKey: "isUserSignedIn")
     }
 }
 
