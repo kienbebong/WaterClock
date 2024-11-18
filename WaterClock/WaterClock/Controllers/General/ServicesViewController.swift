@@ -89,7 +89,7 @@ class ServicesViewController: UIViewController {
             stackView.addArrangedSubview(vc.view)
             vc.didMove(toParent: self)
         case 4:
-            let vc = CutCalenderViewController()
+            let vc = InstantByDateViewController()
             addChild(vc)
             stackView.addArrangedSubview(vc.view)
             vc.didMove(toParent: self)

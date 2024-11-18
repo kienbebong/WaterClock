@@ -76,8 +76,8 @@ class HeaderSettingView: UIView {
     func setUpBackLogo() {
         addSubview(backLogoImage)
         backLogoImage.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(93)
-            make.leading.equalToSuperview().offset(10)
+            make.top.equalToSuperview().offset(50)
+            make.leading.equalToSuperview().offset(20)
             make.width.height.equalTo(28)
         }
         
@@ -89,7 +89,7 @@ class HeaderSettingView: UIView {
         addSubview(settingImage)
         settingImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(90)
-            make.leading.equalTo(backLogoImage.snp.trailing).offset(20)
+            make.leading.equalToSuperview().offset(20)
             make.size.equalTo(CGSize(width: 30, height: 30))
         }
     }
@@ -97,7 +97,7 @@ class HeaderSettingView: UIView {
     func setUpSettingLabel() {
         addSubview(settingLabel)
         settingLabel.snp.makeConstraints { make in
-            make.top.equalTo(settingImage)
+            make.centerY.equalTo(settingImage)
             make.leading.equalTo(settingImage).offset(40)
             make.width.equalTo(100)
         }

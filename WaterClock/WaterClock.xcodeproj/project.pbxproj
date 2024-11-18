@@ -19,6 +19,9 @@
 		756BBDBE2CE45DED003B4021 /* MeterDataInDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDBD2CE45DED003B4021 /* MeterDataInDay.swift */; };
 		756BBDC12CE48619003B4021 /* ChooseDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDC02CE48619003B4021 /* ChooseDateView.swift */; };
 		756BBDC92CE6ECA5003B4021 /* DataSpreadSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDC82CE6ECA5003B4021 /* DataSpreadSheetView.swift */; };
+		756BBDCB2CE73BEC003B4021 /* InstantByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDCA2CE73BEC003B4021 /* InstantByDate.swift */; };
+		756BBDCD2CE73F9A003B4021 /* ChooseInstantDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDCC2CE73F9A003B4021 /* ChooseInstantDateView.swift */; };
+		756BBDCF2CE74F7D003B4021 /* DataInstantSpreadsheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDCE2CE74F7D003B4021 /* DataInstantSpreadsheetView.swift */; };
 		75819F4C2CE1B0730018B986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75819F452CE1B0730018B986 /* Assets.xcassets */; };
 		75819F4E2CE1B0730018B986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75819F482CE1B0730018B986 /* LaunchScreen.storyboard */; };
 		75819F4F2CE1B0730018B986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75819F4A2CE1B0730018B986 /* Main.storyboard */; };
@@ -37,7 +40,7 @@
 		75819F5C2CE1B0730018B986 /* CollectionLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F102CE1B0730018B986 /* CollectionLocationViewController.swift */; };
 		75819F5D2CE1B0730018B986 /* ContactLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F112CE1B0730018B986 /* ContactLocationViewController.swift */; };
 		75819F5E2CE1B0730018B986 /* ContractWaterConsumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F122CE1B0730018B986 /* ContractWaterConsumeViewController.swift */; };
-		75819F5F2CE1B0730018B986 /* CutCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F132CE1B0730018B986 /* CutCalenderViewController.swift */; };
+		75819F5F2CE1B0730018B986 /* InstantByDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F132CE1B0730018B986 /* InstantByDateViewController.swift */; };
 		75819F602CE1B0730018B986 /* ParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F142CE1B0730018B986 /* ParameterViewController.swift */; };
 		75819F612CE1B0730018B986 /* PayHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F152CE1B0730018B986 /* PayHistoryViewController.swift */; };
 		75819F622CE1B0730018B986 /* MeterDataInDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F162CE1B0730018B986 /* MeterDataInDayViewController.swift */; };
@@ -91,6 +94,9 @@
 		756BBDBD2CE45DED003B4021 /* MeterDataInDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterDataInDay.swift; sourceTree = "<group>"; };
 		756BBDC02CE48619003B4021 /* ChooseDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDateView.swift; sourceTree = "<group>"; };
 		756BBDC82CE6ECA5003B4021 /* DataSpreadSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSpreadSheetView.swift; sourceTree = "<group>"; };
+		756BBDCA2CE73BEC003B4021 /* InstantByDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantByDate.swift; sourceTree = "<group>"; };
+		756BBDCC2CE73F9A003B4021 /* ChooseInstantDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseInstantDateView.swift; sourceTree = "<group>"; };
+		756BBDCE2CE74F7D003B4021 /* DataInstantSpreadsheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInstantSpreadsheetView.swift; sourceTree = "<group>"; };
 		75819F022CE1B0730018B986 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		75819F032CE1B0730018B986 /* LookUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookUpViewController.swift; sourceTree = "<group>"; };
 		75819F042CE1B0730018B986 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +112,7 @@
 		75819F102CE1B0730018B986 /* CollectionLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLocationViewController.swift; sourceTree = "<group>"; };
 		75819F112CE1B0730018B986 /* ContactLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLocationViewController.swift; sourceTree = "<group>"; };
 		75819F122CE1B0730018B986 /* ContractWaterConsumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractWaterConsumeViewController.swift; sourceTree = "<group>"; };
-		75819F132CE1B0730018B986 /* CutCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutCalenderViewController.swift; sourceTree = "<group>"; };
+		75819F132CE1B0730018B986 /* InstantByDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantByDateViewController.swift; sourceTree = "<group>"; };
 		75819F142CE1B0730018B986 /* ParameterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterViewController.swift; sourceTree = "<group>"; };
 		75819F152CE1B0730018B986 /* PayHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayHistoryViewController.swift; sourceTree = "<group>"; };
 		75819F162CE1B0730018B986 /* MeterDataInDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterDataInDayViewController.swift; sourceTree = "<group>"; };
@@ -183,17 +189,20 @@
 			children = (
 				756BBDAE2CE2F737003B4021 /* Account.swift */,
 				756BBDBD2CE45DED003B4021 /* MeterDataInDay.swift */,
+				756BBDCA2CE73BEC003B4021 /* InstantByDate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		756BBDBF2CE485FD003B4021 /* DataInDay */ = {
+		756BBDBF2CE485FD003B4021 /* ServiceView */ = {
 			isa = PBXGroup;
 			children = (
 				756BBDC02CE48619003B4021 /* ChooseDateView.swift */,
 				756BBDC82CE6ECA5003B4021 /* DataSpreadSheetView.swift */,
+				756BBDCC2CE73F9A003B4021 /* ChooseInstantDateView.swift */,
+				756BBDCE2CE74F7D003B4021 /* DataInstantSpreadsheetView.swift */,
 			);
-			path = DataInDay;
+			path = ServiceView;
 			sourceTree = "<group>";
 		};
 		75819F072CE1B0730018B986 /* Core */ = {
@@ -228,7 +237,7 @@
 				75819F102CE1B0730018B986 /* CollectionLocationViewController.swift */,
 				75819F112CE1B0730018B986 /* ContactLocationViewController.swift */,
 				75819F122CE1B0730018B986 /* ContractWaterConsumeViewController.swift */,
-				75819F132CE1B0730018B986 /* CutCalenderViewController.swift */,
+				75819F132CE1B0730018B986 /* InstantByDateViewController.swift */,
 				75819F142CE1B0730018B986 /* ParameterViewController.swift */,
 				75819F152CE1B0730018B986 /* PayHistoryViewController.swift */,
 				75819F162CE1B0730018B986 /* MeterDataInDayViewController.swift */,
@@ -335,7 +344,7 @@
 		75819F432CE1B0730018B986 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				756BBDBF2CE485FD003B4021 /* DataInDay */,
+				756BBDBF2CE485FD003B4021 /* ServiceView */,
 				75819F342CE1B0730018B986 /* Header */,
 				75819F392CE1B0730018B986 /* HomeController */,
 				75819F3B2CE1B0730018B986 /* LookUpController */,
@@ -532,10 +541,12 @@
 			files = (
 				75819F502CE1B0730018B986 /* HomeViewController.swift in Sources */,
 				75819F512CE1B0730018B986 /* LookUpViewController.swift in Sources */,
+				756BBDCF2CE74F7D003B4021 /* DataInstantSpreadsheetView.swift in Sources */,
 				75819F522CE1B0730018B986 /* NewsViewController.swift in Sources */,
 				75819F532CE1B0730018B986 /* NotificationViewController.swift in Sources */,
 				75819F542CE1B0730018B986 /* TransactionViewController.swift in Sources */,
 				75819F552CE1B0730018B986 /* BookViewController.swift in Sources */,
+				756BBDCB2CE73BEC003B4021 /* InstantByDate.swift in Sources */,
 				756BBDAA2CE2F302003B4021 /* API.swift in Sources */,
 				75819F562CE1B0730018B986 /* ContactViewController.swift in Sources */,
 				75819F572CE1B0730018B986 /* OnlineChargeViewController.swift in Sources */,
@@ -548,8 +559,9 @@
 				75819F5C2CE1B0730018B986 /* CollectionLocationViewController.swift in Sources */,
 				75819F5D2CE1B0730018B986 /* ContactLocationViewController.swift in Sources */,
 				75819F5E2CE1B0730018B986 /* ContractWaterConsumeViewController.swift in Sources */,
-				75819F5F2CE1B0730018B986 /* CutCalenderViewController.swift in Sources */,
+				75819F5F2CE1B0730018B986 /* InstantByDateViewController.swift in Sources */,
 				756BBDAF2CE2F737003B4021 /* Account.swift in Sources */,
+				756BBDCD2CE73F9A003B4021 /* ChooseInstantDateView.swift in Sources */,
 				75819F602CE1B0730018B986 /* ParameterViewController.swift in Sources */,
 				75819F612CE1B0730018B986 /* PayHistoryViewController.swift in Sources */,
 				75819F622CE1B0730018B986 /* MeterDataInDayViewController.swift in Sources */,

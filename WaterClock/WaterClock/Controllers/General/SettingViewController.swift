@@ -127,6 +127,17 @@ class SettingViewController: UIViewController {
             self?.navigationController?.popViewController(animated: true)
         }
         
+        headerAfter?.onSignOutTapped = { [weak self] in
+            DataPersistenceManager.shared.deleteAllAccounts { deleteResult in
+                switch deleteResult {
+                case .success():
+                    print("Deleted Account")
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
+        
         headerAfter?.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()

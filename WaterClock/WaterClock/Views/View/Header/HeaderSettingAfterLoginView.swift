@@ -9,7 +9,7 @@ import UIKit
 
 class HeaderSettingAfterLoginView: UIView {
 
-    var onSignInTapped: (() -> Void)?
+    var onSignOutTapped: (() -> Void)?
     var back: (() -> Void)?
     
     private let backLogoImage: UIImageView = {
@@ -37,7 +37,7 @@ class HeaderSettingAfterLoginView: UIView {
         return label
     }()
     
-    private let logInLabel: UILabel = {
+    private let logOutLabel: UILabel = {
         let label = UILabel()
         label.text = "ĐĂNG XUẤT"
         label.textColor = .blue
@@ -52,7 +52,7 @@ class HeaderSettingAfterLoginView: UIView {
         return image
     }()
 
-    private let signInView: UIView = {
+    private let signOutView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 15
@@ -83,7 +83,7 @@ class HeaderSettingAfterLoginView: UIView {
         self.setUpSettingLabel()
         self.setUpUserName()
 
-        self.setUpSignInView()
+        self.setUpSignOutView()
     }
     
     required init?(coder: NSCoder) {
@@ -93,8 +93,8 @@ class HeaderSettingAfterLoginView: UIView {
     func setUpBackLogo() {
         addSubview(backLogoImage)
         backLogoImage.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(93)
-            make.leading.equalToSuperview().offset(10)
+            make.top.equalToSuperview().offset(50)
+            make.leading.equalToSuperview().offset(20)
             make.width.height.equalTo(28)
         }
         
@@ -106,7 +106,7 @@ class HeaderSettingAfterLoginView: UIView {
         addSubview(settingImage)
         settingImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(80)
-            make.leading.equalTo(backLogoImage.snp.trailing).offset(20)
+            make.leading.equalToSuperview().offset(20)
             make.size.equalTo(CGSize(width: 45, height: 45))
         }
     }
@@ -128,40 +128,40 @@ class HeaderSettingAfterLoginView: UIView {
         }
     }
     
-    func setUpSignInView() {
-        addSubview(signInView)
-        signInView.snp.makeConstraints { make in
+    func setUpSignOutView() {
+        addSubview(signOutView)
+        signOutView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(80)
             make.trailing.equalToSuperview().offset(-20)
             make.width.equalTo(140)
             make.height.equalTo(50)
         }
         
-        signInView.addSubview(logoImage)
+        signOutView.addSubview(logoImage)
         logoImage.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(10)
             make.width.height.equalTo(20)
         }
         
-        signInView.addSubview(logInLabel)
-        logInLabel.snp.makeConstraints { make in
+        signOutView.addSubview(logOutLabel)
+        logOutLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalTo(logoImage).offset(28)
             make.height.equalTo(logoImage)
             make.width.equalTo(200)
         }
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleSignInViewTap))
-        signInView.addGestureRecognizer(tapGesture)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleSignOutTap))
+        signOutView.addGestureRecognizer(tapGesture)
     }
     
     @objc private func backHome() {
         back?()
     }
     
-    @objc private func handleSignInViewTap() {
-        onSignInTapped?()
+    @objc private func handleSignOutTap() {
+        onSignOutTapped?()
     }
 
 

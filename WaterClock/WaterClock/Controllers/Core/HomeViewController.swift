@@ -35,7 +35,9 @@ class HomeViewController: UIViewController {
     
     private let homeCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 219.5, height: 80)
+        let itemWidth = (UIScreen.main.bounds.width - 3) / 2
+        let itemHeight: CGFloat = 80
+        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = 1
@@ -94,8 +96,60 @@ class HomeViewController: UIViewController {
             headerView?.isHidden = true
             setUpHeaderAfterLogin()
             signInView?.isHidden = true
+            
+            scrollView.snp.removeConstraints()
+            scrollView.snp.makeConstraints { make in
+                make.width.leading.trailing.equalToSuperview()
+                make.top.equalTo(headerView?.snp.bottom ?? view)
+                make.bottom.equalTo(view.safeAreaInsets).offset(-25)
+            }
+            
+            contentView.snp.removeConstraints()
+            contentView.snp.makeConstraints { make in
+                make.top.equalTo(scrollView)
+                make.leading.equalTo(scrollView.snp.leading)
+                make.bottom.equalTo(scrollView.snp.bottom)
+                make.width.equalTo(scrollView.snp.width)
+                make.height.greaterThanOrEqualTo(scrollView.snp.height)
+            }
+            
+            logoVTB.snp.removeConstraints()
+            logoVTB.snp.makeConstraints { make in
+                make.top.equalTo(contentView).offset(20)
+                make.leading.equalTo(contentView)
+                make.width.equalTo(150)
+                make.height.equalTo(70)
+            }
+            
+            homeCollectionView.snp.removeConstraints()
+            homeCollectionView.snp.makeConstraints { make in
+                make.top.equalTo(logoVTB.snp.bottom)
+                make.leading.trailing.equalTo(contentView)
+                make.width.equalTo(contentView)
+                make.height.equalTo(160)
+            }
+            
+            handbookView?.snp.removeConstraints()
             handbookView?.snp.makeConstraints { make in
                 make.top.equalTo(homeCollectionView.snp.bottom).offset(10)
+                make.trailing.equalTo(contentView).offset(-20)
+                make.leading.equalTo(contentView).offset(20)
+                make.height.equalTo(100)
+            }
+            
+            newsLabel.snp.removeConstraints()
+            newsLabel.snp.makeConstraints { make in
+                make.top.equalTo(handbookView?.snp.bottom ?? view).offset(30)
+                make.height.equalTo(20)
+                make.leading.equalTo(contentView).offset(35)
+            }
+            
+            newsView?.snp.removeConstraints()
+            newsView?.snp.makeConstraints { make in
+                make.top.equalTo(handbookView?.snp.bottom ?? view).offset(55)
+                make.trailing.equalTo(contentView).offset(-35)
+                make.leading.equalTo(contentView).offset(35)
+                make.height.equalTo(210)
             }
             
             callButton.snp.removeConstraints()
@@ -103,10 +157,16 @@ class HomeViewController: UIViewController {
                 make.top.equalTo(newsView!.snp.bottom).offset(20)
                 make.centerX.equalTo(contentView)
                 make.width.equalTo(300)
-                make.height.equalTo(50)
+                make.bottom.equalTo(contentView.snp.bottom)
             }
             
             view.setNeedsLayout()
+            view.layoutIfNeeded()
+        }
+        
+        if scrollView != nil {
+            let contentHeight = callButton.frame.maxY
+            scrollView.contentSize = CGSize(width: scrollView.frame.width, height: contentHeight)
         }
     }
     
@@ -228,7 +288,7 @@ class HomeViewController: UIViewController {
         handbookView = HandbookHomeView(frame: .zero)
         contentView.addSubview(handbookView!)
         handbookView?.snp.makeConstraints { make in
-            make.top.equalTo(signInView?.snp.bottom ?? view).offset(30)
+            make.top.equalTo(homeCollectionView.snp.bottom).offset(540)
             make.trailing.equalTo(contentView).offset(-20)
             make.leading.equalTo(contentView).offset(20)
             make.height.equalTo(100)
@@ -306,7 +366,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if indexPath.row == 0 {
             cell.configure(with: UIImage(systemName: "list.bullet.clipboard") ?? UIImage(), text: "Dữ liệu nước theo ngày")
         } else if indexPath.row == 1 {
-            cell.configure(with: UIImage(systemName: "calendar.badge.clock") ?? UIImage(), text: "Xem lịch cắt nước")
+            cell.configure(with: UIImage(systemName: "calendar.badge.clock") ?? UIImage(), text: "Dữ liệu báo cáo")
         } else if indexPath.row == 2 {
             cell.configure(with: UIImage(systemName: "checklist") ?? UIImage(), text: "Tiến độ dịch vụ")
         } else {
