@@ -136,6 +136,7 @@ class SettingViewController: UIViewController {
                     print(error.localizedDescription)
                 }
             }
+            
             UserDefaults.standard.set(false, forKey: "isUserSignedIn")
             self?.handleSignOut()
             self?.navigationController?.popViewController(animated: true)

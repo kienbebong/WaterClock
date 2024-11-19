@@ -29,6 +29,10 @@ class MeterDataInDayViewController: UIViewController, ChooseDateViewDelegate {
     
     func didTappedSearch(with data: [MeterDataInDay]) {
             DispatchQueue.main.async {
+                if let existingView = self.dataView {
+                    existingView.spreadsheetView.isHidden = true
+                    existingView.spreadsheetView.removeFromSuperview()
+                }
                 self.dataView = DataSpreadSheetView(frame: .zero)
                 self.view.addSubview(self.dataView!)
                 self.dataView?.snp.makeConstraints { make in
@@ -39,6 +43,7 @@ class MeterDataInDayViewController: UIViewController, ChooseDateViewDelegate {
                 }
                 self.dataView?.updateData(data)
                 self.dataView?.spreadsheetView.reloadData()
+                
             }
     }
 

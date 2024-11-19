@@ -107,7 +107,7 @@ class ChooseInstantDateView: UIView {
     }
     
     private func createToolbar() -> UIToolbar {
-        let toolbar = UIToolbar()
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
         toolbar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donePressed))
@@ -118,7 +118,7 @@ class ChooseInstantDateView: UIView {
     }
     
     private func createToolbar2() -> UIToolbar {
-        let toolbar = UIToolbar()
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
         toolbar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donePressed2))
@@ -219,7 +219,6 @@ class ChooseInstantDateView: UIView {
         dateTF.inputAccessoryView = createToolbar()
         datePicker.addTarget(self, action: #selector(dateChange(picker:)), for: UIControl.Event.valueChanged)
         dateTF.text = formatDate(date: Date())
-        
         dateTF2.inputView = datePicker2
         dateTF2.inputAccessoryView = createToolbar2()
         datePicker.addTarget(self, action: #selector(dateChange2(picker:)), for: UIControl.Event.valueChanged)

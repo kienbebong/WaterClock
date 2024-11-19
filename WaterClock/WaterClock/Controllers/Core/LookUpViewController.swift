@@ -37,8 +37,18 @@ class LookUpViewController: UIViewController {
         setUpChart()
         setUpCollection()
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         if SessionManager.shared.isUserSignedIn() {
             headerView?.handleAfterSignIn()
+            view.setNeedsLayout()
+        } else {
+            headerView?.handleAfterSignOut()
+            view.setNeedsLayout()
         }
     }
     

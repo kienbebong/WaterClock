@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6E216AD9360101BDE28856FE /* Pods_WaterClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D86C564BB2D735952D4AD37A /* Pods_WaterClock.framework */; };
+		7510AA2A2CEC1EA700BEDF8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7510AA292CEC1EA700BEDF8C /* Main.storyboard */; };
 		756BBDA52CE1BCF3003B4021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */; };
 		756BBDA72CE2EB7A003B4021 /* HeaderAfterLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */; };
 		756BBDAA2CE2F302003B4021 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA92CE2F301003B4021 /* API.swift */; };
@@ -24,7 +25,6 @@
 		756BBDCF2CE74F7D003B4021 /* DataInstantSpreadsheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDCE2CE74F7D003B4021 /* DataInstantSpreadsheetView.swift */; };
 		75819F4C2CE1B0730018B986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75819F452CE1B0730018B986 /* Assets.xcassets */; };
 		75819F4E2CE1B0730018B986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75819F482CE1B0730018B986 /* LaunchScreen.storyboard */; };
-		75819F4F2CE1B0730018B986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75819F4A2CE1B0730018B986 /* Main.storyboard */; };
 		75819F502CE1B0730018B986 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F022CE1B0730018B986 /* HomeViewController.swift */; };
 		75819F512CE1B0730018B986 /* LookUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F032CE1B0730018B986 /* LookUpViewController.swift */; };
 		75819F522CE1B0730018B986 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F042CE1B0730018B986 /* NewsViewController.swift */; };
@@ -83,6 +83,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7510AA292CEC1EA700BEDF8C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAfterLoginView.swift; sourceTree = "<group>"; };
 		756BBDA92CE2F301003B4021 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -154,7 +155,6 @@
 		75819F452CE1B0730018B986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75819F462CE1B0730018B986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75819F472CE1B0730018B986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		75819F492CE1B0730018B986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75E1EC002CCF3BDC006043D9 /* WaterClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A3E3152148BDE6C21428E9 /* Pods-WaterClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterClock.release.xcconfig"; path = "Target Support Files/Pods-WaterClock/Pods-WaterClock.release.xcconfig"; sourceTree = "<group>"; };
 		D86C564BB2D735952D4AD37A /* Pods_WaterClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -375,8 +375,8 @@
 				75819F452CE1B0730018B986 /* Assets.xcassets */,
 				75819F462CE1B0730018B986 /* Info.plist */,
 				75819F482CE1B0730018B986 /* LaunchScreen.storyboard */,
-				75819F4A2CE1B0730018B986 /* Main.storyboard */,
 				756BBDB02CE329A1003B4021 /* AccountModel.xcdatamodeld */,
+				7510AA292CEC1EA700BEDF8C /* Main.storyboard */,
 			);
 			path = WaterClock;
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 				756BBDA52CE1BCF3003B4021 /* GoogleService-Info.plist in Resources */,
 				75819F4C2CE1B0730018B986 /* Assets.xcassets in Resources */,
 				75819F4E2CE1B0730018B986 /* LaunchScreen.storyboard in Resources */,
-				75819F4F2CE1B0730018B986 /* Main.storyboard in Resources */,
+				7510AA2A2CEC1EA700BEDF8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,14 +618,6 @@
 				75819F472CE1B0730018B986 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		75819F4A2CE1B0730018B986 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				75819F492CE1B0730018B986 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

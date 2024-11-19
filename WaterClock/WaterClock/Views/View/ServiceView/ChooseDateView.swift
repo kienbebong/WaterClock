@@ -66,7 +66,8 @@ class ChooseDateView: UIView {
     }
     
     private func createToolbar() -> UIToolbar {
-        let toolbar = UIToolbar()
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
+        toolbar.translatesAutoresizingMaskIntoConstraints = false
         toolbar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donePressed))

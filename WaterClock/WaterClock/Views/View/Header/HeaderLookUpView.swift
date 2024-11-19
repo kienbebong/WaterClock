@@ -126,6 +126,12 @@ class HeaderLookUpView: UIView {
         
     }
     
+    func handleAfterSignOut() {
+        signInView.isHidden = false
+        self.detailLabel.text = "để sử dụng tất cả tính năng của ứng dụng VTB"
+        
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .blue

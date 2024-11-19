@@ -101,7 +101,7 @@ class HomeViewController: UIViewController {
             scrollView.snp.makeConstraints { make in
                 make.width.leading.trailing.equalToSuperview()
                 make.top.equalTo(headerView?.snp.bottom ?? view)
-                make.bottom.equalTo(view.safeAreaInsets).offset(-25)
+                make.bottom.equalTo(view.safeAreaInsets.top).offset(-100)
             }
             
             contentView.snp.removeConstraints()
@@ -157,7 +157,7 @@ class HomeViewController: UIViewController {
                 make.top.equalTo(newsView!.snp.bottom).offset(20)
                 make.centerX.equalTo(contentView)
                 make.width.equalTo(300)
-                make.bottom.equalTo(contentView.snp.bottom)
+                make.height.equalTo(50)
             }
             
             view.setNeedsLayout()
@@ -227,8 +227,8 @@ class HomeViewController: UIViewController {
             callButton.snp.makeConstraints { make in
                 make.top.equalTo(newsView!.snp.bottom).offset(20)
                 make.centerX.equalTo(contentView)
-                make.width.equalTo(300)
                 make.bottom.equalTo(contentView.snp.bottom)
+                make.width.equalTo(300)
             }
             
             view.setNeedsLayout()
