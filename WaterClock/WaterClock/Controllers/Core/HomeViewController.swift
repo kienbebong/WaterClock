@@ -280,12 +280,18 @@ class HomeViewController: UIViewController {
             self?.navigationController?.pushViewController(destinationVC, animated: true)
         }
         
+        headerView?.onSearchTapped = { [weak self] in
+            let destinattionVC = SearchViewController()
+            destinattionVC.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(destinattionVC, animated: true)
+        }
+        
         self.view.addSubview(headerView!)
         headerView?.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.trailing.equalToSuperview()
             make.leading.equalToSuperview()
-            make.height.equalTo(180)
+            make.height.equalTo(150)
         }
     }
     
@@ -416,12 +422,18 @@ class HomeViewController: UIViewController {
             self?.navigationController?.pushViewController(destinationVC, animated: true)
         }
         
+        headerAfter?.onSettingInTapped = { [weak self] in
+            let destinationVC = SearchViewController()
+            destinationVC.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(destinationVC, animated: true)
+        }
+        
         self.view.addSubview(headerAfter!)
         headerAfter?.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.trailing.equalToSuperview()
             make.leading.equalToSuperview()
-            make.height.equalTo(180)
+            make.height.equalTo(150)
         }
     }
 }

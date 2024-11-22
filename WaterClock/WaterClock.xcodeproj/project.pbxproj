@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6E216AD9360101BDE28856FE /* Pods_WaterClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D86C564BB2D735952D4AD37A /* Pods_WaterClock.framework */; };
 		7510AA2A2CEC1EA700BEDF8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7510AA292CEC1EA700BEDF8C /* Main.storyboard */; };
+		7510AA2C2CEC4BB900BEDF8C /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA2B2CEC4BB900BEDF8C /* LocationView.swift */; };
+		7510AA2E2CF012C200BEDF8C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA2D2CF012C200BEDF8C /* SearchViewController.swift */; };
+		7510AA302CF0151D00BEDF8C /* HeaderSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA2F2CF0151D00BEDF8C /* HeaderSearchView.swift */; };
 		756BBDA52CE1BCF3003B4021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */; };
 		756BBDA72CE2EB7A003B4021 /* HeaderAfterLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */; };
 		756BBDAA2CE2F302003B4021 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA92CE2F301003B4021 /* API.swift */; };
@@ -84,6 +87,9 @@
 
 /* Begin PBXFileReference section */
 		7510AA292CEC1EA700BEDF8C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7510AA2B2CEC4BB900BEDF8C /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		7510AA2D2CF012C200BEDF8C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7510AA2F2CF0151D00BEDF8C /* HeaderSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSearchView.swift; sourceTree = "<group>"; };
 		756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAfterLoginView.swift; sourceTree = "<group>"; };
 		756BBDA92CE2F301003B4021 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 				756BBDC82CE6ECA5003B4021 /* DataSpreadSheetView.swift */,
 				756BBDCC2CE73F9A003B4021 /* ChooseInstantDateView.swift */,
 				756BBDCE2CE74F7D003B4021 /* DataInstantSpreadsheetView.swift */,
+				7510AA2B2CEC4BB900BEDF8C /* LocationView.swift */,
 			);
 			path = ServiceView;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 				75819F0C2CE1B0730018B986 /* SettingViewController.swift */,
 				75819F0D2CE1B0730018B986 /* SignInViewController.swift */,
 				75819F0E2CE1B0730018B986 /* TabBarViewController.swift */,
+				7510AA2D2CF012C200BEDF8C /* SearchViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 				75819F332CE1B0730018B986 /* TransactionHeaderView.swift */,
 				756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */,
 				756BBDB92CE348AB003B4021 /* HeaderSettingAfterLoginView.swift */,
+				7510AA2F2CF0151D00BEDF8C /* HeaderSearchView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -575,8 +584,10 @@
 				75819F682CE1B0730018B986 /* AppDelegate.swift in Sources */,
 				75819F692CE1B0730018B986 /* SceneDelegate.swift in Sources */,
 				75819F6A2CE1B0730018B986 /* BookCollectionViewCell.swift in Sources */,
+				7510AA2E2CF012C200BEDF8C /* SearchViewController.swift in Sources */,
 				756BBDC92CE6ECA5003B4021 /* DataSpreadSheetView.swift in Sources */,
 				75819F6B2CE1B0730018B986 /* HomeCollectionViewCell.swift in Sources */,
+				7510AA302CF0151D00BEDF8C /* HeaderSearchView.swift in Sources */,
 				75819F6C2CE1B0730018B986 /* LookUpCollectionViewCell.swift in Sources */,
 				75819F6D2CE1B0730018B986 /* NewsCollectionViewCell.swift in Sources */,
 				756BBDBC2CE438CE003B4021 /* SessionManager.swift in Sources */,
@@ -596,6 +607,7 @@
 				75819F7A2CE1B0730018B986 /* TransactionHeaderView.swift in Sources */,
 				75819F7B2CE1B0730018B986 /* FeatureHomeView.swift in Sources */,
 				75819F7C2CE1B0730018B986 /* HandbookHomeView.swift in Sources */,
+				7510AA2C2CEC4BB900BEDF8C /* LocationView.swift in Sources */,
 				75819F7D2CE1B0730018B986 /* NewsView.swift in Sources */,
 				75819F7E2CE1B0730018B986 /* SignInHomeView.swift in Sources */,
 				75819F7F2CE1B0730018B986 /* CollectionLookUpView.swift in Sources */,

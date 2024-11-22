@@ -187,7 +187,6 @@ class SignInViewController: UIViewController {
         textField.layer.borderWidth = 2
         textField.layer.borderColor = UIColor.gray.cgColor
         textField.layer.cornerRadius = 10
-        textField.keyboardType = .phonePad
         textField.attributedPlaceholder = NSAttributedString(string: "UserName", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         textField.leftViewMode = .always

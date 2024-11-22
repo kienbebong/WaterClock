@@ -35,5 +35,9 @@
             </dict>
         </dict>
     </dict>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Ứng dụng cần quyền truy cập vị trí của bạn để hiển thị bản đồ.</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>Ứng dụng cần quyền truy cập vị trí của bạn để hiển thị bản đồ.</string>
 </dict>
 </plist>

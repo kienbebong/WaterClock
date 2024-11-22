@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 protocol ChooseDateViewDelegate: AnyObject {
     func didTappedSearch(with data: [MeterDataInDay])
 }

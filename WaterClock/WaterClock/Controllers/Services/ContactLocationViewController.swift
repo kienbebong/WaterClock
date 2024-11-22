@@ -6,13 +6,25 @@
 //
 
 import UIKit
+import MapKit
 
 class ContactLocationViewController: UIViewController {
 
+    var mapView: LocationView?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
-
+           
+        setUpMap()
+    }
+    
+    func setUpMap() {
+        mapView = LocationView(frame: .zero)
+        view.addSubview(mapView!)
+        mapView?.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.trailing.top.bottom.equalToSuperview()
+        }
     }
 
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class HeaderAfterLoginView: UIView {
     var onSettingInTapped: (() -> Void)?
+    var onSearchInTapped: (() -> Void)?
     
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
@@ -21,6 +22,7 @@ class HeaderAfterLoginView: UIView {
     private let glassLogo: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(systemName: "magnifyingglass")
+        image.isUserInteractionEnabled = true
         image.tintColor = .white
         return image
     }()
@@ -97,6 +99,9 @@ class HeaderAfterLoginView: UIView {
         
         let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(openSettingConTroller))
         signInImage.addGestureRecognizer(tapGesture1)
+        
+        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(openSearchTab))
+        glassLogo.addGestureRecognizer(tapGesture2)
     }
     
     required init?(coder: NSCoder) {
@@ -106,7 +111,7 @@ class HeaderAfterLoginView: UIView {
     func setUpPhoneLogo() {
         addSubview(phoneLogo)
         phoneLogo.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(80)
+            make.top.equalToSuperview().offset(60)
             make.trailing.equalToSuperview().offset(-20)
             make.width.height.equalTo(30)
         }
@@ -131,7 +136,7 @@ class HeaderAfterLoginView: UIView {
     func setUpSignInImage() {
         addSubview(signInImage)
         signInImage.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(90)
+            make.top.equalToSuperview().offset(60)
             make.leading.equalToSuperview().offset(15)
             make.width.height.equalTo(60)
         }
@@ -157,12 +162,16 @@ class HeaderAfterLoginView: UIView {
             make.top.equalTo(phoneLogo.snp.bottom).offset(10)
             make.leading.equalTo(glassLogo).offset(-10)
             make.trailing.equalTo(phoneLogo).offset(10)
-            make.height.equalTo(50)
+            make.height.equalTo(40)
         }
     }
     
     @objc private func openSettingConTroller() {
         onSettingInTapped?()
+    }
+    
+    @objc private func openSearchTab() {
+        onSearchInTapped?()
     }
 
 }

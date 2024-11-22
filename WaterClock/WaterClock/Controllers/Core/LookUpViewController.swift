@@ -66,7 +66,7 @@ class LookUpViewController: UIViewController {
         headerView?.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(180)
+            make.height.equalTo(150)
         }
     }
     
@@ -106,8 +106,8 @@ class LookUpViewController: UIViewController {
         contentView.addSubview(collectionView!)
         collectionView?.snp.makeConstraints { make in
             make.top.equalTo(imageChart.snp.bottom).offset(10)
-            make.leading.equalToSuperview().offset(10)
-            make.trailing.equalToSuperview().offset(-10)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
             make.bottom.equalTo(contentView.snp.bottom)
         }
         collectionView?.delegate = self

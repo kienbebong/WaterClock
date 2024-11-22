@@ -79,7 +79,7 @@ class FeatureTransactionView: UIView {
         fixButton.snp.makeConstraints { make in
             make.top.equalTo(onlinePayButton.snp.bottom).offset(20)
             make.leading.equalTo(onlinePayButton)
-            make.width.equalTo(190)
+            make.width.equalTo(UIScreen.main.bounds.width / 3)
             make.height.equalTo(onlinePayButton)
         }
     }
@@ -89,7 +89,7 @@ class FeatureTransactionView: UIView {
         indexButton.snp.makeConstraints { make in
             make.top.equalTo(fixButton)
             make.trailing.equalTo(onlinePayButton)
-            make.width.equalTo(190)
+            make.width.equalTo(UIScreen.main.bounds.width / 3)
 
             make.height.equalTo(onlinePayButton)
         }

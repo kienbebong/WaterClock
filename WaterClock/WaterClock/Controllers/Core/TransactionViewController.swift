@@ -52,7 +52,7 @@ class TransactionViewController: UIViewController {
         
         headerView?.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(180)
+            make.height.equalTo(150)
         }
     }
     

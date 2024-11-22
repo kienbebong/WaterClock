@@ -6,6 +6,7 @@ class HeaderView: UIView {
     var onContactTapped: (() -> Void)?
     var onSignInTapped: (() -> Void)?
     var onSettingInTapped: (() -> Void)?
+    var onSearchTapped: (() -> Void)?
     
     private let backgroundImageView: UIImageView = {
             let imageView = UIImageView()
@@ -50,6 +51,7 @@ class HeaderView: UIView {
     private let logoImage2: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(systemName: "magnifyingglass")
+        image.isUserInteractionEnabled = true
         image.tintColor = .white
         return image
     }()
@@ -75,7 +77,7 @@ class HeaderView: UIView {
         
         addSubview(signInImage)
         signInImage.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(90)
+            make.top.equalToSuperview().offset(60)
             make.leading.equalToSuperview().offset(15)
             make.width.height.equalTo(60)
         }
@@ -85,7 +87,7 @@ class HeaderView: UIView {
         
             addSubview(signInView)
             signInView.snp.makeConstraints { make in
-                make.top.equalToSuperview().offset(90)
+                make.top.equalToSuperview().offset(60)
                 make.leading.equalTo(signInImage.snp.trailing).offset(15)
                 make.height.equalTo(60)
                 make.width.equalTo(200)
@@ -111,14 +113,17 @@ class HeaderView: UIView {
         
         addSubview(logoImage2)
         logoImage2.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(100)
+            make.top.equalToSuperview().offset(70)
             make.trailing.equalToSuperview().offset(-80)
             make.width.height.equalTo(30)
         }
         
+        let tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(OpenSearchTab))
+        logoImage2.addGestureRecognizer(tapGesture3)
+        
         addSubview(logoImage3)
         logoImage3.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(100)
+            make.top.equalToSuperview().offset(70)
             make.trailing.equalToSuperview().offset(-30)
             make.width.height.equalTo(30)
         }
@@ -139,6 +144,10 @@ class HeaderView: UIView {
     
     @objc private func openSettingConTroller() {
         onSettingInTapped?()
+    }
+    
+    @objc private func OpenSearchTab() {
+        onSearchTapped?()
     }
     
     required init?(coder: NSCoder) {
