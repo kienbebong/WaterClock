@@ -4,12 +4,17 @@
 //
 //  Created by Dinh Chi Kien on 22/11/24.
 //
+protocol HeaderSearchViewDelegate: AnyObject {
+    func didUpdateSearchText(_ searchText: String)
+}
 
 import UIKit
 
-class HeaderSearchView: UIView {
+class HeaderSearchView: UIView, UISearchBarDelegate {
     
     var back: (() -> Void)?
+    var delegate: HeaderSearchViewDelegate?
+
 
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
@@ -26,27 +31,16 @@ class HeaderSearchView: UIView {
         return img
     }()
     
-    private let searchField: UITextField = {
-        let text = UITextField()
-        text.placeholder = "  Tìm kiếm"
-        text.textColor = .white
-        text.font = .systemFont(ofSize: 18)
-        text.layer.borderWidth = 1
-        text.layer.borderColor =  UIColor.white.cgColor
-        text.backgroundColor = .gray.withAlphaComponent(0.5)
-        text.layer.cornerRadius = 10
-        text.clipsToBounds = true
+    private let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.placeholder = "Tìm kiếm"
+        searchBar.searchBarStyle = .minimal
+        searchBar.tintColor = .white
+        searchBar.barTintColor = .gray.withAlphaComponent(0.5)
         
-        let clearButton = UIButton(type: .system)
-        clearButton.setImage(UIImage(systemName: "xmark"), for: .normal)
-        clearButton.tintColor = .white
-        clearButton.addTarget(self, action: #selector(clearTextField), for: .touchUpInside)
-            
-        clearButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        text.rightView = clearButton
-        text.rightViewMode = .always
-        return text
+        return searchBar
     }()
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -82,13 +76,14 @@ class HeaderSearchView: UIView {
     }
     
     func setUpSearchField() {
-        addSubview(searchField)
-        searchField.snp.makeConstraints { make in
+        addSubview(searchBar)
+        searchBar.snp.makeConstraints { make in
             make.centerY.equalToSuperview().offset(20)
             make.leading.equalTo(backLogoImage.snp.trailing).offset(20)
             make.trailing.equalToSuperview().offset(-40)
             make.height.equalTo(40)
         }
+        searchBar.delegate = self
     }
 
     
@@ -97,7 +92,8 @@ class HeaderSearchView: UIView {
         back?()
     }
     
-    @objc private func clearTextField() {
-        searchField.text = ""
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        delegate?.didUpdateSearchText(searchText)
     }
+    
 }
