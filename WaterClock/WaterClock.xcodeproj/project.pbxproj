@@ -13,6 +13,10 @@
 		7510AA2E2CF012C200BEDF8C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA2D2CF012C200BEDF8C /* SearchViewController.swift */; };
 		7510AA302CF0151D00BEDF8C /* HeaderSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA2F2CF0151D00BEDF8C /* HeaderSearchView.swift */; };
 		7510AA322CF0285C00BEDF8C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA312CF0285C00BEDF8C /* SearchTableViewCell.swift */; };
+		7510AA362CF0746000BEDF8C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA352CF0746000BEDF8C /* ShareViewController.swift */; };
+		7510AA382CF0751A00BEDF8C /* HeaderShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA372CF0751A00BEDF8C /* HeaderShareView.swift */; };
+		7510AA3B2CF0787300BEDF8C /* MiddleShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA3A2CF0787300BEDF8C /* MiddleShareView.swift */; };
+		7510AA3D2CF083A000BEDF8C /* FootShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA3C2CF083A000BEDF8C /* FootShareView.swift */; };
 		756BBDA52CE1BCF3003B4021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */; };
 		756BBDA72CE2EB7A003B4021 /* HeaderAfterLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */; };
 		756BBDAA2CE2F302003B4021 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA92CE2F301003B4021 /* API.swift */; };
@@ -92,6 +96,10 @@
 		7510AA2D2CF012C200BEDF8C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7510AA2F2CF0151D00BEDF8C /* HeaderSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSearchView.swift; sourceTree = "<group>"; };
 		7510AA312CF0285C00BEDF8C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		7510AA352CF0746000BEDF8C /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		7510AA372CF0751A00BEDF8C /* HeaderShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderShareView.swift; sourceTree = "<group>"; };
+		7510AA3A2CF0787300BEDF8C /* MiddleShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleShareView.swift; sourceTree = "<group>"; };
+		7510AA3C2CF083A000BEDF8C /* FootShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootShareView.swift; sourceTree = "<group>"; };
 		756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAfterLoginView.swift; sourceTree = "<group>"; };
 		756BBDA92CE2F301003B4021 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -182,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7510AA392CF0785C00BEDF8C /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				7510AA3A2CF0787300BEDF8C /* MiddleShareView.swift */,
+				7510AA3C2CF083A000BEDF8C /* FootShareView.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		756BBDA82CE2F277003B4021 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +254,7 @@
 				75819F0D2CE1B0730018B986 /* SignInViewController.swift */,
 				75819F0E2CE1B0730018B986 /* TabBarViewController.swift */,
 				7510AA2D2CF012C200BEDF8C /* SearchViewController.swift */,
+				7510AA352CF0746000BEDF8C /* ShareViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -317,6 +335,7 @@
 				756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */,
 				756BBDB92CE348AB003B4021 /* HeaderSettingAfterLoginView.swift */,
 				7510AA2F2CF0151D00BEDF8C /* HeaderSearchView.swift */,
+				7510AA372CF0751A00BEDF8C /* HeaderShareView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -356,6 +375,7 @@
 		75819F432CE1B0730018B986 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7510AA392CF0785C00BEDF8C /* Share */,
 				756BBDBF2CE485FD003B4021 /* ServiceView */,
 				75819F342CE1B0730018B986 /* Header */,
 				75819F392CE1B0730018B986 /* HomeController */,
@@ -557,6 +577,8 @@
 				75819F522CE1B0730018B986 /* NewsViewController.swift in Sources */,
 				75819F532CE1B0730018B986 /* NotificationViewController.swift in Sources */,
 				75819F542CE1B0730018B986 /* TransactionViewController.swift in Sources */,
+				7510AA362CF0746000BEDF8C /* ShareViewController.swift in Sources */,
+				7510AA3D2CF083A000BEDF8C /* FootShareView.swift in Sources */,
 				75819F552CE1B0730018B986 /* BookViewController.swift in Sources */,
 				756BBDCB2CE73BEC003B4021 /* InstantByDate.swift in Sources */,
 				756BBDAA2CE2F302003B4021 /* API.swift in Sources */,
@@ -569,6 +591,7 @@
 				75819F5A2CE1B0730018B986 /* SignInViewController.swift in Sources */,
 				75819F5B2CE1B0730018B986 /* TabBarViewController.swift in Sources */,
 				75819F5C2CE1B0730018B986 /* CollectionLocationViewController.swift in Sources */,
+				7510AA3B2CF0787300BEDF8C /* MiddleShareView.swift in Sources */,
 				75819F5D2CE1B0730018B986 /* ContactLocationViewController.swift in Sources */,
 				75819F5E2CE1B0730018B986 /* ContractWaterConsumeViewController.swift in Sources */,
 				75819F5F2CE1B0730018B986 /* InstantByDateViewController.swift in Sources */,
@@ -583,6 +606,7 @@
 				756BBDBE2CE45DED003B4021 /* MeterDataInDay.swift in Sources */,
 				756BBDA72CE2EB7A003B4021 /* HeaderAfterLoginView.swift in Sources */,
 				75819F662CE1B0730018B986 /* WaterConsumeViewController.swift in Sources */,
+				7510AA382CF0751A00BEDF8C /* HeaderShareView.swift in Sources */,
 				75819F672CE1B0730018B986 /* WaterUpViewController.swift in Sources */,
 				75819F682CE1B0730018B986 /* AppDelegate.swift in Sources */,
 				75819F692CE1B0730018B986 /* SceneDelegate.swift in Sources */,

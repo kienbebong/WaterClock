@@ -191,4 +191,12 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 5 {
+            let destinationVC = ShareViewController()
+            destinationVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(destinationVC, animated: true)
+        }
+    }
 }

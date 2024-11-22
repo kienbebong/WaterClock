@@ -11,7 +11,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     var headerView: HeaderSearchView?
     
-    private let nameLabel = ["Dữ liệu nước theo ngày", "Dữ liệu báo cáo","Cấp nước khu đô thị", "Cấp nước khu nông thông", "Cấp nước trở lại khi đã tạm ngưng", "Kiểm tra công tơ, thiết bị", "Thay đổi vị trí thiết bị đồng hồ", "Thay đổi công suất nước sử dụng", "Kí hợp đồng trực tuyến", "Thay đổi chủ đề hợp đông mua bán", "Gia hạn hợp đông", "Chấm dứt hợp đông", "Thay đổi thông tin cá nhân", "Thay đổi mục đích sử dụng", "Thay đổi định mức", "Thay đổi hình thức thanh toán", "Yêu cầu khác", "Giaỉ đáp ý kiến của khách hàng", "Thi công online", "Kiểm định áp suất nước"]
+    private let nameLabel = ["Dữ liệu nước theo ngày", "Dữ liệu báo cáo","Cấp nước khu đô thị", "Cấp nước khu nông thôn", "Cấp nước trở lại khi đã tạm ngưng", "Kiểm tra công tơ, thiết bị", "Thay đổi vị trí thiết bị đồng hồ", "Thay đổi công suất nước sử dụng", "Kí hợp đồng trực tuyến", "Thay đổi chủ đề hợp đông mua bán", "Gia hạn hợp đông", "Chấm dứt hợp đông", "Thay đổi thông tin cá nhân", "Thay đổi mục đích sử dụng", "Thay đổi định mức", "Thay đổi hình thức thanh toán", "Yêu cầu khác", "Giaỉ đáp ý kiến của khách hàng", "Thi công online", "Kiểm định áp suất nước"]
     
     private let img = ["list.bullet.clipboard", "calendar.badge.clock", "humidity.fill", "humidity.fill", "drop.circle", "gauge.with.dots.needle.bottom.0percent", "location.magnifyingglass", "water.waves", "square.and.pencil", "book.closed.circle", "calendar.badge.clock.rtl", "xmark", "person.crop.circle.badge.checkmark", "repeat.1.circle", "chart.xyaxis.line", "creditcard", "pencil.and.list.clipboard", "exclamationmark.bubble", "phone", "gauge.with.dots.needle.bottom.50percent"]
     
