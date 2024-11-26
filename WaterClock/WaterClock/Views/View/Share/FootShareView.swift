@@ -52,8 +52,11 @@ class FootShareView: UIView {
         button.setTitleColor(UIColor.red, for: .normal)
         button.setImage(UIImage(systemName: "link"), for: .normal)
         button.tintColor = .red
-        button.layer.cornerRadius = 30
+        button.layer.cornerRadius = 20
         button.clipsToBounds = true
+        button.layer.borderWidth = 0.5
+        button.layer.borderColor = UIColor.red.cgColor
+        button.addTarget(self, action: #selector(ShareLink), for: .touchUpInside)
         return button
     }()
 
@@ -125,6 +128,25 @@ class FootShareView: UIView {
     
     @objc func openLink() {
         UIPasteboard.general.string = urlLabel.text
+    }
+    
+    @objc func ShareLink() {
+        let url = URL(string: "https://vtb.com.vn")
+        let itemToShare: [Any] = [url]
+        let activityViewController = UIActivityViewController(activityItems: itemToShare, applicationActivities: nil)
+        activityViewController.completionWithItemsHandler = { activityType, completed, returnedItems, activityError in
+            if completed {
+                print("chia se thanh cong")
+            } else {
+                print("chia se khong thanh cong")
+            }
+        }
+        
+        if let parentVC = UIApplication.shared.windows.first?.rootViewController {
+            parentVC.present(activityViewController, animated: true, completion: nil)
+        } else {
+            print("khong tim thay controller")
+        }
     }
 
 }

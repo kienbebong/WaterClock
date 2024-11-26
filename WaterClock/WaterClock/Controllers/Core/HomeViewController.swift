@@ -422,7 +422,7 @@ class HomeViewController: UIViewController {
             self?.navigationController?.pushViewController(destinationVC, animated: true)
         }
         
-        headerAfter?.onSettingInTapped = { [weak self] in
+        headerAfter?.onSearchInTapped = { [weak self] in
             let destinationVC = SearchViewController()
             destinationVC.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(destinationVC, animated: true)
