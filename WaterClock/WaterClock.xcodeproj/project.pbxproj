@@ -17,6 +17,10 @@
 		7510AA382CF0751A00BEDF8C /* HeaderShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA372CF0751A00BEDF8C /* HeaderShareView.swift */; };
 		7510AA3B2CF0787300BEDF8C /* MiddleShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA3A2CF0787300BEDF8C /* MiddleShareView.swift */; };
 		7510AA3D2CF083A000BEDF8C /* FootShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA3C2CF083A000BEDF8C /* FootShareView.swift */; };
+		7510AA3F2CF5758800BEDF8C /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA3E2CF5758800BEDF8C /* MobileNetV2.mlmodel */; };
+		7510AA412CF5789B00BEDF8C /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA402CF5789B00BEDF8C /* Resnet50.mlmodel */; };
+		7510AA4E2CF6BB3800BEDF8C /* water.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA4D2CF6BB3800BEDF8C /* water.mlpackage */; };
+		7510AA502CF6C45F00BEDF8C /* WaterModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA4F2CF6C45F00BEDF8C /* WaterModel.mlmodel */; };
 		756BBDA52CE1BCF3003B4021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */; };
 		756BBDA72CE2EB7A003B4021 /* HeaderAfterLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */; };
 		756BBDAA2CE2F302003B4021 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA92CE2F301003B4021 /* API.swift */; };
@@ -100,6 +104,10 @@
 		7510AA372CF0751A00BEDF8C /* HeaderShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderShareView.swift; sourceTree = "<group>"; };
 		7510AA3A2CF0787300BEDF8C /* MiddleShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleShareView.swift; sourceTree = "<group>"; };
 		7510AA3C2CF083A000BEDF8C /* FootShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootShareView.swift; sourceTree = "<group>"; };
+		7510AA3E2CF5758800BEDF8C /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		7510AA402CF5789B00BEDF8C /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		7510AA4D2CF6BB3800BEDF8C /* water.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = water.mlpackage; sourceTree = "<group>"; };
+		7510AA4F2CF6C45F00BEDF8C /* WaterModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = WaterModel.mlmodel; sourceTree = "<group>"; };
 		756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAfterLoginView.swift; sourceTree = "<group>"; };
 		756BBDA92CE2F301003B4021 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -212,9 +220,13 @@
 		756BBDAB2CE2F717003B4021 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7510AA402CF5789B00BEDF8C /* Resnet50.mlmodel */,
+				7510AA4D2CF6BB3800BEDF8C /* water.mlpackage */,
+				7510AA4F2CF6C45F00BEDF8C /* WaterModel.mlmodel */,
 				756BBDAE2CE2F737003B4021 /* Account.swift */,
 				756BBDBD2CE45DED003B4021 /* MeterDataInDay.swift */,
 				756BBDCA2CE73BEC003B4021 /* InstantByDate.swift */,
+				7510AA3E2CF5758800BEDF8C /* MobileNetV2.mlmodel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -585,6 +597,7 @@
 				75819F562CE1B0730018B986 /* ContactViewController.swift in Sources */,
 				75819F572CE1B0730018B986 /* OnlineChargeViewController.swift in Sources */,
 				75819F582CE1B0730018B986 /* ServicesViewController.swift in Sources */,
+				7510AA4E2CF6BB3800BEDF8C /* water.mlpackage in Sources */,
 				756BBDC12CE48619003B4021 /* ChooseDateView.swift in Sources */,
 				756BBDB82CE32F35003B4021 /* DataPersistenceManager.swift in Sources */,
 				75819F592CE1B0730018B986 /* SettingViewController.swift in Sources */,
@@ -594,6 +607,7 @@
 				7510AA3B2CF0787300BEDF8C /* MiddleShareView.swift in Sources */,
 				75819F5D2CE1B0730018B986 /* ContactLocationViewController.swift in Sources */,
 				75819F5E2CE1B0730018B986 /* ContractWaterConsumeViewController.swift in Sources */,
+				7510AA502CF6C45F00BEDF8C /* WaterModel.mlmodel in Sources */,
 				75819F5F2CE1B0730018B986 /* InstantByDateViewController.swift in Sources */,
 				756BBDAF2CE2F737003B4021 /* Account.swift in Sources */,
 				756BBDCD2CE73F9A003B4021 /* ChooseInstantDateView.swift in Sources */,
@@ -621,11 +635,13 @@
 				75819F6E2CE1B0730018B986 /* NotificationCollectionViewCell.swift in Sources */,
 				75819F6F2CE1B0730018B986 /* ServicesCollectionViewCell.swift in Sources */,
 				75819F702CE1B0730018B986 /* BookTableViewCell.swift in Sources */,
+				7510AA3F2CF5758800BEDF8C /* MobileNetV2.mlmodel in Sources */,
 				75819F712CE1B0730018B986 /* SettingTableViewCell.swift in Sources */,
 				75819F722CE1B0730018B986 /* TransactionTableViewCell.swift in Sources */,
 				75819F732CE1B0730018B986 /* HeaderBookView.swift in Sources */,
 				75819F742CE1B0730018B986 /* HeaderLookUpView.swift in Sources */,
 				75819F752CE1B0730018B986 /* HeaderNotiView.swift in Sources */,
+				7510AA412CF5789B00BEDF8C /* Resnet50.mlmodel in Sources */,
 				75819F762CE1B0730018B986 /* HeaderOnlChargeView.swift in Sources */,
 				75819F772CE1B0730018B986 /* HeaderServicesView.swift in Sources */,
 				75819F782CE1B0730018B986 /* HeaderSettingView.swift in Sources */,
@@ -757,6 +773,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				COREML_CODEGEN_LANGUAGE = Swift;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -820,6 +837,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				COREML_CODEGEN_LANGUAGE = Swift;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
