@@ -18,9 +18,9 @@
 		7510AA3B2CF0787300BEDF8C /* MiddleShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA3A2CF0787300BEDF8C /* MiddleShareView.swift */; };
 		7510AA3D2CF083A000BEDF8C /* FootShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA3C2CF083A000BEDF8C /* FootShareView.swift */; };
 		7510AA3F2CF5758800BEDF8C /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA3E2CF5758800BEDF8C /* MobileNetV2.mlmodel */; };
-		7510AA412CF5789B00BEDF8C /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA402CF5789B00BEDF8C /* Resnet50.mlmodel */; };
 		7510AA4E2CF6BB3800BEDF8C /* water.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA4D2CF6BB3800BEDF8C /* water.mlpackage */; };
 		7510AA502CF6C45F00BEDF8C /* WaterModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA4F2CF6C45F00BEDF8C /* WaterModel.mlmodel */; };
+		7510AA632CF99B1A00BEDF8C /* TabBarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA622CF99B1A00BEDF8C /* TabBarTest.swift */; };
 		756BBDA52CE1BCF3003B4021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */; };
 		756BBDA72CE2EB7A003B4021 /* HeaderAfterLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */; };
 		756BBDAA2CE2F302003B4021 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA92CE2F301003B4021 /* API.swift */; };
@@ -94,6 +94,16 @@
 		75E1EC1A2CCF3BEC006043D9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 75E1EC192CCF3BEC006043D9 /* SnapKit */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7510AA592CF9945F00BEDF8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75E1EBF82CCF3BDC006043D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75E1EBFF2CCF3BDC006043D9;
+			remoteInfo = WaterClock;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		7510AA292CEC1EA700BEDF8C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7510AA2B2CEC4BB900BEDF8C /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
@@ -105,9 +115,10 @@
 		7510AA3A2CF0787300BEDF8C /* MiddleShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleShareView.swift; sourceTree = "<group>"; };
 		7510AA3C2CF083A000BEDF8C /* FootShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootShareView.swift; sourceTree = "<group>"; };
 		7510AA3E2CF5758800BEDF8C /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
-		7510AA402CF5789B00BEDF8C /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		7510AA4D2CF6BB3800BEDF8C /* water.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = water.mlpackage; sourceTree = "<group>"; };
 		7510AA4F2CF6C45F00BEDF8C /* WaterModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = WaterModel.mlmodel; sourceTree = "<group>"; };
+		7510AA552CF9945E00BEDF8C /* WaterClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7510AA622CF99B1A00BEDF8C /* TabBarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTest.swift; sourceTree = "<group>"; };
 		756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAfterLoginView.swift; sourceTree = "<group>"; };
 		756BBDA92CE2F301003B4021 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -186,6 +197,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7510AA522CF9945E00BEDF8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75E1EBFD2CCF3BDC006043D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +225,14 @@
 			path = Share;
 			sourceTree = "<group>";
 		};
+		7510AA5E2CF9956B00BEDF8C /* WaterClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				7510AA622CF99B1A00BEDF8C /* TabBarTest.swift */,
+			);
+			path = WaterClockTests;
+			sourceTree = "<group>";
+		};
 		756BBDA82CE2F277003B4021 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +246,6 @@
 		756BBDAB2CE2F717003B4021 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7510AA402CF5789B00BEDF8C /* Resnet50.mlmodel */,
 				7510AA4D2CF6BB3800BEDF8C /* water.mlpackage */,
 				7510AA4F2CF6C45F00BEDF8C /* WaterModel.mlmodel */,
 				756BBDAE2CE2F737003B4021 /* Account.swift */,
@@ -413,9 +438,9 @@
 				756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */,
 				756BBDAB2CE2F717003B4021 /* Models */,
 				756BBDA82CE2F277003B4021 /* Manager */,
+				75819F442CE1B0730018B986 /* Views */,
 				75819F1D2CE1B0730018B986 /* Controllers */,
 				75819F202CE1B0730018B986 /* Resources */,
-				75819F442CE1B0730018B986 /* Views */,
 				75819F452CE1B0730018B986 /* Assets.xcassets */,
 				75819F462CE1B0730018B986 /* Info.plist */,
 				75819F482CE1B0730018B986 /* LaunchScreen.storyboard */,
@@ -429,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				75819F4B2CE1B0730018B986 /* WaterClock */,
+				7510AA5E2CF9956B00BEDF8C /* WaterClockTests */,
 				75E1EC012CCF3BDC006043D9 /* Products */,
 				A47A5ADD1AE5FA620A1181EE /* Pods */,
 				8DEC3C2A99A96024F8CA32AE /* Frameworks */,
@@ -439,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				75E1EC002CCF3BDC006043D9 /* WaterClock.app */,
+				7510AA552CF9945E00BEDF8C /* WaterClockTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -463,6 +490,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7510AA542CF9945E00BEDF8C /* WaterClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7510AA5B2CF9945F00BEDF8C /* Build configuration list for PBXNativeTarget "WaterClockTests" */;
+			buildPhases = (
+				7510AA512CF9945E00BEDF8C /* Sources */,
+				7510AA522CF9945E00BEDF8C /* Frameworks */,
+				7510AA532CF9945E00BEDF8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7510AA5A2CF9945F00BEDF8C /* PBXTargetDependency */,
+			);
+			name = WaterClockTests;
+			packageProductDependencies = (
+			);
+			productName = WaterClockTests;
+			productReference = 7510AA552CF9945E00BEDF8C /* WaterClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		75E1EBFF2CCF3BDC006043D9 /* WaterClock */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75E1EC132CCF3BDF006043D9 /* Build configuration list for PBXNativeTarget "WaterClock" */;
@@ -492,9 +539,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
+				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					7510AA542CF9945E00BEDF8C = {
+						CreatedOnToolsVersion = 16.1;
+						LastSwiftMigration = 1610;
+						TestTargetID = 75E1EBFF2CCF3BDC006043D9;
+					};
 					75E1EBFF2CCF3BDC006043D9 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -518,11 +570,19 @@
 			projectRoot = "";
 			targets = (
 				75E1EBFF2CCF3BDC006043D9 /* WaterClock */,
+				7510AA542CF9945E00BEDF8C /* WaterClockTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7510AA532CF9945E00BEDF8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75E1EBFE2CCF3BDC006043D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -579,6 +639,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7510AA512CF9945E00BEDF8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7510AA632CF99B1A00BEDF8C /* TabBarTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75E1EBFC2CCF3BDC006043D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -641,7 +709,6 @@
 				75819F732CE1B0730018B986 /* HeaderBookView.swift in Sources */,
 				75819F742CE1B0730018B986 /* HeaderLookUpView.swift in Sources */,
 				75819F752CE1B0730018B986 /* HeaderNotiView.swift in Sources */,
-				7510AA412CF5789B00BEDF8C /* Resnet50.mlmodel in Sources */,
 				75819F762CE1B0730018B986 /* HeaderOnlChargeView.swift in Sources */,
 				75819F772CE1B0730018B986 /* HeaderServicesView.swift in Sources */,
 				75819F782CE1B0730018B986 /* HeaderSettingView.swift in Sources */,
@@ -667,6 +734,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7510AA5A2CF9945F00BEDF8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75E1EBFF2CCF3BDC006043D9 /* WaterClock */;
+			targetProxy = 7510AA592CF9945F00BEDF8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		75819F482CE1B0730018B986 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -679,6 +754,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7510AA5C2CF9945F00BEDF8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VW6KW968S8;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.WaterClockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterClock.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WaterClock";
+			};
+			name = Debug;
+		};
+		7510AA5D2CF9945F00BEDF8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VW6KW968S8;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.WaterClockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterClock.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WaterClock";
+			};
+			name = Release;
+		};
 		75E1EC142CCF3BDF006043D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC9BB3BA79902EF79DB3E887 /* Pods-WaterClock.debug.xcconfig */;
@@ -863,6 +981,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7510AA5B2CF9945F00BEDF8C /* Build configuration list for PBXNativeTarget "WaterClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7510AA5C2CF9945F00BEDF8C /* Debug */,
+				7510AA5D2CF9945F00BEDF8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		75E1EBFB2CCF3BDC006043D9 /* Build configuration list for PBXProject "WaterClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
