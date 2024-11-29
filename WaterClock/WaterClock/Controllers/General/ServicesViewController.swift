@@ -74,7 +74,7 @@ class ServicesViewController: UIViewController {
             stackView.addArrangedSubview(vc.view)
             vc.didMove(toParent: self)
         case 1:
-            let vc = WaterConsumeViewController()
+            let vc = CheckQualityWaterViewController()
             addChild(vc)
             stackView.addArrangedSubview(vc.view)
             vc.didMove(toParent: self)

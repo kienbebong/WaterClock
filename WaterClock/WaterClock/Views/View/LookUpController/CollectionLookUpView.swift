@@ -70,7 +70,7 @@ extension CollectionLookUpView: UICollectionViewDelegate, UICollectionViewDataSo
         if indexPath.item == 0 {
             cell.configure(with: UIImage(systemName: "list.bullet.clipboard") ?? UIImage(), title: "Hoá đơn điện tử")
         } else if indexPath.item == 1 {
-            cell.configure(with: UIImage(systemName: "gauge.low") ?? UIImage(), title: "Số nước sử dụng")
+            cell.configure(with: UIImage(systemName: "gauge.low") ?? UIImage(), title: "Kiểm tra chất lượng nước")
         } else if indexPath.item == 2 {
             cell.configure(with: UIImage(systemName: "humidity") ?? UIImage(), title: "Số nước phát lên")
         } else if indexPath.item == 3 {

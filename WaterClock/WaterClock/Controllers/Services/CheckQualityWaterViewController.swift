@@ -3,7 +3,7 @@ import AVKit
 import Vision
 import CoreML
 
-class WaterConsumeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class CheckQualityWaterViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     private var model: MLModel?
     private let captureSession = AVCaptureSession()
     private var resultLabel: UILabel = {

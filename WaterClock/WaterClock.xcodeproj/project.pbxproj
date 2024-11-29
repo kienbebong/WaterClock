@@ -59,7 +59,7 @@
 		75819F632CE1B0730018B986 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F172CE1B0730018B986 /* PriceViewController.swift */; };
 		75819F642CE1B0730018B986 /* RecordCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F182CE1B0730018B986 /* RecordCalenderViewController.swift */; };
 		75819F652CE1B0730018B986 /* ServiceProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F192CE1B0730018B986 /* ServiceProgressViewController.swift */; };
-		75819F662CE1B0730018B986 /* WaterConsumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F1A2CE1B0730018B986 /* WaterConsumeViewController.swift */; };
+		75819F662CE1B0730018B986 /* CheckQualityWaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F1A2CE1B0730018B986 /* CheckQualityWaterViewController.swift */; };
 		75819F672CE1B0730018B986 /* WaterUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F1B2CE1B0730018B986 /* WaterUpViewController.swift */; };
 		75819F682CE1B0730018B986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F1E2CE1B0730018B986 /* AppDelegate.swift */; };
 		75819F692CE1B0730018B986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F1F2CE1B0730018B986 /* SceneDelegate.swift */; };
@@ -144,7 +144,7 @@
 		75819F172CE1B0730018B986 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
 		75819F182CE1B0730018B986 /* RecordCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCalenderViewController.swift; sourceTree = "<group>"; };
 		75819F192CE1B0730018B986 /* ServiceProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProgressViewController.swift; sourceTree = "<group>"; };
-		75819F1A2CE1B0730018B986 /* WaterConsumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterConsumeViewController.swift; sourceTree = "<group>"; };
+		75819F1A2CE1B0730018B986 /* CheckQualityWaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckQualityWaterViewController.swift; sourceTree = "<group>"; };
 		75819F1B2CE1B0730018B986 /* WaterUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterUpViewController.swift; sourceTree = "<group>"; };
 		75819F1E2CE1B0730018B986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75819F1F2CE1B0730018B986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 				75819F172CE1B0730018B986 /* PriceViewController.swift */,
 				75819F182CE1B0730018B986 /* RecordCalenderViewController.swift */,
 				75819F192CE1B0730018B986 /* ServiceProgressViewController.swift */,
-				75819F1A2CE1B0730018B986 /* WaterConsumeViewController.swift */,
+				75819F1A2CE1B0730018B986 /* CheckQualityWaterViewController.swift */,
 				75819F1B2CE1B0730018B986 /* WaterUpViewController.swift */,
 			);
 			path = Services;
@@ -619,7 +619,7 @@
 				75819F652CE1B0730018B986 /* ServiceProgressViewController.swift in Sources */,
 				756BBDBE2CE45DED003B4021 /* MeterDataInDay.swift in Sources */,
 				756BBDA72CE2EB7A003B4021 /* HeaderAfterLoginView.swift in Sources */,
-				75819F662CE1B0730018B986 /* WaterConsumeViewController.swift in Sources */,
+				75819F662CE1B0730018B986 /* CheckQualityWaterViewController.swift in Sources */,
 				7510AA382CF0751A00BEDF8C /* HeaderShareView.swift in Sources */,
 				75819F672CE1B0730018B986 /* WaterUpViewController.swift in Sources */,
 				75819F682CE1B0730018B986 /* AppDelegate.swift in Sources */,
