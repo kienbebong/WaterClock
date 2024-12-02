@@ -21,6 +21,7 @@
 		7510AA4E2CF6BB3800BEDF8C /* water.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA4D2CF6BB3800BEDF8C /* water.mlpackage */; };
 		7510AA502CF6C45F00BEDF8C /* WaterModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA4F2CF6C45F00BEDF8C /* WaterModel.mlmodel */; };
 		7510AA632CF99B1A00BEDF8C /* TabBarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AA622CF99B1A00BEDF8C /* TabBarTest.swift */; };
+		7565F9072CFD56F000613AE6 /* AccountCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7565F9062CFD56F000613AE6 /* AccountCoreDataTests.swift */; };
 		756BBDA52CE1BCF3003B4021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */; };
 		756BBDA72CE2EB7A003B4021 /* HeaderAfterLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */; };
 		756BBDAA2CE2F302003B4021 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BBDA92CE2F301003B4021 /* API.swift */; };
@@ -119,6 +120,7 @@
 		7510AA4F2CF6C45F00BEDF8C /* WaterModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = WaterModel.mlmodel; sourceTree = "<group>"; };
 		7510AA552CF9945E00BEDF8C /* WaterClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7510AA622CF99B1A00BEDF8C /* TabBarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTest.swift; sourceTree = "<group>"; };
+		7565F9062CFD56F000613AE6 /* AccountCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoreDataTests.swift; sourceTree = "<group>"; };
 		756BBDA42CE1BCF2003B4021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		756BBDA62CE2EB7A003B4021 /* HeaderAfterLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAfterLoginView.swift; sourceTree = "<group>"; };
 		756BBDA92CE2F301003B4021 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				7510AA622CF99B1A00BEDF8C /* TabBarTest.swift */,
+				7565F9062CFD56F000613AE6 /* AccountCoreDataTests.swift */,
 			);
 			path = WaterClockTests;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7565F9072CFD56F000613AE6 /* AccountCoreDataTests.swift in Sources */,
 				7510AA632CF99B1A00BEDF8C /* TabBarTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

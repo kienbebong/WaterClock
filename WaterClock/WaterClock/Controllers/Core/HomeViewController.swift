@@ -451,7 +451,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if indexPath.row == 1 {
             cell.configure(with: UIImage(systemName: "calendar.badge.clock") ?? UIImage(), text: "Dữ liệu báo cáo")
         } else if indexPath.row == 2 {
-            cell.configure(with: UIImage(systemName: "checklist") ?? UIImage(), text: "Tiến độ dịch vụ")
+            cell.configure(with: UIImage(systemName: "checklist") ?? UIImage(), text: "Kiểm tra chất lượng nước")
         } else {
             cell.configure(with: UIImage(systemName: "iphone.gen1.radiowaves.left.and.right.circle") ?? UIImage(), text: "Thanh toán HĐ")
         }
@@ -480,7 +480,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if indexPath.item == 2 {
             DispatchQueue.main.async {
                 let vc = ServicesViewController()
-                vc.item = 7
+                vc.item = 1
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
                 vc.switchController(for: vc.item)
