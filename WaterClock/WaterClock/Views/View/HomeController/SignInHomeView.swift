@@ -130,8 +130,11 @@ class SignInHomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func updateViewVisibility() {
+        self.isHidden = UserDefaults.standard.bool(forKey: "isUserSignedIn")
+    }
+    
     @objc func handleSignInViewTap() {
         onSignInTapped?()
     }
-
 }

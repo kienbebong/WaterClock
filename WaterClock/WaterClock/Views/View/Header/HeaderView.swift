@@ -150,6 +150,10 @@ class HeaderView: UIView {
         onSearchTapped?()
     }
     
+    func updateViewVisibility() {
+        self.isHidden = UserDefaults.standard.bool(forKey: "isUserSignedIn")
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

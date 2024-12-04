@@ -15,13 +15,13 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     private let img = ["list.bullet.clipboard", "calendar.badge.clock", "humidity.fill", "humidity.fill", "drop.circle", "gauge.with.dots.needle.bottom.0percent", "location.magnifyingglass", "water.waves", "square.and.pencil", "book.closed.circle", "calendar.badge.clock.rtl", "xmark", "person.crop.circle.badge.checkmark", "repeat.1.circle", "chart.xyaxis.line", "creditcard", "pencil.and.list.clipboard", "exclamationmark.bubble", "phone", "gauge.with.dots.needle.bottom.50percent"]
     
-    private var data: [String: String] {
+    public var data: [String: String] {
         Dictionary(uniqueKeysWithValues: zip(nameLabel, img))
     }
     
-    private var filteredData: [String: String] = [:]
+    public var filteredData: [String: String] = [:]
     
-    private var tableView: UITableView = {
+    public var tableView: UITableView = {
         let tableView = UITableView()
         return tableView
     }()
