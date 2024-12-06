@@ -33,8 +33,8 @@ class NotificationCollectionViewCell: UICollectionViewCell {
         label.snp.makeConstraints { make in
             make.top.leading.equalToSuperview().offset(-10)
             make.height.equalTo(50)
-            make.width.equalTo(110)
-            make.width.greaterThanOrEqualTo(50)
+            make.width.equalTo(150)
+            make.width.greaterThanOrEqualTo(80)
         }
     }
     

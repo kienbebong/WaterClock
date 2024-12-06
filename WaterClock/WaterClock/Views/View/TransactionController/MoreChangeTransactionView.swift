@@ -18,7 +18,8 @@ class MoreChangeTransactionView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "YÊU CẦU KHÁC"
+        label.text = NSLocalizedString("other_requests", comment: "Nội dung yêu cầu khác")
+
         label.font = .boldSystemFont(ofSize: 20)
         label.textColor = .black
         return label
@@ -85,12 +86,22 @@ extension MoreChangeTransactionView: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier, for: indexPath) as! TransactionTableViewCell
         
         if indexPath.row == 0 {
-            cell.configure(with: UIImage(systemName: "exclamationmark.bubble") ?? UIImage(), titleLabel: "Giải đáp kiến nghị của khách hàng")
+            cell.configure(
+                with: UIImage(systemName: "exclamationmark.bubble") ?? UIImage(),
+                titleLabel: NSLocalizedString("customer_request_resolution", comment: "")
+            )
         } else if indexPath.row == 1 {
-            cell.configure(with: UIImage(systemName: "phone") ?? UIImage(), titleLabel: "Thi công Hotline")
+            cell.configure(
+                with: UIImage(systemName: "phone") ?? UIImage(),
+                titleLabel: NSLocalizedString("hotline_construction", comment: "")
+            )
         } else {
-            cell.configure(with: UIImage(systemName: "gauge.with.dots.needle.bottom.50percent") ?? UIImage(), titleLabel: "Kiểm định áp suất nước")
+            cell.configure(
+                with: UIImage(systemName: "gauge.with.dots.needle.bottom.50percent") ?? UIImage(),
+                titleLabel: NSLocalizedString("water_pressure_testing", comment: "")
+            )
         }
+
         
         return cell
     }

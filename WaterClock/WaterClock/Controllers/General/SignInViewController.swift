@@ -122,7 +122,7 @@ class SignInViewController: UIViewController {
 
     private let companyLabel: UILabel = {
        let label = UILabel()
-        label.text = "Công ty cổ phần Viettronics Tân Bình"
+        label.text = NSLocalizedString("VIETTRONICS_COMPANY", comment: "Viettronics Tan Binh company name")
         label.textColor = .black
         label.font = .systemFont(ofSize: 13)
         return label
@@ -130,7 +130,7 @@ class SignInViewController: UIViewController {
     
     private let skipButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Bỏ qua", for: .normal)
+        button.setTitle(NSLocalizedString("SKIP", comment: "Skip button title"), for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .white
         button.layer.borderColor = UIColor.gray .cgColor
@@ -147,7 +147,7 @@ class SignInViewController: UIViewController {
     
     private let signLabel: UILabel = {
         let label = UILabel()
-        label.text = "Đăng nhập hoặc tạo tài khoản"
+        label.text = NSLocalizedString("LOGIN_OR_CREATE_ACCOUNT", comment: "Login or create an account label")
         label.textColor = .black
         label.font = .boldSystemFont(ofSize: 25)
         return label
@@ -156,9 +156,9 @@ class SignInViewController: UIViewController {
     private let signDetailLabel: UILabel = {
         let label = UILabel()
         
-        let text1 = "Vui lòng nhập "
-        let text2 = "tài khoản và mật khẩu "
-        let text3 = "để đăng kí hoặc đăng nhập vào ứng dụng."
+        let text1 = NSLocalizedString("PLEASE_ENTER", comment: "Prompt to enter account and password")
+        let text2 = NSLocalizedString("ACCOUNT_AND_PASSWORD", comment: "Account and password for login or registration")
+        let text3 = NSLocalizedString("REGISTER_OR_LOGIN", comment: "Instructions to register or log in to the app")
         let fullText = text1 + text2 + text3
         
         let attributedText = NSMutableAttributedString(string: fullText)
@@ -180,7 +180,7 @@ class SignInViewController: UIViewController {
     
     private let logEmailTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Email"
+        textField.placeholder = NSLocalizedString("ACCOUNT_PLACEHOLDER", comment: "Placeholder for account text field")
         textField.textColor = .black
         textField.backgroundColor = .white
         textField.font = .systemFont(ofSize: 15)
@@ -195,7 +195,7 @@ class SignInViewController: UIViewController {
     
     private let logPaswordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Password"
+        textField.placeholder = NSLocalizedString("PASSWORD_PLACEHOLDER", comment: "Placeholder for password text field")
         textField.textColor = .black
         textField.backgroundColor = .white
         textField.font = .systemFont(ofSize: 15)
@@ -210,7 +210,7 @@ class SignInViewController: UIViewController {
     
     private let continueButton: UIButton = {
         let button = UIButton()
-        button.setTitle("TIẾP TỤC", for: .normal)
+        button.setTitle(NSLocalizedString("CONTINUE", comment: "Continue button title"), for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 20)
         button.setTitleShadowColor(UIColor.white, for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -222,8 +222,8 @@ class SignInViewController: UIViewController {
     
     private let clauseLabel: UILabel = {
         let label = UILabel()
-        let text1 = "Bằng việc đăng nhập, đăng ký, bạn đồng ý với các "
-        let text2 = "giao dịch điện tử của VTB"
+        let text1 = NSLocalizedString("AGREE_WITH_ELECTRONIC_TRANSACTIONS", comment: "Agreement text part 1")
+        let text2 = NSLocalizedString("ELECTRONIC_TRANSACTIONS_VTB", comment: "Agreement text part 2")
         let fullText = text1 + text2
         let attributedText = NSMutableAttributedString(string: fullText)
         let tappableRange = (fullText as NSString).range(of: text2)
@@ -240,7 +240,7 @@ class SignInViewController: UIViewController {
     
     private let orLabel: UILabel = {
         let label = UILabel()
-        label.text = "----------Hoặc đăng nhập bằng----------"
+        label.text = NSLocalizedString("LOGIN_OR_LOGIN_WITH", comment: "Text for alternative login method")
         label.textColor = .gray
         label.font = .systemFont(ofSize: 15)
         return label
@@ -257,11 +257,11 @@ class SignInViewController: UIViewController {
         var alertMessage = ""
         
         if missingField == "email" {
-            alertTitle = "Please Enter Username"
-            alertMessage = "We need your username to continue."
+            alertTitle = NSLocalizedString("ENTER_USERNAME_TITLE", comment: "Alert title when email is missing")
+            alertMessage = NSLocalizedString("ENTER_USERNAME_MESSAGE", comment: "Alert message when email is missing")
         } else if missingField == "password" {
-            alertTitle = "Please Enter Password"
-            alertMessage = "We need your password to continue."
+            alertTitle = NSLocalizedString("ENTER_PASSWORD_TITLE", comment: "Alert title when password is missing")
+            alertMessage = NSLocalizedString("ENTER_PASSWORD_MESSAGE", comment: "Alert message when password is missing")
         }
         
         let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)

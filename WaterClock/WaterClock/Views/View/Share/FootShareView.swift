@@ -11,7 +11,7 @@ class FootShareView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Gửi link giới thiệu cho bạn bè"
+        label.text = NSLocalizedString("send_invite_link", comment: "Text for sharing the invitation link")
         label.textColor = .black
         label.font = .boldSystemFont(ofSize: 20)
         return label
@@ -40,7 +40,7 @@ class FootShareView: UIView {
     
     private let orLabel: UILabel = {
         let label = UILabel()
-        label.text = "-----------------Hoặc-----------------"
+        label.text = NSLocalizedString("or_text", comment: "Text to display for 'or' separator")
         label.font = .systemFont(ofSize: 16)
         label.textColor = .black
         return label
@@ -48,7 +48,7 @@ class FootShareView: UIView {
     
     private let shareLinkButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Chia sẻ bằng đường link", for: .normal)
+        button.setTitle(NSLocalizedString("share_link", comment: "Button title for sharing via link"), for: .normal)
         button.setTitleColor(UIColor.red, for: .normal)
         button.setImage(UIImage(systemName: "link"), for: .normal)
         button.tintColor = .red

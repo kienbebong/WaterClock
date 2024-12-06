@@ -18,7 +18,7 @@ class ChangeInfoTransactionView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "YÊU CẦU THAY ĐỔI THÔNG TIN"
+        label.text = NSLocalizedString("request_change_info", comment: "Text for requesting to change information")
         label.font = .boldSystemFont(ofSize: 20)
         label.textColor = .black
         return label
@@ -85,16 +85,17 @@ extension ChangeInfoTransactionView: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier, for: indexPath) as! TransactionTableViewCell
         
         if indexPath.row == 0 {
-            cell.configure(with: UIImage(systemName: "person.crop.circle.badge.checkmark") ?? UIImage(), titleLabel: "Thay đổi thông tin đã đăng kí")
+            cell.configure(with: UIImage(systemName: "person.crop.circle.badge.checkmark") ?? UIImage(), titleLabel: NSLocalizedString("change_info", comment: ""))
         } else if indexPath.row == 1 {
-            cell.configure(with: UIImage(systemName: "repeat.1.circle") ?? UIImage(), titleLabel: "Thay đổi mục đích sử dụng nước")
+            cell.configure(with: UIImage(systemName: "repeat.1.circle") ?? UIImage(), titleLabel: NSLocalizedString("change_purpose", comment: ""))
         } else if indexPath.row == 2 {
-            cell.configure(with: UIImage(systemName: "chart.xyaxis.line") ?? UIImage(), titleLabel: "Thay đổi định mức sử dụng nước")
+            cell.configure(with: UIImage(systemName: "chart.xyaxis.line") ?? UIImage(), titleLabel: NSLocalizedString("change_limit", comment: ""))
         } else if indexPath.row == 3 {
-            cell.configure(with: UIImage(systemName: "creditcard") ?? UIImage(), titleLabel: "Thay đổi hình thức thanh toánt tiền nước")
+            cell.configure(with: UIImage(systemName: "creditcard") ?? UIImage(), titleLabel: NSLocalizedString("change_payment", comment: ""))
         } else {
-            cell.configure(with: UIImage(systemName: "pencil.and.list.clipboard") ?? UIImage(), titleLabel: "Yêu cầu khác")
+            cell.configure(with: UIImage(systemName: "pencil.and.list.clipboard") ?? UIImage(), titleLabel: NSLocalizedString("other_requests", comment: ""))
         }
+
         
         return cell
     }

@@ -31,15 +31,16 @@ class HeaderSettingView: UIView {
     
     private let settingLabel: UILabel = {
         let label = UILabel()
-        label.text = "CÀI ĐẶT"
+        label.text = NSLocalizedString("SETTINGS", comment: "Settings title")
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textColor = .white
         return label
     }()
+
     
     private let logInLabel: UILabel = {
         let label = UILabel()
-        label.text = "ĐĂNG NHẬP NGAY"
+        label.text = NSLocalizedString("LOG_IN_NOW", comment: "LOG_IN_NOW")
         label.textColor = .blue
         label.font = UIFont.boldSystemFont(ofSize: 15)
         return label

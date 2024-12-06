@@ -12,7 +12,7 @@ class FeatureTransactionView: UIView {
 
     private let onlinePayButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Thanh toán trực tuyến", for: .normal)
+        button.setTitle(NSLocalizedString("online_payment", comment: "Thanh toán trực tuyến"), for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 15)
         button.setImage(UIImage(systemName: "dollarsign.bank.building.fill"), for: .normal)
@@ -28,7 +28,7 @@ class FeatureTransactionView: UIView {
     
     private let fixButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Báo cáo sửa nước", for: .normal)
+        button.setTitle(NSLocalizedString("repair_report", comment: "Báo cáo sửa nước"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 15)
         button.setImage(UIImage(systemName: "wrench.and.screwdriver.fill"), for: .normal)
@@ -43,7 +43,7 @@ class FeatureTransactionView: UIView {
     
     private let indexButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Báo chỉ số nước", for: .normal)
+        button.setTitle(NSLocalizedString("water_index_report", comment: "Báo chỉ số nước"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 15)
         button.setImage(UIImage(systemName: "chart.line.text.clipboard.fill"), for: .normal)

@@ -18,7 +18,7 @@ class DeviceTransactionView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "THIẾT BỊ ĐO ĐẾM"
+        label.text = NSLocalizedString("measuring_device", comment: "THIẾT BỊ ĐO ĐẾM")
         label.font = .boldSystemFont(ofSize: 20)
         label.textColor = .black
         return label
@@ -85,12 +85,13 @@ extension DeviceTransactionView: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier, for: indexPath) as! TransactionTableViewCell
         
         if indexPath.row == 0 {
-            cell.configure(with: UIImage(systemName: "gauge.with.dots.needle.bottom.0percent") ?? UIImage(), titleLabel: "Kiểm tra công tơ, thiết bị đo đếm khác")
+            cell.configure(with: UIImage(systemName: "gauge.with.dots.needle.bottom.0percent") ?? UIImage(), titleLabel: NSLocalizedString("check_meter_device", comment: "Kiểm tra công tơ, thiết bị đo đếm khác"))
         } else if indexPath.row == 1 {
-            cell.configure(with: UIImage(systemName: "location.magnifyingglass") ?? UIImage(), titleLabel: "Thay đổi vị trí thiết bị đo đếm")
+            cell.configure(with: UIImage(systemName: "location.magnifyingglass") ?? UIImage(), titleLabel: NSLocalizedString("change_device_position", comment: "Thay đổi vị trí thiết bị đo đếm"))
         } else {
-            cell.configure(with: UIImage(systemName: "water.waves") ?? UIImage(), titleLabel: "Thay đổi công suất sử dụng nước")
+            cell.configure(with: UIImage(systemName: "water.waves") ?? UIImage(), titleLabel: NSLocalizedString("change_water_capacity", comment: "Thay đổi công suất sử dụng nước"))
         }
+
         
         return cell
     }

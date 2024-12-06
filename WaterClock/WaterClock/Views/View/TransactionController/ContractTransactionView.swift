@@ -18,7 +18,7 @@ class ContractTransactionView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "HỢP ĐỒNG MUA BÁN NƯỚC"
+        label.text = NSLocalizedString("contract_water_sale", comment: "Hợp đồng mua bán nước")
         label.font = .boldSystemFont(ofSize: 20)
         label.textColor = .black
         return label
@@ -85,14 +85,15 @@ extension ContractTransactionView: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier, for: indexPath) as! TransactionTableViewCell
         
         if indexPath.row == 0 {
-            cell.configure(with: UIImage(systemName: "square.and.pencil") ?? UIImage(), titleLabel: "Ký hợp đồng trực tuyến")
+            cell.configure(with: UIImage(systemName: "square.and.pencil") ?? UIImage(), titleLabel: NSLocalizedString("sign_online_contract", comment: "Ký hợp đồng trực tuyến"))
         } else if indexPath.row == 1 {
-            cell.configure(with: UIImage(systemName: "book.closed.circle") ?? UIImage(), titleLabel: "Thay đổi chủ để hợp đồng mua bán")
+            cell.configure(with: UIImage(systemName: "book.closed.circle") ?? UIImage(), titleLabel: NSLocalizedString("change_contract_subject", comment: "Thay đổi chủ đề hợp đồng mua bán"))
         } else if indexPath.row == 2 {
-            cell.configure(with: UIImage(systemName: "calendar.badge.clock.rtl") ?? UIImage(), titleLabel: "Gia hạn hợp đồng mua bán nước")
+            cell.configure(with: UIImage(systemName: "calendar.badge.clock.rtl") ?? UIImage(), titleLabel: NSLocalizedString("extend_contract", comment: "Gia hạn hợp đồng mua bán nước"))
         } else {
-            cell.configure(with: UIImage(systemName: "xmark") ?? UIImage(), titleLabel: "Chấm dứt hợp đồng mua bán nước")
+            cell.configure(with: UIImage(systemName: "xmark") ?? UIImage(), titleLabel: NSLocalizedString("terminate_contract", comment: "Chấm dứt hợp đồng mua bán nước"))
         }
+
         
         return cell
     }

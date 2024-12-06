@@ -166,20 +166,49 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.identifier) as! SettingTableViewCell
         if indexPath.row == 0 {
-            cell.configure(with: UIImage(systemName: "inset.filled.rectangle.and.person.filled") ?? UIImage(), titleLabel: "Cài dặt tài khoản", detailLabel: "Quản lí thông tin tài khoản, mật khẩu, dăng nhập bằng sinh trắc học")
+            cell.configure(
+                with: UIImage(systemName: "inset.filled.rectangle.and.person.filled") ?? UIImage(),
+                titleLabel: NSLocalizedString("ACCOUNT_SETTINGS", comment: "Account settings title"),
+                detailLabel: NSLocalizedString("ACCOUNT_MANAGEMENT_DESCRIPTION", comment: "Account management description")
+            )
         } else if indexPath.row == 1 {
-            cell.configure(with: UIImage(systemName: "list.bullet.rectangle.portrait.fill") ?? UIImage(), titleLabel: "Liên kết mã PE", detailLabel: "Điểm dùng nước, mã khách hàng")
+            cell.configure(
+                with: UIImage(systemName: "list.bullet.rectangle.portrait.fill") ?? UIImage(),
+                titleLabel: NSLocalizedString("LINK_PE_CODE", comment: "PE Code link title"),
+                detailLabel: NSLocalizedString("WATER_POINTS_CUSTOMER_CODE", comment: "Description of water points and customer code")
+            )
         } else if indexPath.row == 2 {
-            cell.configure(with: UIImage(systemName: "person") ?? UIImage(), titleLabel: "Tài khoản người dùng khác", detailLabel: "Khoá/mở khoá các tài khoản đã liên kết với mã PE của bạn")
+            cell.configure(
+                with: UIImage(systemName: "person") ?? UIImage(),
+                titleLabel: NSLocalizedString("OTHER_USER_ACCOUNTS", comment: "Other user accounts title"),
+                detailLabel: NSLocalizedString("MANAGE_ACCOUNT_ACCESS", comment: "Manage linked user accounts description")
+            )
         } else if indexPath.row == 3 {
-            cell.configure(with: UIImage(systemName: "iphone.gen1.circle") ?? UIImage(), titleLabel: "Cài đặt điện thoại", detailLabel: "Cài đặt thông báo, định vị...")
+            cell.configure(
+                with: UIImage(systemName: "iphone.gen1.circle") ?? UIImage(),
+                titleLabel: NSLocalizedString("PHONE_SETTINGS", comment: "Phone settings title"),
+                detailLabel: NSLocalizedString("NOTIFICATIONS_LOCATION_SETTINGS", comment: "Notification and location settings description")
+            )
         } else if indexPath.row == 4 {
-            cell.configure(with: UIImage(systemName: "globe") ?? UIImage(), titleLabel: "Ngôn ngữ hỗ trợ", detailLabel: "Tiếng Việt")
+            cell.configure(
+                with: UIImage(systemName: "globe") ?? UIImage(),
+                titleLabel: NSLocalizedString("LANGUAGE_SUPPORT", comment: "Language support title"),
+                detailLabel: NSLocalizedString("VIETNAMESE", comment: "Vietnamese language detail")
+            )
         } else if indexPath.row == 5 {
-            cell.configure(with: UIImage(systemName: "square.and.arrow.up") ?? UIImage(), titleLabel: "Chia sẻ ứng dụng", detailLabel: "Cho phép sao chép đường dẫn, mã QR để gửi đến bạn bè")
-        } else  {
-            cell.configure(with: UIImage(systemName: "book") ?? UIImage(), titleLabel: "Hướng dẫn sử dụng", detailLabel: "Hướng dẫn dành cho ngừoi mới")
+            cell.configure(
+                with: UIImage(systemName: "square.and.arrow.up") ?? UIImage(),
+                titleLabel: NSLocalizedString("SHARE_APP", comment: "Share app title"),
+                detailLabel: NSLocalizedString("COPY_LINK_QR", comment: "Description for copying link or QR code to share")
+            )
+        } else {
+            cell.configure(
+                with: UIImage(systemName: "book") ?? UIImage(),
+                titleLabel: NSLocalizedString("USER_GUIDE", comment: "User guide title"),
+                detailLabel: NSLocalizedString("NEW_USER_INSTRUCTIONS", comment: "Instructions for new users")
+            )
         }
+
         
         return cell
     }
@@ -197,6 +226,48 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             let destinationVC = ShareViewController()
             destinationVC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(destinationVC, animated: true)
+        } else if indexPath.row == 4 {
+            showLanguageSelectiom()
         }
     }
+    
+    func showLanguageSelectiom() {
+        let alertController = UIAlertController(title: NSLocalizedString("CHOOSE_LANGUAGE", comment: "Title for language selection"),
+                                                message: NSLocalizedString("SELECT_LANGUAGE_MESSAGE", comment: "Message asking the user to choose a language"),
+                                                preferredStyle: .actionSheet)
+
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("VIETNAMESE1", comment: "Title for Vietnamese option"), style: .default, handler: { _ in
+            self.setLanguageToVietnamese()
+        }))
+
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("ENGLISH1", comment: "Title for English option"), style: .default, handler: { _ in
+            self.setLanguageToEnglish()
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func setLanguageToVietnamese() {
+        UserDefaults.standard.set(["vi"], forKey: "AppleLanguages")
+        UserDefaults.standard.synchronize()
+        Bundle.setLanguage("vi")
+        let alert = UIAlertController(title: NSLocalizedString("CHANGE_LANGUAGE", comment: "Title for changing language"), message: NSLocalizedString("LANGUAGE_CHANGE_MESSAGE", comment: "Message explaining the app restart due to language change"),preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            exit(0)
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func setLanguageToEnglish() {
+        UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
+        UserDefaults.standard.synchronize()
+        Bundle.setLanguage("en")
+        let alert = UIAlertController(title: NSLocalizedString("CHANGE_LANGUAGE", comment: "Title for changing language"), message: NSLocalizedString("LANGUAGE_CHANGE_MESSAGE", comment: "Message explaining the app restart due to language change"),preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            exit(0)
+        }))
+        present(alert, animated: true, completion: nil)
+    }
 }
+

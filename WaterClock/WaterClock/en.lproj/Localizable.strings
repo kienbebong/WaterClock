@@ -1,0 +1,157 @@
+"LOG_IN_NOW" = "LOG IN NOW";
+
+"LANGUAGE_SUPPORT" = "Language Support";
+"VIETNAMESE" = "English";
+
+"ACCOUNT_SETTINGS" = "Account Settings";
+"ACCOUNT_MANAGEMENT_DESCRIPTION" = "Manage account info, password, and biometric login";
+
+"LINK_PE_CODE" = "Link PE Code";
+"WATER_POINTS_CUSTOMER_CODE" = "Water points, customer code";
+
+"OTHER_USER_ACCOUNTS" = "Other User Accounts";
+"MANAGE_ACCOUNT_ACCESS" = "Unlock/lock accounts linked to your PE code";
+
+"PHONE_SETTINGS" = "Phone Settings";
+"NOTIFICATIONS_LOCATION_SETTINGS" = "Notification and location settings...";
+
+"SHARE_APP" = "Share App";
+"COPY_LINK_QR" = "Copy link or QR code to share with friends";
+
+"USER_GUIDE" = "User Guide";
+"NEW_USER_INSTRUCTIONS" = "Instructions for new users";
+
+"SETTINGS" = "Settings";
+
+"DAILY_WATER_DATA" = "Daily water data";
+"REPORT_DATA" = "Report data";
+"WATER_QUALITY_CHECK" = "Water quality check";
+"BILL_PAYMENT" = "Bill payment";
+
+"LOGIN_ACCOUNT" = "Login account";
+"EXPLORE_NEW_FEATURES" = "Explore all new features";
+
+"EFFECTIVE_WATER_CONTROL" = "Effective water source control";
+"DAILY_WATER_REPORT" = "Daily water index report";
+"BILL_REPORT_ON_DUE" = "Bill report for due payments";
+"MANAGE_PE_CODES" = "Manage multiple PE codes simultaneously";
+
+"WATER_DATA_DAILY" = "Water data daily";
+"REPORT_DATA" = "Report data";
+"URBAN_WATER_SUPPLY" = "Urban water supply";
+"RURAL_WATER_SUPPLY" = "Rural water supply";
+"WATER_RECONNECT_AFTER_SUSPEND" = "Water reconnect after suspension";
+"METER_CHECK_DEVICE" = "Meter and device check";
+"CHANGE_DEVICE_POSITION" = "Change device position";
+"CHANGE_WATER_CONSUMPTION" = "Change water consumption capacity";
+"ONLINE_CONTRACT_SIGNING" = "Online contract signing";
+"CHANGE_CONTRACT_TYPE" = "Change contract type";
+"CONTRACT_EXTENSION" = "Contract extension";
+"CONTRACT_TERMINATION" = "Contract termination";
+"CHANGE_PERSONAL_INFO" = "Change personal information";
+"CHANGE_USAGE_PURPOSE" = "Change usage purpose";
+"CHANGE_QUOTA" = "Change quota";
+"CHANGE_PAYMENT_METHOD" = "Change payment method";
+"OTHER_REQUEST" = "Other requests";
+"CUSTOMER_FEEDBACK" = "Customer feedback response";
+"ONLINE_CONSTRUCTION" = "Online construction";
+"WATER_PRESSURE_TEST" = "Water pressure testing";
+"new_info" = "NEW INFORMATION";
+"customer_service_hotline" = "Free Customer Service Hotline";
+
+"SEARCH_PLACEHOLDER" = "Search";
+
+"LOOKUP" = "Lookup";
+"DETAIL" = "To use all features of the VTB app";
+"LOOKUP_CUSTOMER_INFO" = "Lookup all customer information: %@";
+
+"ELECTRONIC_BILL" = "Electronic Bill";
+"WATER_QUALITY_CHECK" = "Water Quality Check";
+"WATER_USAGE" = "Water Usage";
+"OPERATIONAL_PARAMETERS" = "Operational Parameters";
+"WATER_CUT_SCHEDULE" = "Water Cut Schedule";
+"WATER_READING_SCHEDULE" = "Water Reading Schedule";
+"PAYMENT_HISTORY" = "Payment History";
+"SERVICE_PROGRESS" = "Service Progress";
+"COLLECTION_POINTS" = "Collection Points";
+"WATER_CONTRACT" = "Water Contract";
+"WATER_PRICE" = "Water Price";
+"ADDRESS" = "Address";
+
+"NOTIFICATIONS" = "Notifications";
+"ALL" = "All";
+"WATER_ISSUES" = "Water issues";
+"WORK_SCHEDULE" = "Work schedule";
+"ELECTRICITY_BILL" = "Electricity bill";
+"DEBT_REMINDER" = "Debt reminder";
+"WATER_INDEX" = "Water index";
+
+"NEWS" = "News";
+"TRANSACTIONS" = "Transactions";
+"VTB" = "VTB";
+"LOOKUP" = "Lookup";
+"NOTIFICATIONS" = "Notifications";
+
+"VIETTRONICS_COMPANY" = "Viettronics Tan Binh Joint Stock Company";
+"SKIP" = "Skip";
+"LOGIN_OR_CREATE_ACCOUNT" = "Login or create an account";
+"PLEASE_ENTER" = "Please enter ";
+"ACCOUNT_AND_PASSWORD" = "account and password ";
+"REGISTER_OR_LOGIN" = "to register or log in to the app.";
+"CONTINUE" = "CONTINUE";
+"AGREE_WITH_ELECTRONIC_TRANSACTIONS" = "By logging in or signing up, you agree to ";
+"ELECTRONIC_TRANSACTIONS_VTB" = "the electronic transactions of VTB";
+"LOGIN_OR_LOGIN_WITH" = "----------Or log in with----------";
+"ENTER_USERNAME_TITLE" = "Please Enter Username";
+"ENTER_USERNAME_MESSAGE" = "We need your username to continue.";
+"ENTER_PASSWORD_TITLE" = "Please Enter Password";
+"ENTER_PASSWORD_MESSAGE" = "We need your password to continue.";
+"ACCOUNT_PLACEHOLDER" = "Account";
+"PASSWORD_PLACEHOLDER" = "Password";
+
+"CHOOSE_LANGUAGE" = "Choose Language";
+"SELECT_LANGUAGE_MESSAGE" = "Please choose your language";
+"VIETNAMESE1" = "Vietnamese";
+"ENGLISH1" = "English";
+"CHANGE_LANGUAGE" = "Change Language";
+"LANGUAGE_CHANGE_MESSAGE" = "The app will restart to apply the new language.";
+
+"transaction_online" = "Online Transactions";
+"send_request" = "Send request";
+"request_service_from_water_company" = " perform service from the water company";
+"online_payment" = "Online Payment";
+"repair_report" = "Water Repair Report";
+"water_index_report" = "Water Index Report";
+"measuring_device" = "MEASURING DEVICE";
+"check_meter_device" = "Check meter, other measuring devices";
+"change_device_position" = "Change measuring device position";
+"change_water_capacity" = "Change water usage capacity";
+"water_supply_request" = "WATER SUPPLY REQUEST";
+"urban_water_supply" = "Urban water supply";
+"rural_water_supply" = "Rural water supply";
+"water_supply_after_suspend" = "Water supply resumed after suspension";
+"contract_water_sale" = "WATER SALE CONTRACT";
+"sign_online_contract" = "Sign Online Contract";
+"change_contract_subject" = "Change Contract Subject";
+"extend_contract" = "Extend Water Sale Contract";
+"terminate_contract" = "Terminate Water Sale Contract";
+"request_change_info" = "REQUEST TO CHANGE INFORMATION";
+"change_info" = "Change Registered Information";
+"change_purpose" = "Change Water Usage Purpose";
+"change_limit" = "Change Water Usage Limit";
+"change_payment" = "Change Water Payment Method";
+"other_requests" = "OTHER REQUESTS";
+"customer_request_resolution" = "Customer request resolution";
+"hotline_construction" = "Hotline construction";
+"water_pressure_testing" = "Water pressure testing";
+
+"share_app" = "Share the app";
+"scan_qr_code" = "Scan the QR code below to visit our website";
+"share_now" = "Share now";
+"share_alert_title" = "Notification";
+"share_success" = "Share successful";
+"share_failed" = "Share failed or canceled";
+"ok" = "OK";
+"send_invite_link" = "Send invitation link to friends";
+"or_text" = "-----------------Or-----------------";
+"share_link" = "Share via link";

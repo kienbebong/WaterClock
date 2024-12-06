@@ -19,28 +19,29 @@ class HeaderLookUpView: UIView {
     
     private let lookupLabel: UILabel = {
         let label = UILabel()
-        label.text = "TRA CỨU"
+        label.text = NSLocalizedString("LOOKUP", comment: "Lookup label text")
         label.textColor = .white
         label.font = .boldSystemFont(ofSize: 22)
         return label
     }()
-    
+
     private let detailLabel: UILabel = {
         let label = UILabel()
-        label.text = "để sử dụng tất cả tính năng của ứng dụng VTB"
+        label.text = NSLocalizedString("DETAIL", comment: "Detail label text")
         label.textColor = .white
         label.font = .systemFont(ofSize: 18)
         label.numberOfLines = 0
         return label
     }()
-    
+
     private let logInLabel: UILabel = {
         let label = UILabel()
-        label.text = "ĐĂNG NHẬP NGAY"
+        label.text = NSLocalizedString("LOG_IN_NOW", comment: "Log in now label text")
         label.textColor = .blue
         label.font = UIFont.boldSystemFont(ofSize: 18)
         return label
     }()
+
 
 
     private let logoImage: UIImageView = {
@@ -118,7 +119,8 @@ class HeaderLookUpView: UIView {
         DataPersistenceManager.shared.fetchAccount { result in
             switch result {
             case .success(let account):
-                self.detailLabel.text = "Tra cứu tất cả thông tin của khách hàng: \(account.userName ?? "")"
+                self.detailLabel.text = String(format: NSLocalizedString("LOOKUP_CUSTOMER_INFO", comment: "Lookup customer information"), account.userName ?? "")
+
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -128,7 +130,7 @@ class HeaderLookUpView: UIView {
     
     func handleAfterSignOut() {
         signInView.isHidden = false
-        self.detailLabel.text = "để sử dụng tất cả tính năng của ứng dụng VTB"
+        self.detailLabel.text =  NSLocalizedString("DETAIL", comment: "Detail label text")
         
     }
     

@@ -21,7 +21,7 @@ class HeaderShareView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Chia sẻ ứng dụng"
+        label.text = NSLocalizedString("share_app", comment: "")
         label.font = .systemFont(ofSize: 18)
         label.textColor = .black
         return label

@@ -29,11 +29,12 @@ class TabBarViewController: UITabBarController {
         
         setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: true)
         
-        vc1.title = "Tin tức"
-        vc2.title = "Giao dịch"
-        vc3.title = "VTB"
-        vc4.title = "Tra cứu"
-        vc5.title = "Thông báo"
+        vc1.title = NSLocalizedString("NEWS", comment: "News section title")
+        vc2.title = NSLocalizedString("TRANSACTIONS", comment: "Transactions section title")
+        vc3.title = NSLocalizedString("VTB", comment: "VTB section title")
+        vc4.title = NSLocalizedString("LOOKUP", comment: "Lookup section title")
+        vc5.title = NSLocalizedString("NOTIFICATIONS", comment: "Notifications section title")
+
 
 
         self.selectedIndex = 2

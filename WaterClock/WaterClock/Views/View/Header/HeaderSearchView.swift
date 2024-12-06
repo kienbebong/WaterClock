@@ -33,7 +33,7 @@ class HeaderSearchView: UIView, UISearchBarDelegate {
     
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.placeholder = "Tìm kiếm"
+        searchBar.placeholder = NSLocalizedString("SEARCH_PLACEHOLDER", comment: "Search placeholder text")
         searchBar.searchBarStyle = .minimal
         searchBar.tintColor = .white
         searchBar.barTintColor = .gray.withAlphaComponent(0.5)

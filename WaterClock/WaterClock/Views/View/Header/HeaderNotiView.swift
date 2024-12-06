@@ -15,7 +15,7 @@ class HeaderNotiView: UIView {
         let label = UILabel()
         label.textColor = .black
         label.font = .boldSystemFont(ofSize: 24)
-        label.text = "Thông báo"
+        label.text = NSLocalizedString("NOTIFICATIONS", comment: "Notifications")
         return label
     }()
     
@@ -30,7 +30,15 @@ class HeaderNotiView: UIView {
         return collection
     }()
     
-    private let titles = ["Tất cả", "Sự cố nước", "Lịch công tác", "Tiền điện", "Nhắc nợ", "Chỉ số nước"]
+    private let titles = [
+        NSLocalizedString("ALL", comment: "All"),
+        NSLocalizedString("WATER_ISSUES", comment: "Water issues"),
+        NSLocalizedString("WORK_SCHEDULE", comment: "Work schedule"),
+        NSLocalizedString("ELECTRICITY_BILL", comment: "Electricity bill"),
+        NSLocalizedString("DEBT_REMINDER", comment: "Debt reminder"),
+        NSLocalizedString("WATER_INDEX", comment: "Water index")
+    ]
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -94,7 +102,7 @@ extension HeaderNotiView: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let text = titles[indexPath.item]
         let font = UIFont.systemFont(ofSize: 17)
-        let textWidth = text.width(withConstrainedHeight: 50, font: font)
+        let textWidth = text.width(withConstrainedHeight: 80, font: font)
         return CGSize(width: textWidth + 20, height: 80)
     }
 }

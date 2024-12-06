@@ -15,7 +15,7 @@ class SignInHomeView: UIView {
 
     private let logInLabel: UILabel = {
         let label = UILabel()
-        let text1 = "Đăng nhập tài khoản"
+        let text1 = NSLocalizedString("LOGIN_ACCOUNT", comment: "Login account")
         let text2 = " VTB"
         let fullText = text1 + text2
         
@@ -36,7 +36,7 @@ class SignInHomeView: UIView {
     
     private let discoverLabel: UILabel = {
         let label = UILabel()
-        label.text = "Khám phá tất cả tính năng mới"
+        label.text = NSLocalizedString("EXPLORE_NEW_FEATURES", comment: "Explore all new features")
         label.font = .boldSystemFont(ofSize: 25)
         label.textColor = .red
         label.textAlignment = .center
@@ -52,7 +52,7 @@ class SignInHomeView: UIView {
     private let signInButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .red
-        button.setTitle("ĐĂNG NHẬP NGAY", for: .normal)
+        button.setTitle(NSLocalizedString("LOG_IN_NOW", comment: "Log in now button title"), for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
         button.setImage(UIImage(systemName: "person.circle"), for: .normal)

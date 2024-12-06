@@ -41,41 +41,41 @@ class FeatureHomeView: UIView {
            return imageView
        }()
        
-       private let label1: UILabel = {
-           let label = UILabel()
-           label.text = "Kiểm soát hiệu quả nguồn nước."
-           label.textAlignment = .left
-           label.font = .systemFont(ofSize: 15)
-           label.textColor = .black
-           return label
-       }()
-       
-       private let label2: UILabel = {
-           let label = UILabel()
-           label.text = "Báo cáo chỉ số nước hằng ngày."
-           label.textAlignment = .left
-           label.font = .systemFont(ofSize: 15)
-           label.textColor = .black
-           return label
-       }()
-       
-       private let label3: UILabel = {
-           let label = UILabel()
-           label.text = "Báo cáo hoá đơn đến kì thanh toán."
-           label.textAlignment = .left
-           label.font = .systemFont(ofSize: 15)
-           label.textColor = .black
-           return label
-       }()
-       
-       private let label4: UILabel = {
-           let label = UILabel()
-           label.text = "Quản lí nhiều mã PE cùng lúc."
-           label.textAlignment = .left
-           label.font = .systemFont(ofSize: 15)
-           label.textColor = .black
-           return label
-       }()
+    private let label1: UILabel = {
+        let label = UILabel()
+        label.text = NSLocalizedString("EFFECTIVE_WATER_CONTROL", comment: "Effective water source control")
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 15)
+        label.textColor = .black
+        return label
+    }()
+
+    private let label2: UILabel = {
+        let label = UILabel()
+        label.text = NSLocalizedString("DAILY_WATER_REPORT", comment: "Daily water index report")
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 15)
+        label.textColor = .black
+        return label
+    }()
+
+    private let label3: UILabel = {
+        let label = UILabel()
+        label.text = NSLocalizedString("BILL_REPORT_ON_DUE", comment: "Bill report for due payments")
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 15)
+        label.textColor = .black
+        return label
+    }()
+
+    private let label4: UILabel = {
+        let label = UILabel()
+        label.text = NSLocalizedString("MANAGE_PE_CODES", comment: "Manage multiple PE codes simultaneously")
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 15)
+        label.textColor = .black
+        return label
+    }()
        
        override init(frame: CGRect) {
            super.init(frame: frame)

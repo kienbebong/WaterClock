@@ -19,7 +19,7 @@ class TransactionHeaderView: UIView {
     
     private let transactionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Giao dịch trực tuyến"
+        label.text = NSLocalizedString("transaction_online", comment: "Label for online transactions")
         label.font = .boldSystemFont(ofSize: 25)
         label.textColor = .white
         return label
@@ -27,8 +27,8 @@ class TransactionHeaderView: UIView {
     
     private let detailLabel: UILabel = {
         let label = UILabel()
-        let text1 = "Gửi yêu cầu "
-        let text2 = "thực hiện dịch vụ đến công ty nước"
+        let text1 = NSLocalizedString("send_request", comment: "Yêu cầu dịch vụ")
+        let text2 = NSLocalizedString("request_service_from_water_company", comment: "Mô tả yêu cầu")
         let fullText = text1 + text2
         
         let attributedText = NSMutableAttributedString(string: fullText)

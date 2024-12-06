@@ -1,0 +1,161 @@
+"LOG_IN_NOW" = "ĐĂNG NHẬP NGAY";
+
+"LANGUAGE_SUPPORT" = "Ngôn ngữ hỗ trợ";
+"VIETNAMESE" = "Tiếng Việt";
+
+"ACCOUNT_SETTINGS" = "Cài dặt tài khoản";
+"ACCOUNT_MANAGEMENT_DESCRIPTION" = "Quản lí thông tin tài khoản, mật khẩu, đăng nhập bằng sinh trắc học";
+
+"LINK_PE_CODE" = "Liên kết mã PE";
+"WATER_POINTS_CUSTOMER_CODE" = "Điểm dùng nước, mã khách hàng";
+
+"OTHER_USER_ACCOUNTS" = "Tài khoản người dùng khác";
+"MANAGE_ACCOUNT_ACCESS" = "Khoá/mở khoá các tài khoản đã liên kết với mã PE của bạn";
+
+"PHONE_SETTINGS" = "Cài đặt điện thoại";
+"NOTIFICATIONS_LOCATION_SETTINGS" = "Cài đặt thông báo, định vị...";
+
+
+"SHARE_APP" = "Chia sẻ ứng dụng";
+"COPY_LINK_QR" = "Cho phép sao chép đường dẫn, mã QR để gửi đến bạn bè";
+
+"USER_GUIDE" = "Hướng dẫn sử dụng";
+"NEW_USER_INSTRUCTIONS" = "Hướng dẫn dành cho người mới";
+
+"SETTINGS" = "CÀI ĐẶT";
+
+"DAILY_WATER_DATA" = "Dữ liệu nước theo ngày";
+"REPORT_DATA" = "Dữ liệu báo cáo";
+"WATER_QUALITY_CHECK" = "Kiểm tra chất lượng nước";
+"BILL_PAYMENT" = "Thanh toán HĐ";
+
+"LOGIN_ACCOUNT" = "Đăng nhập tài khoản";
+"EXPLORE_NEW_FEATURES" = "Khám phá tất cả tính năng mới";
+
+"EFFECTIVE_WATER_CONTROL" = "Kiểm soát hiệu quả nguồn nước.";
+"DAILY_WATER_REPORT" = "Báo cáo chỉ số nước hằng ngày.";
+"BILL_REPORT_ON_DUE" = "Báo cáo hoá đơn đến kì thanh toán.";
+"MANAGE_PE_CODES" = "Quản lí nhiều mã PE cùng lúc.";
+
+"WATER_DATA_DAILY" = "Dữ liệu nước theo ngày";
+"REPORT_DATA" = "Dữ liệu báo cáo";
+"URBAN_WATER_SUPPLY" = "Cấp nước khu đô thị";
+"RURAL_WATER_SUPPLY" = "Cấp nước khu nông thôn";
+"WATER_RECONNECT_AFTER_SUSPEND" = "Cấp nước trở lại khi đã tạm ngưng";
+"METER_CHECK_DEVICE" = "Kiểm tra công tơ, thiết bị";
+"CHANGE_DEVICE_POSITION" = "Thay đổi vị trí thiết bị đồng hồ";
+"CHANGE_WATER_CONSUMPTION" = "Thay đổi công suất nước sử dụng";
+"ONLINE_CONTRACT_SIGNING" = "Kí hợp đồng trực tuyến";
+"CHANGE_CONTRACT_TYPE" = "Thay đổi chủ đề hợp đồng mua bán";
+"CONTRACT_EXTENSION" = "Gia hạn hợp đồng";
+"CONTRACT_TERMINATION" = "Chấm dứt hợp đồng";
+"CHANGE_PERSONAL_INFO" = "Thay đổi thông tin cá nhân";
+"CHANGE_USAGE_PURPOSE" = "Thay đổi mục đích sử dụng";
+"CHANGE_QUOTA" = "Thay đổi định mức";
+"CHANGE_PAYMENT_METHOD" = "Thay đổi hình thức thanh toán";
+"OTHER_REQUEST" = "Yêu cầu khác";
+"CUSTOMER_FEEDBACK" = "Giải đáp ý kiến của khách hàng";
+"ONLINE_CONSTRUCTION" = "Thi công online";
+"WATER_PRESSURE_TEST" = "Kiểm định áp suất nước";
+"new_info" = "THÔNG TIN MỚI";
+"customer_service_hotline" = "Tổng đài CSKH miễn phí";
+
+"SEARCH_PLACEHOLDER" = "Tìm kiếm";
+
+"LOOKUP" = "TRA CỨU";
+"DETAIL" = "để sử dụng tất cả tính năng của ứng dụng VTB";
+"LOG_IN_NOW" = "ĐĂNG NHẬP NGAY";
+"LOOKUP_CUSTOMER_INFO" = "Tra cứu tất cả thông tin của khách hàng: %@";
+
+
+"ELECTRONIC_BILL" = "Hoá đơn điện tử";
+"WATER_QUALITY_CHECK" = "Kiểm tra chất lượng nước";
+"WATER_USAGE" = "Số nước phát lên";
+"OPERATIONAL_PARAMETERS" = "Thông số vận hành";
+"WATER_CUT_SCHEDULE" = "Lịch cắt nước";
+"WATER_READING_SCHEDULE" = "Lịch ghi nước";
+"PAYMENT_HISTORY" = "Lịch sử thanh toán";
+"SERVICE_PROGRESS" = "Tiến độ dịch vụ";
+"COLLECTION_POINTS" = "Điểm thu hộ";
+"WATER_CONTRACT" = "Hợp đồng sử dụng nước";
+"WATER_PRICE" = "Giá bán nước";
+"ADDRESS" = "Địa chỉ";
+
+"NOTIFICATIONS" = "Thông báo";
+"ALL" = "Tất cả";
+"WATER_ISSUES" = "Sự cố nước";
+"WORK_SCHEDULE" = "Lịch công tác";
+"ELECTRICITY_BILL" = "Tiền điện";
+"DEBT_REMINDER" = "Nhắc nợ";
+"WATER_INDEX" = "Chỉ số nước";
+
+"NEWS" = "Tin tức";
+"TRANSACTIONS" = "Giao dịch";
+"VTB" = "VTB";
+"LOOKUP" = "Tra cứu";
+"NOTIFICATIONS" = "Thông báo";
+
+"VIETTRONICS_COMPANY" = "Công ty cổ phần Viettronics Tân Bình";
+"SKIP" = "Bỏ qua";
+"LOGIN_OR_CREATE_ACCOUNT" = "Đăng nhập hoặc tạo tài khoản";
+"PLEASE_ENTER" = "Vui lòng nhập ";
+"ACCOUNT_AND_PASSWORD" = "tài khoản và mật khẩu ";
+"REGISTER_OR_LOGIN" = "để đăng kí hoặc đăng nhập vào ứng dụng.";
+"CONTINUE" = "TIẾP TỤC";
+"AGREE_WITH_ELECTRONIC_TRANSACTIONS" = "Bằng việc đăng nhập, đăng ký, bạn đồng ý với các ";
+"ELECTRONIC_TRANSACTIONS_VTB" = "giao dịch điện tử của VTB";
+"LOGIN_OR_LOGIN_WITH" = "----------Hoặc đăng nhập bằng----------";
+"ENTER_USERNAME_TITLE" = "Vui lòng nhập tên người dùng";
+"ENTER_USERNAME_MESSAGE" = "Chúng tôi cần tên người dùng của bạn để tiếp tục.";
+"ENTER_PASSWORD_TITLE" = "Vui lòng nhập mật khẩu";
+"ENTER_PASSWORD_MESSAGE" = "Chúng tôi cần mật khẩu của bạn để tiếp tục.";
+"ACCOUNT_PLACEHOLDER" = "Tài khoản";
+"PASSWORD_PLACEHOLDER" = "Mật khẩu";
+
+
+"CHOOSE_LANGUAGE" = "Chọn ngôn ngữ";
+"SELECT_LANGUAGE_MESSAGE" = "Vui lòng chọn ngôn ngữ của bạn";
+"VIETNAMESE1" = "Tiếng Việt";
+"ENGLISH1" = "Tiếng Anh";
+"CHANGE_LANGUAGE" = "Thay đổi ngôn ngữ";
+"LANGUAGE_CHANGE_MESSAGE" = "Ứng dụng sẽ khởi động lại để áp dụng ngôn ngữ mới.";
+
+"transaction_online" = "Giao dịch trực tuyến";
+"send_request" = "Gửi yêu cầu";
+"request_service_from_water_company" = " thực hiện dịch vụ đến công ty nước";
+"online_payment" = "Thanh toán trực tuyến";
+"repair_report" = "Báo cáo sửa nước";
+"water_index_report" = "Báo chỉ số nước";
+"measuring_device" = "THIẾT BỊ ĐO ĐẾM";
+"check_meter_device" = "Kiểm tra công tơ, thiết bị đo đếm khác";
+"change_device_position" = "Thay đổi vị trí thiết bị đo đếm";
+"change_water_capacity" = "Thay đổi công suất sử dụng nước";
+"water_supply_request" = "YÊU CẦU CẤP NƯỚC";
+"urban_water_supply" = "Cấp nước khu đô thị";
+"rural_water_supply" = "Cấp nước khu nông thôn";
+"water_supply_after_suspend" = "Cấp nước trở lại khi đã tạm ngưng sử dụng nước";
+"contract_water_sale" = "HỢP ĐỒNG MUA BÁN NƯỚC";
+"sign_online_contract" = "Ký hợp đồng trực tuyến";
+"change_contract_subject" = "Thay đổi chủ đề hợp đồng mua bán";
+"extend_contract" = "Gia hạn hợp đồng mua bán nước";
+"terminate_contract" = "Chấm dứt hợp đồng mua bán nước";
+"request_change_info" = "YÊU CẦU THAY ĐỔI THÔNG TIN";
+"change_info" = "Thay đổi thông tin đã đăng kí";
+"change_purpose" = "Thay đổi mục đích sử dụng nước";
+"change_limit" = "Thay đổi định mức sử dụng nước";
+"change_payment" = "Thay đổi hình thức thanh toán tiền nước";
+"other_requests" = "YÊU CẦU KHÁC";
+"customer_request_resolution" = "Giải đáp kiến nghị của khách hàng";
+"hotline_construction" = "Thi công Hotline";
+"water_pressure_testing" = "Kiểm định áp suất nước";
+
+"share_app" = "Chia sẻ ứng dụng";
+"scan_qr_code" = "Quét mã QR bên dưới để tham quan trang web của chúng tôi";
+"share_now" = "Chia sẻ ngay";
+"share_alert_title" = "Thông báo";
+"share_success" = "Chia sẻ thành công";
+"share_failed" = "Chia sẻ thất bại hoặc bị hủy";
+"ok" = "Đồng ý";
+"send_invite_link" = "Gửi link giới thiệu cho bạn bè";
+"or_text" = "-----------------Hoặc-----------------";
+"share_link" = "Chia sẻ bằng đường link";

@@ -18,7 +18,7 @@ class RequestTransactionView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "YÊU CẦU CẤP NƯỚC"
+        label.text = NSLocalizedString("water_supply_request", comment: "Yêu cầu cấp nước")
         label.font = .boldSystemFont(ofSize: 20)
         label.textColor = .black
         return label
@@ -85,12 +85,13 @@ extension RequestTransactionView: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier, for: indexPath) as! TransactionTableViewCell
         
         if indexPath.row == 0 {
-            cell.configure(with: UIImage(systemName: "humidity.fill") ?? UIImage(), titleLabel: "Cấp nước khu đô thị")
+            cell.configure(with: UIImage(systemName: "humidity.fill") ?? UIImage(), titleLabel: NSLocalizedString("urban_water_supply", comment: "Cấp nước khu đô thị"))
         } else if indexPath.row == 1 {
-            cell.configure(with: UIImage(systemName: "humidity.fill") ?? UIImage(), titleLabel: "Cấp nước khu nông thôn")
+            cell.configure(with: UIImage(systemName: "humidity.fill") ?? UIImage(), titleLabel: NSLocalizedString("rural_water_supply", comment: "Cấp nước khu nông thôn"))
         } else {
-            cell.configure(with: UIImage(systemName: "drop.circle") ?? UIImage(), titleLabel: "Cấp nước trở lại khi đã tạp ngưng sử dụng nước")
+            cell.configure(with: UIImage(systemName: "drop.circle") ?? UIImage(), titleLabel: NSLocalizedString("water_supply_after_suspend", comment: "Cấp nước trở lại khi đã tạm ngưng sử dụng nước"))
         }
+
         
         return cell
     }

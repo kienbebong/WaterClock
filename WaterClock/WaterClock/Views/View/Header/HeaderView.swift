@@ -25,9 +25,9 @@ class HeaderView: UIView {
         return image
     }()
     
-    private let logInLabel: UILabel = {
+    public let logInLabel: UILabel = {
         let label = UILabel()
-        label.text = "ĐĂNG NHẬP NGAY"
+        label.text = NSLocalizedString("LOG_IN_NOW", comment: "LOG_IN_NOW")
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 15)
         return label
@@ -130,9 +130,8 @@ class HeaderView: UIView {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(OpenTabContact))
         logoImage3.addGestureRecognizer(tapGesture)
+        
     }
-    
-    
     
     @objc private func handleSignInViewTap() {
         onSignInTapped?()

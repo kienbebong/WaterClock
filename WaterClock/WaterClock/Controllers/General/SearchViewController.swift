@@ -11,7 +11,29 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     var headerView: HeaderSearchView?
     
-    private let nameLabel = ["Dữ liệu nước theo ngày", "Dữ liệu báo cáo","Cấp nước khu đô thị", "Cấp nước khu nông thôn", "Cấp nước trở lại khi đã tạm ngưng", "Kiểm tra công tơ, thiết bị", "Thay đổi vị trí thiết bị đồng hồ", "Thay đổi công suất nước sử dụng", "Kí hợp đồng trực tuyến", "Thay đổi chủ đề hợp đông mua bán", "Gia hạn hợp đông", "Chấm dứt hợp đông", "Thay đổi thông tin cá nhân", "Thay đổi mục đích sử dụng", "Thay đổi định mức", "Thay đổi hình thức thanh toán", "Yêu cầu khác", "Giaỉ đáp ý kiến của khách hàng", "Thi công online", "Kiểm định áp suất nước"]
+    private let nameLabel = [
+        NSLocalizedString("WATER_DATA_DAILY", comment: "Water data daily"),
+        NSLocalizedString("REPORT_DATA", comment: "Report data"),
+        NSLocalizedString("URBAN_WATER_SUPPLY", comment: "Urban water supply"),
+        NSLocalizedString("RURAL_WATER_SUPPLY", comment: "Rural water supply"),
+        NSLocalizedString("WATER_RECONNECT_AFTER_SUSPEND", comment: "Water reconnect after suspension"),
+        NSLocalizedString("METER_CHECK_DEVICE", comment: "Meter and device check"),
+        NSLocalizedString("CHANGE_DEVICE_POSITION", comment: "Change device position"),
+        NSLocalizedString("CHANGE_WATER_CONSUMPTION", comment: "Change water consumption capacity"),
+        NSLocalizedString("ONLINE_CONTRACT_SIGNING", comment: "Online contract signing"),
+        NSLocalizedString("CHANGE_CONTRACT_TYPE", comment: "Change contract type"),
+        NSLocalizedString("CONTRACT_EXTENSION", comment: "Contract extension"),
+        NSLocalizedString("CONTRACT_TERMINATION", comment: "Contract termination"),
+        NSLocalizedString("CHANGE_PERSONAL_INFO", comment: "Change personal information"),
+        NSLocalizedString("CHANGE_USAGE_PURPOSE", comment: "Change usage purpose"),
+        NSLocalizedString("CHANGE_QUOTA", comment: "Change quota"),
+        NSLocalizedString("CHANGE_PAYMENT_METHOD", comment: "Change payment method"),
+        NSLocalizedString("OTHER_REQUEST", comment: "Other requests"),
+        NSLocalizedString("CUSTOMER_FEEDBACK", comment: "Customer feedback response"),
+        NSLocalizedString("ONLINE_CONSTRUCTION", comment: "Online construction"),
+        NSLocalizedString("WATER_PRESSURE_TEST", comment: "Water pressure testing")
+    ]
+
     
     private let img = ["list.bullet.clipboard", "calendar.badge.clock", "humidity.fill", "humidity.fill", "drop.circle", "gauge.with.dots.needle.bottom.0percent", "location.magnifyingglass", "water.waves", "square.and.pencil", "book.closed.circle", "calendar.badge.clock.rtl", "xmark", "person.crop.circle.badge.checkmark", "repeat.1.circle", "chart.xyaxis.line", "creditcard", "pencil.and.list.clipboard", "exclamationmark.bubble", "phone", "gauge.with.dots.needle.bottom.50percent"]
     

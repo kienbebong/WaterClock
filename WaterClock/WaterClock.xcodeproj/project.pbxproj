@@ -95,6 +95,8 @@
 		75819F832CE1B0730018B986 /* FeatureTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F3F2CE1B0730018B986 /* FeatureTransactionView.swift */; };
 		75819F842CE1B0730018B986 /* MoreChangeTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F402CE1B0730018B986 /* MoreChangeTransactionView.swift */; };
 		75819F852CE1B0730018B986 /* RequestTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75819F412CE1B0730018B986 /* RequestTransactionView.swift */; };
+		7598C3D92D0014D300E9F557 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7598C3D72D0014D300E9F557 /* Localizable.strings */; };
+		7598C3DC2D0033DE00E9F557 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598C3DB2D0033DE00E9F557 /* Bundle.swift */; };
 		75E1EC1A2CCF3BEC006043D9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 75E1EC192CCF3BEC006043D9 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -198,6 +200,9 @@
 		75819F452CE1B0730018B986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75819F462CE1B0730018B986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75819F472CE1B0730018B986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7598C3D82D0014D300E9F557 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7598C3DA2D00157A00E9F557 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7598C3DB2D0033DE00E9F557 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		75E1EC002CCF3BDC006043D9 /* WaterClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A3E3152148BDE6C21428E9 /* Pods-WaterClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterClock.release.xcconfig"; path = "Target Support Files/Pods-WaterClock/Pods-WaterClock.release.xcconfig"; sourceTree = "<group>"; };
 		D86C564BB2D735952D4AD37A /* Pods_WaterClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,6 +347,7 @@
 			children = (
 				75819F1E2CE1B0730018B986 /* AppDelegate.swift */,
 				75819F1F2CE1B0730018B986 /* SceneDelegate.swift */,
+				7598C3DB2D0033DE00E9F557 /* Bundle.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -458,6 +464,7 @@
 				75819F482CE1B0730018B986 /* LaunchScreen.storyboard */,
 				756BBDB02CE329A1003B4021 /* AccountModel.xcdatamodeld */,
 				7510AA292CEC1EA700BEDF8C /* Main.storyboard */,
+				7598C3D72D0014D300E9F557 /* Localizable.strings */,
 			);
 			path = WaterClock;
 			sourceTree = "<group>";
@@ -571,6 +578,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 75E1EBF72CCF3BDC006043D9;
 			minimizedProjectReferenceProxies = 1;
@@ -599,6 +607,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7598C3D92D0014D300E9F557 /* Localizable.strings in Resources */,
 				756BBDA52CE1BCF3003B4021 /* GoogleService-Info.plist in Resources */,
 				75819F4C2CE1B0730018B986 /* Assets.xcassets in Resources */,
 				75819F4E2CE1B0730018B986 /* LaunchScreen.storyboard in Resources */,
@@ -727,6 +736,7 @@
 				75819F752CE1B0730018B986 /* HeaderNotiView.swift in Sources */,
 				75819F762CE1B0730018B986 /* HeaderOnlChargeView.swift in Sources */,
 				75819F772CE1B0730018B986 /* HeaderServicesView.swift in Sources */,
+				7598C3DC2D0033DE00E9F557 /* Bundle.swift in Sources */,
 				75819F782CE1B0730018B986 /* HeaderSettingView.swift in Sources */,
 				75819F792CE1B0730018B986 /* HeaderView.swift in Sources */,
 				756BBDB22CE329A1003B4021 /* AccountModel.xcdatamodeld in Sources */,
@@ -765,6 +775,15 @@
 				75819F472CE1B0730018B986 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7598C3D72D0014D300E9F557 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7598C3D82D0014D300E9F557 /* en */,
+				7598C3DA2D00157A00E9F557 /* vi */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -878,6 +897,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -942,6 +962,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

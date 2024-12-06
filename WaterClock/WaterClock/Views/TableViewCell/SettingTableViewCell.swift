@@ -102,7 +102,7 @@ class SettingTableViewCell: UITableViewCell {
         detaillLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel).offset(30)
             make.leading.equalTo(titleLabel)
-            make.width.equalTo(300)
+            make.width.equalTo(250)
             
         }
     }

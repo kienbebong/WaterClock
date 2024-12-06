@@ -12,7 +12,7 @@ class MiddleShareView: UIView {
 
     private let detailLabel: UILabel = {
         let label = UILabel()
-        label.text = "Quét mã QR bên dưới để tham quan trang web của chúng tôi"
+        label.text = NSLocalizedString("scan_qr_code", comment: "")
         label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 16)
@@ -30,7 +30,7 @@ class MiddleShareView: UIView {
     
     private let shareButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Chia sẻ ngay", for: .normal)
+        button.setTitle(NSLocalizedString("share_now", comment: ""), for: .normal)
         button.setTitleColor(UIColor.red, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16)
         button.setImage(UIImage(systemName: "square.and.arrow.up.badge.clock.fill"), for: .normal)
@@ -92,12 +92,26 @@ class MiddleShareView: UIView {
         let activityViewController = UIActivityViewController(activityItems: itemToShare, applicationActivities: nil)
             
         activityViewController.completionWithItemsHandler = { activityType, completed, returnedItems, activityError in
+            let alertTitle = NSLocalizedString("share_alert_title", comment: "")
+            let alertMessage: String
+            
             if completed {
-                print("Chia sẻ thành công")
+                alertMessage = NSLocalizedString("share_success", comment: "")
             } else {
-                print("Chia sẻ thất bại hoặc bị hủy")
+                alertMessage = NSLocalizedString("share_failed", comment: "")
+            }
+            
+            let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: nil))
+            
+            if let parentViewController = self.parentViewController {
+                DispatchQueue.main.async {
+                    parentViewController.present(alert, animated: true, completion: nil)
+                }
             }
         }
+
+
             
         if let parentVC = UIApplication.shared.windows.first?.rootViewController?.presentedViewController ?? UIApplication.shared.windows.first?.rootViewController {
                 parentVC.present(activityViewController, animated: true, completion: nil)

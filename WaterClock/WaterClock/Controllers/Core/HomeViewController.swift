@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
     
     private let newsLabel: UILabel = {
         let label = UILabel()
-        label.text = "THÔNG TIN MỚI"
+        label.text = NSLocalizedString("new_info", comment: "Label for new information")
         label.font = .boldSystemFont(ofSize: 20)
         label.textColor = .black
         return label
@@ -57,7 +57,7 @@ class HomeViewController: UIViewController {
     
     private let callButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Tổng đài CSKH miễn phí", for: .normal)
+        button.setTitle(NSLocalizedString("customer_service_hotline", comment: "Button title for customer service hotline"), for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 15)
         button.setImage(UIImage(systemName: "phone.fill"), for: .normal)
@@ -447,14 +447,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
         
         if indexPath.row == 0 {
-            cell.configure(with: UIImage(systemName: "list.bullet.clipboard") ?? UIImage(), text: "Dữ liệu nước theo ngày")
+            cell.configure(with: UIImage(systemName: "list.bullet.clipboard") ?? UIImage(), text: NSLocalizedString("DAILY_WATER_DATA", comment: "Daily water data"))
         } else if indexPath.row == 1 {
-            cell.configure(with: UIImage(systemName: "calendar.badge.clock") ?? UIImage(), text: "Dữ liệu báo cáo")
+            cell.configure(with: UIImage(systemName: "calendar.badge.clock") ?? UIImage(), text: NSLocalizedString("REPORT_DATA", comment: "Report data"))
         } else if indexPath.row == 2 {
-            cell.configure(with: UIImage(systemName: "checklist") ?? UIImage(), text: "Kiểm tra chất lượng nước")
+            cell.configure(with: UIImage(systemName: "checklist") ?? UIImage(), text: NSLocalizedString("WATER_QUALITY_CHECK", comment: "Water quality check"))
         } else {
-            cell.configure(with: UIImage(systemName: "iphone.gen1.radiowaves.left.and.right.circle") ?? UIImage(), text: "Thanh toán HĐ")
+            cell.configure(with: UIImage(systemName: "iphone.gen1.radiowaves.left.and.right.circle") ?? UIImage(), text: NSLocalizedString("BILL_PAYMENT", comment: "Bill payment"))
         }
+
         cell.backgroundColor = .white
 
         return cell
@@ -495,4 +496,5 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
 }
+
 
