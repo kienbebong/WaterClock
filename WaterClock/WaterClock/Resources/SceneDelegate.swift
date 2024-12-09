@@ -7,15 +7,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         _ = SessionManager.shared
-        UserDefaults.standard.set(false, forKey: "isUserSignedIn")
-        
-        DataPersistenceManager.shared.deleteAllAccounts { deleteResult in
-            switch deleteResult {
-            case .success():
-                print("All accounts deleted successfully.")
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
+        if UserDefaults.standard.bool(forKey: "isUserSignedIn") != true {
+            UserDefaults.standard.set(false, forKey: "isUserSignedIn")
         }
         
         let selectedLanguage = UserDefaults.standard.stringArray(forKey: "AppleLanguages")?.first ?? "vi"
