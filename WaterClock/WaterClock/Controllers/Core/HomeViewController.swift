@@ -433,7 +433,6 @@ class HomeViewController: UIViewController {
             make.leading.trailing.equalTo(contentView)
             make.height.equalTo(500)
         }
-        
     }
     
     func setUpHandbookView() {
