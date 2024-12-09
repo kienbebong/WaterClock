@@ -14,7 +14,14 @@ class DataInstantSpreadsheetView: UIView {
     let spreadsheetView = SpreadsheetView()
     var receiveData: [InstantByDate]?
     
-    let dataName = ["Thời gian", "Cường độ tín hiệu", "Phiên bản đồng hồ", "Nhiệt độ(độ C)", "Chù kì(phút)"]
+    let dataName = [
+        NSLocalizedString("TIME", comment: "Mô tả thời gian"),
+        NSLocalizedString("SIGNAL_STRENGTH", comment: "Mô tả cường độ tín hiệu"),
+        NSLocalizedString("DEVICE_VERSION", comment: "Mô tả phiên bản đồng hồ"),
+        NSLocalizedString("TEMPERATURE_C", comment: "Mô tả nhiệt độ (độ C)"),
+        NSLocalizedString("PERIOD_MIN", comment: "Mô tả chu kỳ (phút)")
+    ]
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)

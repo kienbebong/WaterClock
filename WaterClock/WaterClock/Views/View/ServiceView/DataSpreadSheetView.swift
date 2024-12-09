@@ -13,7 +13,14 @@ class DataSpreadSheetView: UIView {
     let spreadsheetView = SpreadsheetView()
     var receiveData: [MeterDataInDay]?
     
-    let dataName = ["No đồng hồ", "Thời gian gắn với dữ liệu", "Chỉ số module", "Áp suất", "Điện áp pin"]
+    let dataName = [
+        NSLocalizedString("METER_NUMBER", comment: "Mô tả số đồng hồ"),
+        NSLocalizedString("TIME_WITH_DATA", comment: "Mô tả thời gian gắn với dữ liệu"),
+        NSLocalizedString("MODULE_INDEX", comment: "Mô tả chỉ số module"),
+        NSLocalizedString("PRESSURE", comment: "Mô tả áp suất"),
+        NSLocalizedString("BATTERY_VOLTAGE", comment: "Mô tả điện áp pin")
+    ]
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)

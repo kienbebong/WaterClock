@@ -30,7 +30,7 @@ class HeaderSettingAfterLoginView: UIView {
     
     private let settingLabel: UILabel = {
         let label = UILabel()
-        label.text = "CÀI ĐẶT"
+        label.text = NSLocalizedString("SETTINGS", comment: "Settings title")
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textColor = .white
         return label
@@ -38,7 +38,7 @@ class HeaderSettingAfterLoginView: UIView {
     
     private let logOutLabel: UILabel = {
         let label = UILabel()
-        label.text = "ĐĂNG XUẤT"
+        label.text = NSLocalizedString("LOG_OUT", comment: "Label for logout button")
         label.textColor = .blue
         label.font = UIFont.boldSystemFont(ofSize: 15)
         return label

@@ -12,7 +12,7 @@ class HeaderOnlChargeView: UIView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Thanh toán trực tuyến"
+        label.text = NSLocalizedString("ONLINE_PAYMENT", comment: "Thanh toán trực tuyến cho sản phẩm hoặc dịch vụ")
         label.font = .systemFont(ofSize: 18)
         label.textAlignment = .center
         label.textColor = .black

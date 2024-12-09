@@ -19,7 +19,8 @@ class ChooseDateView: UIView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Chỉ số đồng hồ nước theo ngày"
+        label.text = NSLocalizedString("WATER_METER_DAILY_INDEX", comment: "Label hiển thị chỉ số đồng hồ nước theo ngày")
+
         label.textColor = .red
         label.font = .boldSystemFont(ofSize: 23)
         return label
@@ -27,7 +28,7 @@ class ChooseDateView: UIView {
     
     private let chooseLabel: UILabel = {
         let label = UILabel()
-        label.text = "Ngày"
+        label.text = NSLocalizedString("DATE", comment: "Label hiển thị ngày")
         label.font = .systemFont(ofSize: 15)
         label.textColor = .black
         return label
@@ -35,7 +36,6 @@ class ChooseDateView: UIView {
     
     public var dateTF: UITextField = {
         let text = UITextField()
-        text.placeholder = "Chọn ngày"
         text.font = .systemFont(ofSize: 15)
         text.textColor = .black
         text.backgroundColor = .white
@@ -108,7 +108,7 @@ class ChooseDateView: UIView {
     
     private let searchButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Tìm kiếm", for: .normal)
+        button.setTitle(NSLocalizedString("SEARCH", comment: "Button để tìm kiếm"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18)
         button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)

@@ -50,7 +50,8 @@ class HeaderAfterLoginView: UIView {
         DataPersistenceManager.shared.fetchAccount { result in
             switch result {
             case .success(let account):
-                label.text = "Tài khoản: \(account.userName ?? "")"
+                let accountLabelText = String(format: NSLocalizedString("ACCOUNT_LABEL", comment: "Label for user account"), account.userName ?? "")
+                label.text = accountLabelText
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -77,7 +78,7 @@ class HeaderAfterLoginView: UIView {
     
     private let fixButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Báo sửa nước", for: .normal)
+        button.setTitle(NSLocalizedString("REPORT_WATER_REPAIR", comment: "Button title for reporting water repair"), for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .orange.withAlphaComponent(0.9)
         button.layer.cornerRadius = 20

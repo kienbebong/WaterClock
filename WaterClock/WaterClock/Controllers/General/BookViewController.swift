@@ -113,17 +113,23 @@ extension BookViewController: UITableViewDelegate, UITableViewDataSource {
         let cell =  tableView.dequeueReusableCell(withIdentifier: BookTableViewCell.identifier, for: indexPath) as! BookTableViewCell
         
         if indexPath.row == 0 {
-            cell.configure(with: UIImage(systemName: "drop") ?? UIImage(), titleLabel: "Cẩm nang sử dụng nước tiết kiệm")
+            cell.configure(with: UIImage(systemName: "drop") ?? UIImage(),
+                           titleLabel: NSLocalizedString("GUIDE_WATER_SAVING", comment: "Guide to saving water"))
         } else if indexPath.row == 1 {
-            cell.configure(with: UIImage(systemName: "book") ?? UIImage(), titleLabel: "Cẩm nang văn hoá VTB")
+            cell.configure(with: UIImage(systemName: "book") ?? UIImage(),
+                           titleLabel: NSLocalizedString("GUIDE_CULTURE", comment: "Guide to VTB culture"))
         } else if indexPath.row == 2 {
-            cell.configure(with: UIImage(systemName: "building") ?? UIImage(), titleLabel: "Cẩm nang tiết kiệm nước trong văn phòng nhà xưởng")
+            cell.configure(with: UIImage(systemName: "building") ?? UIImage(),
+                           titleLabel: NSLocalizedString("GUIDE_OFFICE_WATER_SAVING", comment: "Guide to saving water in offices and factories"))
         } else if indexPath.row == 3 {
-            cell.configure(with: UIImage(systemName: "house") ?? UIImage(), titleLabel: "Cẩm nang tiết kiệm nước trong gia đình")
+            cell.configure(with: UIImage(systemName: "house") ?? UIImage(),
+                           titleLabel: NSLocalizedString("GUIDE_HOME_WATER_SAVING", comment: "Guide to saving water at home"))
         } else if indexPath.row == 4 {
-            cell.configure(with: UIImage(systemName: "creditcard") ?? UIImage(), titleLabel: "Cẩm nang thanh toán không dùng tiền mặt")
+            cell.configure(with: UIImage(systemName: "creditcard") ?? UIImage(),
+                           titleLabel: NSLocalizedString("GUIDE_CASHLESS_PAYMENT", comment: "Guide to cashless payment"))
         } else if indexPath.row == 5 {
-            cell.configure(with: UIImage(systemName: "exclamationmark.triangle") ?? UIImage(), titleLabel: "Cẩm nang biện pháp phòng ngừa rò rỉ nước")
+            cell.configure(with: UIImage(systemName: "exclamationmark.triangle") ?? UIImage(),
+                           titleLabel: NSLocalizedString("GUIDE_LEAK_PREVENTION", comment: "Guide to leak prevention measures"))
         }
         
         return cell

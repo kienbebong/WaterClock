@@ -155,3 +155,38 @@
 "send_invite_link" = "Send invitation link to friends";
 "or_text" = "-----------------Or-----------------";
 "share_link" = "Share via link";
+
+"ONLINE_PAYMENT" = "Online Payment";
+"USER_POINTS_PAYMENT" = "Payment for Points Internationally";
+"ENTER_CUSTOMER_CODE" = "Enter the customer code for payment";
+"CHECK_DEBT" = "Check debt";
+
+"WATER_METER_REPORT" = "Report water meter status";
+"START_DATE" = "Start date";
+"END_DATE" = "End date";
+"SEARCH" = "Search";
+"WATER_METER_DAILY_INDEX" = "Water meter index by day";
+"DATE" = "Date";
+"METER_NUMBER" = "Meter Number";
+"TIME_WITH_DATA" = "Time with Data";
+"MODULE_INDEX" = "Module Index";
+"PRESSURE" = "Pressure";
+"BATTERY_VOLTAGE" = "Battery Voltage";
+"TIME" = "Time";
+"SIGNAL_STRENGTH" = "Signal Strength";
+"DEVICE_VERSION" = "Device Version";
+"TEMPERATURE_C" = "Temperature (°C)";
+"PERIOD_MIN" = "Period (minutes)";
+
+"ACCOUNT_LABEL" = "Account: %@";
+"REPORT_WATER_REPAIR" = "Report repair";
+
+"LOG_OUT" = "LOG OUT";
+
+"GUIDE_PUBLICATION" = "Guide Publication";
+"GUIDE_WATER_SAVING" = "Guide to saving water";
+"GUIDE_CULTURE" = "Guide to VTB culture";
+"GUIDE_OFFICE_WATER_SAVING" = "Guide to saving water in offices and factories";
+"GUIDE_HOME_WATER_SAVING" = "Guide to saving water at home";
+"GUIDE_CASHLESS_PAYMENT" = "Guide to cashless payment";
+"GUIDE_LEAK_PREVENTION" = "Guide to leak prevention measures";

@@ -13,7 +13,7 @@ class HeaderBookView: UIView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Cẩm nang ấn phẩm"
+        label.text = NSLocalizedString("GUIDE_PUBLICATION", comment: "Label for guide publication")
         label.font = .systemFont(ofSize: 18)
         label.textAlignment = .center
         label.textColor = .black

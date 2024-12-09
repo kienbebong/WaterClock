@@ -21,7 +21,7 @@ class OnlineChargeViewController: UIViewController {
     
     private let detailLabel: UILabel = {
         let label = UILabel()
-        label.text = "Thanh toán cho điểm người dùng nước"
+        label.text = NSLocalizedString("USER_POINTS_PAYMENT", comment: "Thanh toán cho điểm người dùng quốc tế")
         label.font = .boldSystemFont(ofSize: 18)
         label.textColor = .black
         return label
@@ -29,11 +29,13 @@ class OnlineChargeViewController: UIViewController {
     
     private let textFiled: UITextField = {
         let text = UITextField()
-        text.placeholder = "Nhập mã khách hàng cần thanh toán"
+        text.placeholder = NSLocalizedString("ENTER_CUSTOMER_CODE", comment: "Placeholder để nhập mã khách hàng cần thanh toán")
+
         text.attributedPlaceholder = NSAttributedString(
-               string: "Nhập mã khách hàng cần thanh toán",
-               attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray]
-           )
+            string: NSLocalizedString("ENTER_CUSTOMER_CODE", comment: "Placeholder để nhập mã khách hàng cần thanh toán"),
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray]
+        )
+
         text.textColor = .gray
         text.layer.cornerRadius = 10
         text.layer.borderColor = UIColor.gray.cgColor
@@ -43,7 +45,7 @@ class OnlineChargeViewController: UIViewController {
     
     private let checkButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Kiểm tra nợ", for: .normal)
+        button.setTitle(NSLocalizedString("CHECK_DEBT", comment: "Tiêu đề nút kiểm tra nợ"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.textAlignment = .center
         button.titleLabel?.font = .systemFont(ofSize: 18)

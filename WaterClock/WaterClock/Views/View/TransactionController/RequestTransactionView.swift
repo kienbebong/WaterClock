@@ -52,7 +52,7 @@ class RequestTransactionView: UIView {
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(logoImage).offset(5)
             make.leading.equalTo(logoImage.snp.trailing).offset(15)
-            make.width.equalTo(200)
+            make.width.equalTo(300)
         }
     }
     

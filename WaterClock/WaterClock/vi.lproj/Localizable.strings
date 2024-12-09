@@ -15,7 +15,6 @@
 "PHONE_SETTINGS" = "Cài đặt điện thoại";
 "NOTIFICATIONS_LOCATION_SETTINGS" = "Cài đặt thông báo, định vị...";
 
-
 "SHARE_APP" = "Chia sẻ ứng dụng";
 "COPY_LINK_QR" = "Cho phép sao chép đường dẫn, mã QR để gửi đến bạn bè";
 
@@ -67,7 +66,6 @@
 "LOG_IN_NOW" = "ĐĂNG NHẬP NGAY";
 "LOOKUP_CUSTOMER_INFO" = "Tra cứu tất cả thông tin của khách hàng: %@";
 
-
 "ELECTRONIC_BILL" = "Hoá đơn điện tử";
 "WATER_QUALITY_CHECK" = "Kiểm tra chất lượng nước";
 "WATER_USAGE" = "Số nước phát lên";
@@ -111,7 +109,6 @@
 "ENTER_PASSWORD_MESSAGE" = "Chúng tôi cần mật khẩu của bạn để tiếp tục.";
 "ACCOUNT_PLACEHOLDER" = "Tài khoản";
 "PASSWORD_PLACEHOLDER" = "Mật khẩu";
-
 
 "CHOOSE_LANGUAGE" = "Chọn ngôn ngữ";
 "SELECT_LANGUAGE_MESSAGE" = "Vui lòng chọn ngôn ngữ của bạn";
@@ -159,3 +156,38 @@
 "send_invite_link" = "Gửi link giới thiệu cho bạn bè";
 "or_text" = "-----------------Hoặc-----------------";
 "share_link" = "Chia sẻ bằng đường link";
+
+"ONLINE_PAYMENT" = "Thanh toán trực tuyến";
+"USER_POINTS_PAYMENT" = "Thanh toán cho điểm dùng nước";
+"ENTER_CUSTOMER_CODE" = "Nhập mã khách hàng cần thanh toán";
+"CHECK_DEBT" = "Kiểm tra nợ";
+
+"WATER_METER_REPORT" = "Báo cáo tình trạng đồng hồ nước";
+"START_DATE" = "Ngày bắt đầu";
+"END_DATE" = "Ngày kết thúc";
+"SEARCH" = "Tìm kiếm";
+"WATER_METER_DAILY_INDEX" = "Chỉ số đồng hồ nước theo ngày";
+"DATE" = "Ngày";
+"METER_NUMBER" = "No đồng hồ";
+"TIME_WITH_DATA" = "Thời gian gắn với dữ liệu";
+"MODULE_INDEX" = "Chỉ số module";
+"PRESSURE" = "Áp suất";
+"BATTERY_VOLTAGE" = "Điện áp pin";
+"TIME" = "Thời gian";
+"SIGNAL_STRENGTH" = "Cường độ tín hiệu";
+"DEVICE_VERSION" = "Phiên bản đồng hồ";
+"TEMPERATURE_C" = "Nhiệt độ(độ C)";
+"PERIOD_MIN" = "Chù kì(phút)";
+
+"ACCOUNT_LABEL" = "Tài khoản: %@";
+"REPORT_WATER_REPAIR" = "Báo sửa nước";
+
+"LOG_OUT" = "ĐĂNG XUẤT";
+
+"GUIDE_PUBLICATION" = "Cẩm nang ấn phẩm";
+"GUIDE_WATER_SAVING" = "Cẩm nang sử dụng nước tiết kiệm";
+"GUIDE_CULTURE" = "Cẩm nang văn hoá VTB";
+"GUIDE_OFFICE_WATER_SAVING" = "Cẩm nang tiết kiệm nước trong văn phòng nhà xưởng";
+"GUIDE_HOME_WATER_SAVING" = "Cẩm nang tiết kiệm nước trong gia đình";
+"GUIDE_CASHLESS_PAYMENT" = "Cẩm nang thanh toán không dùng tiền mặt";
+"GUIDE_LEAK_PREVENTION" = "Cẩm nang biện pháp phòng ngừa rò rỉ nước";

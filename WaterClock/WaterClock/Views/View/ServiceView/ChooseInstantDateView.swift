@@ -18,7 +18,7 @@ class ChooseInstantDateView: UIView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Báo cáo tình trạng đồng hồ nước"
+        label.text = NSLocalizedString("WATER_METER_REPORT", comment: "Label báo cáo tình trạng đồng hồ nước")
         label.textColor = .red
         label.font = .boldSystemFont(ofSize: 23)
         return label
@@ -26,7 +26,7 @@ class ChooseInstantDateView: UIView {
     
     private let chooseLabel: UILabel = {
         let label = UILabel()
-        label.text = "Ngày bắt đầu"
+        label.text = NSLocalizedString("START_DATE", comment: "Label hiển thị ngày bắt đầu")
         label.font = .systemFont(ofSize: 15)
         label.textColor = .black
         return label
@@ -34,7 +34,7 @@ class ChooseInstantDateView: UIView {
     
     private let chooseLabel2: UILabel = {
         let label = UILabel()
-        label.text = "Ngày kết thúc"
+        label.text = NSLocalizedString("END_DATE", comment: "Label hiển thị ngày kết thúc")
         label.font = .systemFont(ofSize: 15)
         label.textColor = .black
         return label
@@ -42,7 +42,6 @@ class ChooseInstantDateView: UIView {
     
     public var dateTF: UITextField = {
         let text = UITextField()
-        text.placeholder = "Chọn ngày"
         text.font = .systemFont(ofSize: 15)
         text.textColor = .black
         text.backgroundColor = .white
@@ -56,7 +55,6 @@ class ChooseInstantDateView: UIView {
     
     public var dateTF2: UITextField = {
         let text = UITextField()
-        text.placeholder = "Chọn ngày"
         text.font = .systemFont(ofSize: 15)
         text.textColor = .black
         text.backgroundColor = .white
@@ -168,7 +166,7 @@ class ChooseInstantDateView: UIView {
     
     private let searchButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Tìm kiếm", for: .normal)
+        button.setTitle(NSLocalizedString("SEARCH", comment: "Button để tìm kiếm"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18)
         button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
