@@ -40,5 +40,8 @@
 	<string>Ứng dụng cần quyền truy cập vị trí của bạn để hiển thị bản đồ.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Ứng dụng cần quyền truy cập vị trí của bạn để hiển thị bản đồ.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Ứng dụng của chúng tôi sử dụng Face ID để xác thực nhanh hơn.</string>
+
 </dict>
 </plist>

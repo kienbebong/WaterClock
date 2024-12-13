@@ -1,12 +1,6 @@
-//
-//  SettingViewController.swift
-//  WaterClock
-//
-//  Created by Dinh Chi Kien on 1/11/24.
-//
-
 import UIKit
 import SnapKit
+import LocalAuthentication
 
 class SettingViewController: UIViewController {
     
@@ -136,7 +130,8 @@ class SettingViewController: UIViewController {
                     print(error.localizedDescription)
                 }
             }
-            
+            UserDefaults.standard.set(false, forKey: "isBiometricEnabled")
+            UserDefaults.standard.set(false, forKey: "isNowBiometricEnabled")
             UserDefaults.standard.set(false, forKey: "isUserSignedIn")
             self?.handleSignOut()
             self?.navigationController?.popViewController(animated: true)
@@ -228,6 +223,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.pushViewController(destinationVC, animated: true)
         } else if indexPath.row == 4 {
             showLanguageSelectiom()
+        } else if indexPath.row == 0 {
+            requestBiometricPermission()
         }
     }
     
@@ -268,6 +265,19 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             exit(0)
         }))
         present(alert, animated: true, completion: nil)
+    }
+    
+    func requestBiometricPermission() {
+        UserDefaults.standard.set(true, forKey: "isBiometricEnabled")
+        UserDefaults.standard.set(true, forKey: "isNowBiometricEnabled")
+        self.showAlert(title: "Thành công", message: "Bạn đã kích hoạt Face ID/Touch ID thành công!")
+    
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
