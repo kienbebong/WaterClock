@@ -190,3 +190,7 @@
 "GUIDE_HOME_WATER_SAVING" = "Guide to saving water at home";
 "GUIDE_CASHLESS_PAYMENT" = "Guide to cashless payment";
 "GUIDE_LEAK_PREVENTION" = "Guide to leak prevention measures";
+
+"FaceIDReason" = "Please use Face ID/Touch ID to unlock the app";
+"SuccessAlertTitle" = "Success";
+"SuccessAlertMessage" = "You have successfully enabled Face ID/Touch ID!";

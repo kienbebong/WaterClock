@@ -270,7 +270,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     func requestBiometricPermission() {
         UserDefaults.standard.set(true, forKey: "isBiometricEnabled")
         UserDefaults.standard.set(true, forKey: "isNowBiometricEnabled")
-        self.showAlert(title: "Thành công", message: "Bạn đã kích hoạt Face ID/Touch ID thành công!")
+        self.showAlert(title: NSLocalizedString("SuccessAlertTitle", comment: ""), message: NSLocalizedString("SuccessAlertMessage", comment: ""))
     
     }
     

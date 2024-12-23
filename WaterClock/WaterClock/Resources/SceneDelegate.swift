@@ -45,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func authenticateUser() {
         let context = LAContext()
-        let reason = "Vui lòng sử dụng Face ID/Touch ID để mở khóa ứng dụng"
+        let reason = NSLocalizedString("FaceIDReason", comment: "")
         var error: NSError?
 
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {

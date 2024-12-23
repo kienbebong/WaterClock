@@ -191,3 +191,7 @@
 "GUIDE_HOME_WATER_SAVING" = "Cẩm nang tiết kiệm nước trong gia đình";
 "GUIDE_CASHLESS_PAYMENT" = "Cẩm nang thanh toán không dùng tiền mặt";
 "GUIDE_LEAK_PREVENTION" = "Cẩm nang biện pháp phòng ngừa rò rỉ nước";
+
+"FaceIDReason" = "Vui lòng sử dụng Face ID/Touch ID để mở khóa ứng dụng";
+"SuccessAlertTitle" = "Thành công";
+"SuccessAlertMessage" = "Bạn đã kích hoạt Face ID/Touch ID thành công!";
